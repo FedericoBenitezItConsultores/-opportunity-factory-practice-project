@@ -22,6 +22,29 @@ export const InfoPersona = () => {
           </p>
           <p>123456789</p>
         </div>
+
+        <div>
+        <label htmlFor="nombre">Primer nombre</label>
+        {/* <p>Primer nombre</p> */}
+        <input type="text" id="nombre" placeholder="Primer nombre"/>
+
+        </div>
+
+        <p>Genero</p>
+        <form>
+          <label>
+            <input type="radio" name="genero" value="masculino" />
+            Masculino
+          </label>
+
+          <label>
+            <input type="radio" name="genero" value="femenino" />
+            Femenino
+          </label>
+
+        </form>
+
+
       </div>
     </>
   );
