@@ -1,8 +1,9 @@
 import React from "react";
+import style from "./InfoPerson.module.css"
 
-export const InfoPersona = () => {
+export const InfoPerson = () => {
   return (
-    <>
+    <div className={style.InfoPerson}>
       <h1>persona</h1>
       <p>
         Ingresa la informacion de la persona, conocerla es inportante para hacer
@@ -24,7 +25,7 @@ export const InfoPersona = () => {
         </div>
 
         <div>
-        <label htmlFor="nombre">Primer nombre</label>
+        {/* <label htmlFor="nombre">Primer nombre</label> */}
         {/* <p>Primer nombre</p> */}
         <input type="text" id="nombre" placeholder="Primer nombre"/>
 
@@ -46,6 +47,6 @@ export const InfoPersona = () => {
 
 
       </div>
-    </>
+    </div>
   );
 };
