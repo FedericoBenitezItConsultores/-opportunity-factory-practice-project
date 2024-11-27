@@ -1,0 +1,73 @@
+.div_root {
+    border: 1px #000 solid;
+    min-height: 200em;
+    position: relative;
+}
+
+.financing_icon {
+    /* Layout Properties */
+    width: 16px;
+    height: 16px;
+    /* UI Properties */
+    opacity: 1;
+}
+
+.p_inf {
+    /* Layout Properties */
+    top: 759px;
+    left: 447px;
+    width: 737px;
+    height: 19px;
+    /* UI Properties */
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-0061f5);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #0061F5;
+    opacity: 1;
+}
+
+.p_inf_2 {
+    /* Layout Properties */
+    top: 784px;
+    left: 447px;
+    width: 727px;
+    height: 19px;
+    /* UI Properties */
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-343741);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #343741;
+    opacity: 1;
+}
+
+.div_inf {
+    /* Layout Properties */
+    position: absolute;
+    top: 107px;
+    left: 261px;
+    width: 851px;
+    height: 86px;
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-c0bfc0);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C0BFC0;
+    border-radius: 3px;
+    opacity: 1;
+    border-left: 4px solid #0723c1;
+}
+
+.img_arrow_down {
+    /* Layout Properties */
+    position: absolute;
+    top: 29px;
+    left: 1108px;
+    width: 24px;
+    height: 13px;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+    /* UI Properties */
+    background: transparent url('img/Icon-Arrow down.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
