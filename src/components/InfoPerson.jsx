@@ -70,15 +70,20 @@ export const InfoPerson = () => {
 
       <p>Genero</p>
       <form>
+        <div className={style.gender}>
         <label>
           <input type="radio" name="genero" value="masculino" />
           Masculino
         </label>
+        </div>
 
+        <div className={style.gender}>
         <label>
           <input type="radio" name="genero" value="femenino" />
           Femenino
         </label>
+        </div>
+
       </form>
     </div>
   );
