@@ -7,16 +7,19 @@
     padding: 20px;  
   }
 
-  .information{
-    display: flex;
-    margin-top: 10px;
-  }
-
   .persona{
     color: #1c1149;
+    margin-bottom: 0px;
+  }
+
+  .information{
+    margin-top: 0; 
+    margin-bottom: 15px;
+
   }
 
   .parragraf{
+    margin-top: 0;
     color: #28a3af;
   }
 
