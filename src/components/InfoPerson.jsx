@@ -4,7 +4,7 @@ import style from "./InfoPerson.module.css";
 export const InfoPerson = () => {
   return (
     <div className={style.InfoPerson}>
-      <h1>persona</h1>
+      <h1 className={style.persona}>persona</h1>
       <p>
         Ingresa la informacion de la persona, conocerla es inportante para hacer
         una propuesta acorde a sus necesidades
@@ -15,34 +15,45 @@ export const InfoPerson = () => {
         <div className={style.grid}>
           <div className={style.document1}>
             <div>
-            <table>
-              <tr>
-                <td>
-                  <img className={style.Grupo7616} src="Grupo7616.svg" alt="" />
-                </td>
+              <table>
                 <tr>
-                  <td>Tipo de documento</td>
+                  <td>
+                    <div className={style.line} />
+                  </td>
+                  <td>
+                    <img
+                      className={style.Grupo7616}
+                      src="Grupo7616.svg"
+                      alt=""
+                    />
+                  </td>
+                  <tr>
+                    <td>Tipo de documento</td>
+                  </tr>
+                  <tr>
+                    <td>Cédula de Ciudadanía</td>
+                  </tr>
                 </tr>
-                <tr>
-                  <td>Tipo de documento</td>
-                </tr>
-              </tr>
-            </table>
+              </table>
             </div>
             <div>
-            <table>
-              <tr>
-                <td>
-                  <img className={style.Grupo7616} src="Grupo7616.svg" alt="" />
-                </td>
+              <table>
                 <tr>
-                  <td>Identificación</td>
+                  <td>
+                    <img
+                      className={style.Grupo7616}
+                      src="Grupo7616.svg"
+                      alt=""
+                    />
+                  </td>
+                  <tr>
+                    <td>Identificación</td>
+                  </tr>
+                  <tr>
+                    <td>123456789</td>
+                  </tr>
                 </tr>
-                <tr>
-                  <td>123456789</td>
-                </tr>
-              </tr>
-            </table>
+              </table>
             </div>
           </div>
         </div>
