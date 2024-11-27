@@ -9,47 +9,61 @@ export const InfoPerson = () => {
         Ingresa la informacion de la persona, conocerla es inportante para hacer
         una propuesta acorde a sus necesidades
       </p>
-      <p>los campos con (*) son obligatorios</p>
-      
-        <div className={style.document}>
-          <div className={style.grid}>
-            <div className={style.document1}>
-              <img className={style.Grupo7616} src="Grupo7616.svg" alt="" />
-              {/* <p>
-                <d>Tipo de documento</d>
-              </p>
-              <p>Cedula de Ciudadania</p> */}
-            </div>
+      <p className={style.parragraf}>los campos con (*) son obligatorios</p>
 
-            {/* <div className={style.document2}>
-              <img src="Grupo2046.svg" alt="" />
-              <p>
-                <d>Identificación</d>
-              </p>
-              <p>123456789</p>
-            </div> */}
+      <div className={style.document}>
+        <div className={style.grid}>
+          <div className={style.document1}>
+            <div>
+            <table>
+              <tr>
+                <td>
+                  <img className={style.Grupo7616} src="Grupo7616.svg" alt="" />
+                </td>
+                <tr>
+                  <td>Tipo de documento</td>
+                </tr>
+                <tr>
+                  <td>Tipo de documento</td>
+                </tr>
+              </tr>
+            </table>
+            </div>
+            <div>
+            <table>
+              <tr>
+                <td>
+                  <img className={style.Grupo7616} src="Grupo7616.svg" alt="" />
+                </td>
+                <tr>
+                  <td>Identificación</td>
+                </tr>
+                <tr>
+                  <td>123456789</td>
+                </tr>
+              </tr>
+            </table>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div>
-          {/* <label htmlFor="nombre">Primer nombre</label> */}
-          {/* <p>Primer nombre</p> */}
-          <input type="text" id="nombre" placeholder="Primer nombre" />
-        </div>
+      <div>
+        <input type="text" id="nombre" placeholder="Primer nombre" />
+      </div>
 
-        <p>Genero</p>
-        <form>
-          <label>
-            <input type="radio" name="genero" value="masculino" />
-            Masculino
-          </label>
+      <p>Genero</p>
+      <form>
+        <label>
+          <input type="radio" name="genero" value="masculino" />
+          Masculino
+        </label>
 
-          <label>
-            <input type="radio" name="genero" value="femenino" />
-            Femenino
-          </label>
-        </form>
+        <label>
+          <input type="radio" name="genero" value="femenino" />
+          Femenino
+        </label>
+      </form>
     </div>
-    
   );
 };
