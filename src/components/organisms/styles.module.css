@@ -11,6 +11,8 @@
     width: 737px;
     height: 19px;
     /* UI Properties */
+    /* UI Properties */
+    font-family: "roboto Bold" !important;
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-0061f5);
     text-align: left;
@@ -26,6 +28,7 @@
     width: 727px;
     height: 19px;
     /* UI Properties */
+    font-family: "roboto regular";
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-343741);
     text-align: left;
