@@ -5,14 +5,13 @@ export const InfoPerson = () => {
   return (
     <div className={style.InfoPerson}>
 
-      <h1 className={style.persona}>persona</h1>
+      <h1 className={style.persona}>Persona</h1>
 
       <p className={style.information}>
-        Ingresa la informacion de la persona, conocerla es inportante para hacer
-        una propuesta <br/>acorde a sus necesidades
+      Ingresa la información de la persona, conocerla es importante para hacer una propuesta <br /> acorde a sus necesidades
       </p>
 
-      <p className={style.parragraf}>los campos con (*) son obligatorios</p>
+      <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
       
       <div className={style.document}>
         <div className={style.grid}>
