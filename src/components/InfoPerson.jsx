@@ -39,10 +39,13 @@ export const InfoPerson = () => {
             <div>
               <table>
                 <tr>
+                <td>
+                    <div className={style.line} />
+                  </td>
                   <td>
                     <img
                       className={style.Grupo7616}
-                      src="Grupo7616.svg"
+                      src="Grupo2046.svg"
                       alt=""
                     />
                   </td>
