@@ -52,17 +52,20 @@ export const InfoPerson = () => {
         <input type="text" id="nombre" placeholder="Primer nombre" />
       </div>
 
-      <p>Genero</p>
+      <p>Genero *</p>
       <form>
+      <div className={style.gender}>
         <label>
-          <input type="radio" name="genero" value="masculino" />
+          <input className={style.input_gender}type="radio" name="genero" value="masculino" />
           Masculino
         </label>
-
+      </div>
+     <div className={style.gender}>
         <label>
-          <input type="radio" name="genero" value="femenino" />
+          <input className={style.input_gender} type="radio" name="genero" value="femenino" />
           Femenino
         </label>
+     </div>
       </form>
     </div>
   );
