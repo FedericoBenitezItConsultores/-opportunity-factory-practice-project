@@ -1,0 +1,39 @@
+.title {
+    /* Layout Properties */
+
+
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-32)/var(--unnamed-line-spacing-43) var(--unnamed-font-family-roboto-medium);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-1c1149);
+    text-align: center;
+    font: normal normal 300 32px/43px Roboto-Medium;
+    letter-spacing: 0px;
+    color: #1C1149;
+    opacity: 1;
+}
+
+.sub_title {
+
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/25.6px var(--unnamed-font-family-roboto-regular);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-333742);
+    text-align: center;
+    letter-spacing: 0px;
+    color: #333742;
+}
+
+.div_father {
+    /* Layout Properties */
+
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.div_plan_price {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
