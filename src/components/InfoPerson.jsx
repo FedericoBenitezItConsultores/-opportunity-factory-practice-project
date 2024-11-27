@@ -4,13 +4,16 @@ import style from "./InfoPerson.module.css";
 export const InfoPerson = () => {
   return (
     <div className={style.InfoPerson}>
-      <h1 className={style.persona}>persona</h1>
-      <p>
-        Ingresa la informacion de la persona, conocerla es inportante para hacer
-        una propuesta acorde a sus necesidades
-      </p>
-      <p className={style.parragraf}>los campos con (*) son obligatorios</p>
 
+      <h1 className={style.persona}>persona</h1>
+
+      <p className={style.information}>
+        Ingresa la informacion de la persona, conocerla es inportante para hacer
+        una propuesta <br/>acorde a sus necesidades
+      </p>
+
+      <p className={style.parragraf}>los campos con (*) son obligatorios</p>
+      
       <div className={style.document}>
         <div className={style.grid}>
           <div className={style.document1}>
