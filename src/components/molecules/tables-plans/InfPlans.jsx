@@ -5,7 +5,11 @@ import TablesPlans from "./TablesPlans";
 export default function InfPlans({ plan }) {
   return (
     <div className={styles.div_root}>
-      <img className={styles.img_arrow_down} src={img_arrow_down} alt="" />
+      <img
+        className={styles.img_arrow_down}
+        src={img_arrow_down}
+        alt="img_arrow_down"
+      />
       <div
         style={{
           display: "flex",
