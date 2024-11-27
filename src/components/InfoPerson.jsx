@@ -57,7 +57,7 @@ export const InfoPerson = () => {
       <div className={style.gender}>
         <label>
           <input className={style.input_gender}type="radio" name="genero" value="masculino" />
-          Masculino
+          Masculinoo
         </label>
       </div>
      <div className={style.gender}>
