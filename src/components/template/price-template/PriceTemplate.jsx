@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./styles.module.css";
 import PlansPrice from "../../organisms/PlansPrice";
+import { Footer } from "../../molecules/Footer/Footer";
+import { FooterDiligenciación } from "../../molecules/footer-deligenciación/FooterDeligenciacion";
 export default function PriceTemplate() {
   return (
     <div className={styles.div_father}>
@@ -11,6 +13,16 @@ export default function PriceTemplate() {
       </p>
       <div className={styles.div_plan_price}>
         <PlansPrice />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "4em",
+          marginBottom: "7em",
+        }}
+      >
+        <Footer />
       </div>
     </div>
   );
