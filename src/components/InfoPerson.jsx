@@ -28,7 +28,7 @@ export const InfoPerson = () => {
                     />
                   </td>
                   <tr>
-                    <td>Tipo de documento</td>
+                    <td className={style.documents}>Tipo de documento</td>
                   </tr>
                   <tr>
                     <td>Cédula de Ciudadanía</td>
@@ -50,7 +50,7 @@ export const InfoPerson = () => {
                     />
                   </td>
                   <tr>
-                    <td>Identificación</td>
+                    <td className={style.documents}>Identificación</td>
                   </tr>
                   <tr>
                     <td>123456789</td>
