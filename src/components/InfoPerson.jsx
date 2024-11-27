@@ -68,7 +68,7 @@ export const InfoPerson = () => {
         <input type="text" id="nombre" placeholder="Primer nombre" />
       </div>
 
-      <p>Genero</p>
+      <p>Genero *</p>
       <form>
         <div className={style.gender}>
         <label>
@@ -85,6 +85,10 @@ export const InfoPerson = () => {
         </div>
 
       </form>
+      <div className={style.input_age}>
+      <label htmlFor="">Años de experiencia *</label>
+      <input  id="experience" type="number" placeholder=""/>
+      </div>
     </div>
   );
 };
