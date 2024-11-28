@@ -1,0 +1,427 @@
+export const plans = [
+  {
+    id: 1,
+    name: "Integral",
+    price: 1347798,
+    financing: {
+      price: 148855,
+      quotas: 10,
+    },
+    border_button: {
+      color: "#95DFE4",
+      height: 10,
+    },
+    coberturas: [
+      {
+        typeCheck: "icon_done",
+        cobertura: "Responsabilidad Civil Extracontractual",
+        capital: [3000000000],
+        deducibles: 0,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida total por hurto",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida total daños",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida parcial daños",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida parcial hurto",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Terremoto",
+        capital: 28500000,
+        deducibles: 950000,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Amparo patrimonial",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Gastos de transporte por pérdida total hurto",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Gastos de transporte por pérdida total daños",
+        capital: 1200000,
+        deducibles: null,
+      },
+    ],
+    asistencias: [
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia jurídica penal",
+        capital: 13385074,
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia jurídica civil",
+        capital: 6770.66,
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia en viaje",
+        capital: ["Tradicional"],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Premium",
+    price: 1523621,
+    financing: {
+      price: 164882,
+      quotas: 10,
+    },
+    border_button: {
+      color: "#FFD000",
+      height: 15,
+    },
+    coberturas: [
+      {
+        typeCheck: "icon_done",
+        cobertura: "Responsabilidad Civil Extracontractual",
+        capital: [3000000000],
+        deducibles: 0,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida total por hurto",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida total daños",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida parcial daños",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Pérdida parcial hurto",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Terremoto",
+        capital: 28500000,
+        deducibles: 950000,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Amparo patrimonial",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Gastos de transporte por pérdida total hurto",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Gastos de transporte por pérdida total daños",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Vehículo Sustituto",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "Accidentes personales",
+        capital: 40000000,
+        deducibles: null,
+      },
+      {
+        typeCheck: "icon_done",
+        cobertura: "RC General Familiar",
+        capital: 44000000,
+        deducibles: 950000,
+      },
+      {
+        typeCheck: "Icon-Check",
+        cobertura: "Cobertura de vidrios",
+        capital: null,
+        deducibles: null,
+      },
+    ],
+    asistencias: [
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia jurídica penal",
+        capital: 13385074,
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia jurídica civil",
+        capital: 6770.66,
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia en viaje",
+        capital: ["Tradicional"],
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Asistencia odontológica autos",
+        capital: null,
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Exequial",
+        capital: null,
+      },
+      {
+        typeCheck: "icon_done",
+        asisitecia: "Trámite de Tránsito",
+        capital: null,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Dinamico",
+    price: 398100,
+    financing: {
+      price: 43081,
+      quotas: 10,
+    },
+    border_button: {
+      color: "#191445",
+      height: 10,
+    },
+    coberturas: [
+      {
+        typeCheck: "icon_done",
+        cobertura: "Responsabilidad Civil Extracontractual",
+        capital: [3000000000],
+        deducibles: 0,
+      },
+      {
+        typeCheck: "square",
+        cobertura: "Pérdida total por hurto",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        cobertura: "Pérdida total daños",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        cobertura: "Pérdida parcial daños",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        cobertura: "Pérdida parcial hurto",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        cobertura: "Terremoto",
+        capital: 28500000,
+        deducibles: 950000,
+      },
+      {
+        cobertura: "Amparo patrimonial",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Gastos de transporte por pérdida total hurto",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        cobertura: "Gastos de transporte por pérdida total daños",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        cobertura: "Vehículo Sustituto",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Accidentes personales",
+        capital: 40000000,
+        deducibles: null,
+      },
+      {
+        cobertura: "RC General Familiar",
+        capital: 44000000,
+        deducibles: 950000,
+      },
+      {
+        cobertura: "Cobertura de vidrios",
+        capital: null,
+        deducibles: null,
+      },
+    ],
+    asistencias: [
+      {
+        asisitecia: "Asistencia jurídica penal",
+        capital: 13385074,
+      },
+      {
+        asisitecia: "Asistencia jurídica civil",
+        capital: 6770.66,
+      },
+      {
+        asisitecia: "Asistencia en viaje",
+        capital: ["Tradicional"],
+      },
+      {
+        asisitecia: "Asistencia odontológica autos",
+        capital: null,
+      },
+      {
+        asisitecia: "Exequial",
+        capital: null,
+      },
+      {
+        asisitecia: "Trámite de Tránsito",
+        capital: null,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Ligero",
+    price: 289100,
+    financing: {
+      price: 43081,
+      quotas: 10,
+    },
+    border_button: {
+      color: "#28A3AF",
+      height: 10,
+    },
+    coberturas: [
+      {
+        cobertura: "Responsabilidad Civil Extracontractual",
+        capital: [3000000000],
+        deducibles: 0,
+      },
+      {
+        cobertura: "Pérdida total por hurto",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        cobertura: "Pérdida total daños",
+        capital: 28500000,
+        deducibles: 0,
+      },
+      {
+        cobertura: "Pérdida parcial daños",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        cobertura: "Pérdida parcial hurto",
+        capital: 28500000,
+        deducibles: [950000],
+      },
+      {
+        cobertura: "Terremoto",
+        capital: 28500000,
+        deducibles: 950000,
+      },
+      {
+        cobertura: "Amparo patrimonial",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Gastos de transporte por pérdida total hurto",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        cobertura: "Gastos de transporte por pérdida total daños",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        cobertura: "Gastos de transporte por pérdida total daños",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        cobertura: "Vehículo Sustituto",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Accidentes personales",
+        capital: 13385000,
+        deducibles: null,
+      },
+      {
+        cobertura: "RC General Familiar",
+        capital: 6770660,
+        deducibles: null,
+      },
+    ],
+    asistencias: [
+      {
+        asisitecia: "Asistencia jurídica penal",
+        capital: 13385074,
+      },
+      {
+        asisitecia: "Asistencia jurídica civil",
+        capital: 6770.66,
+      },
+      {
+        asisitecia: "Asistencia en viaje",
+        capital: ["Tradicional"],
+      },
+      {
+        asisitecia: "Asistencia odontológica autos",
+        capital: null,
+      },
+      {
+        asisitecia: "Exequial",
+        capital: null,
+      },
+      {
+        asisitecia: "Trámite de Tránsito",
+        capital: null,
+      },
+    ],
+  },
+];

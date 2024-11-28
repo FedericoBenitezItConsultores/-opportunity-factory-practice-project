@@ -1,19 +1,18 @@
 import React from "react";
 import style from "./InfoPerson.module.css";
+import InputForm from "./atoms/input-form/InputForm";
 
 export const InfoPerson = () => {
   return (
     <div className={style.InfoPerson}>
       <h1 className={style.persona}>Persona</h1>
-
       <p className={style.information}>
         Ingresa la información de la persona, conocerla es importante para hacer
         una propuesta <br /> acorde a sus necesidades
       </p>
-
       <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
-      <div className={style.containerCard}>
+      <div className={style.document}>
         <div className={style.grid}>
           <div className={style.document1}>
             <div>
@@ -64,22 +63,9 @@ export const InfoPerson = () => {
         </div>
       </div>
 
-      <div className={style.floatingInput}>
-        <input
-          type="text"
-          id="nombre"
-          placeholder=""
-          className={style.input}
-        />
-        <label htmlFor="nombre" className={style.label}>
-          Primer nombre
-        </label>
+      <div>
+        <input type="text" id="nombre" placeholder="Primer nombre" />
       </div>
-
-      <label className={style.container_input}>
-        <input className={style.input} type="text" placeholder="nuevo valor" />
-        <p className={style.placeholder}></p>
-      </label>
 
       <p>Genero</p>
       <form>
@@ -97,6 +83,7 @@ export const InfoPerson = () => {
           </label>
         </div>
       </form>
+      <InputForm />
     </div>
   );
 };
