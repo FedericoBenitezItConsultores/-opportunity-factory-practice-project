@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "../ProgressBar/ProgressBar.module.css";
-import Triangle from "../../../assets/Triangle.png";
+import styles from "./ProgressBar.module.css";
+import Triangle from "../../../assets/png/Triangle.png";
 
 const ProgressBar = () => {
   const steps = [
     "Validación de datos",
     "Información del vehículo",
     "Información personal",
-    "Cotización", 
+    "Cotización",
   ];
 
   return (
@@ -20,20 +20,24 @@ const ProgressBar = () => {
         {steps.map((step, index) => (
           <div key={index} className={styles.stepContainer}>
             <div
-              className={`${styles.stepNumber} ${styles[`stepNumber${index + 1}`]} ${
-                index <= 1 ? styles.completed : styles.pending
-              }`}
+              className={`${styles.stepNumber} ${
+                styles[`stepNumber${index + 1}`]
+              } ${index <= 1 ? styles.completed : styles.pending}`}
             >
               {index + 1}
             </div>
             <span
-              className={`${styles.stepText} ${index === 3 ? styles.cotizacionFinal : ""}`}
+              className={`${styles.stepText} ${
+                index === 3 ? styles.cotizacionFinal : ""
+              }`}
             >
               {step}
             </span>
             {index < steps.length - 1 && (
               <div
-                className={`${styles.divider} ${index === 2 ? styles.divider3 : ""}`}
+                className={`${styles.divider} ${
+                  index === 2 ? styles.divider3 : ""
+                }`}
               ></div>
             )}
           </div>

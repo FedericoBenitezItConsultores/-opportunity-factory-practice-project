@@ -1,16 +1,13 @@
 import React from "react";
-import styles from "./styles.module.css";
 import PriceTemplate from "../../../components/template/price-template/PriceTemplate";
-import Input from "../../../components/atoms/input/Input";
+import Navbar from "../../../components/organisms/navbar-2/Navbar";
 
 export default function PricePage() {
-  console.log('first')
+  console.log("first");
   return (
     <div>
-      {/* <Input placeholder={"Nuevo valor"} /> */}
+      <Navbar />
       <PriceTemplate />
-      
-     
     </div>
   );
 }
