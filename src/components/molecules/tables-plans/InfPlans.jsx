@@ -1,10 +1,12 @@
 import styles from "./styles.module.css";
 import img_financing from "../../../assets/svg/CombinedShape.svg";
 import img_arrow_down from "../../../assets/svg/flechitaArriba.svg";
-import TablesPlans from "./TablesPlans";
+import TableCobertura from "./TableCobertura";
+import TableAsistencia from "./TableAsistencia";
 export default function InfPlans({ plan }) {
+  console.log(plan);
   return (
-    <div className={styles.div_root}>
+    <div className={styles.div_root1}>
       <img
         className={styles.img_arrow_down}
         src={img_arrow_down}
@@ -41,7 +43,35 @@ export default function InfPlans({ plan }) {
           </p>
         </div>
       </div>
-      <TablesPlans plan={plan} />
+      {plan && (
+        <>
+          <div>
+            <div
+              style={{
+                backgroundColor: plan.styles_tables.bg,
+                color: plan.styles_tables.color,
+              }}
+              className={styles.title_table}
+            >
+              <h1>Cobertura {plan.name}</h1>
+            </div>
+            <TableCobertura plan={plan} />
+          </div>
+          <div>
+            <div
+              style={{
+                marginTop: "100px",
+                backgroundColor: plan.styles_tables.bg,
+                color: plan.styles_tables.color,
+              }}
+              className={styles.title_table}
+            >
+              <h1>Asistencias {plan.name}</h1>
+            </div>
+            <TableAsistencia plan={plan} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

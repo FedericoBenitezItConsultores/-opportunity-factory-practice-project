@@ -11,12 +11,16 @@ export const plans = [
       color: "#95DFE4",
       height: 10,
     },
+    styles_tables: {
+      bg: "#99E5EA",
+      color: " #1A1446",
+    },
     coberturas: [
       {
         typeCheck: "icon_done",
         cobertura: "Responsabilidad Civil Extracontractual",
-        capital: [3000000000],
-        deducibles:  0,
+        capital: [3000000000, 16090000, 28000000, 12000000, 3402000, 2100000],
+        deducibles: 0,
       },
       {
         typeCheck: "icon_done",
@@ -34,13 +38,13 @@ export const plans = [
         typeCheck: "icon_done",
         cobertura: "Pérdida parcial daños",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "icon_done",
         cobertura: "Pérdida parcial hurto",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "icon_done",
@@ -97,11 +101,15 @@ export const plans = [
       color: "#FFD000",
       height: 15,
     },
+    styles_tables: {
+      bg: "#FFD000 ",
+      color: " #1A1446",
+    },
     coberturas: [
       {
         typeCheck: "icon_done",
         cobertura: "Responsabilidad Civil Extracontractual",
-        capital: [3000000000],
+        capital: [3000000000, 16090000, 28000000, 12000000, 3402000, 2100000],
         deducibles: 0,
       },
       {
@@ -120,13 +128,13 @@ export const plans = [
         typeCheck: "icon_done",
         cobertura: "Pérdida parcial daños",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "icon_done",
         cobertura: "Pérdida parcial hurto",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "icon_done",
@@ -222,11 +230,15 @@ export const plans = [
       color: "#191445",
       height: 10,
     },
+    styles_tables: {
+      bg: "#1A1446  ",
+      color: " #FFFFFF",
+    },
     coberturas: [
       {
         typeCheck: "icon_done",
         cobertura: "Responsabilidad Civil Extracontractual",
-        capital: [3000000000],
+        capital: [3000000000, 16090000, 28000000, 12000000, 3402000, 2100000],
         deducibles: 0,
       },
       {
@@ -245,13 +257,13 @@ export const plans = [
         typeCheck: "square",
         cobertura: "Pérdida parcial daños",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "square",
         cobertura: "Pérdida parcial hurto",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "square",
@@ -348,11 +360,15 @@ export const plans = [
       color: "#28A3AF",
       height: 10,
     },
+    styles_tables: {
+      bg: "#28A3AF   ",
+      color: " #FFF4F5",
+    },
     coberturas: [
       {
         typeCheck: "icon_done",
         cobertura: "Responsabilidad Civil Extracontractual",
-        capital: [3000000000],
+        capital: [3000000000, 16090000, 28000000, 12000000, 3402000, 2100000],
         deducibles: 0,
       },
       {
@@ -371,13 +387,13 @@ export const plans = [
         typeCheck: "icon_done",
         cobertura: "Pérdida parcial daños",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "icon_done",
         cobertura: "Pérdida parcial hurto",
         capital: 28500000,
-        deducibles: [950000],
+        deducibles: [950000, 16090000, 28000000, 12000000, 3402000, 2100000],
       },
       {
         typeCheck: "icon_done",

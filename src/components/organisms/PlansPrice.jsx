@@ -18,9 +18,6 @@ export default function PlansPrice() {
         ))}
       </div>
       <InfPlans plan={planSelect} />
-      <div className={styles.div_table}>
-        <h1>{planSelect?.name}</h1>
-      </div>
     </div>
   );
 }
