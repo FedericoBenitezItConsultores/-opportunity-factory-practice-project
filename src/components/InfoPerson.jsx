@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./InfoPerson.module.css";
-import InputForm from "./atoms/input-form/InputForm";
+import InputForm from "./atoms/InputForm";
 
 export const InfoPerson = () => {
   return (
@@ -12,60 +12,77 @@ export const InfoPerson = () => {
       </p>
       <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
-      <div className={style.document}>
-        <div className={style.grid}>
-          <div className={style.document1}>
-            <div>
-              <table>
+      <div className={style.containerCard}>
+        {/* <div className={style.grid}> */}
+        <div className={style.document1}>
+          <div>
+            <table>
+              <tr>
+                <td>
+                  <div className={style.line} />
+                </td>
+                <td>
+                  <img className={style.Image} src="Grupo7616.svg" alt="" />
+                </td>
                 <tr>
-                  <td>
-                    <div className={style.line} />
-                  </td>
-                  <td>
-                    <img
-                      className={style.Grupo7616}
-                      src="Grupo7616.svg"
-                      alt=""
-                    />
-                  </td>
-                  <tr>
-                    <td className={style.documents}>Tipo de documento</td>
-                  </tr>
-                  <tr>
-                    <td>Cédula de Ciudadanía</td>
-                  </tr>
+                  <td className={style.documents}>Tipo de documento</td>
                 </tr>
-              </table>
-            </div>
-            <div>
-              <table>
                 <tr>
-                  <td>
-                    <div className={style.line} />
-                  </td>
-                  <td>
-                    <img
-                      className={style.Grupo7616}
-                      src="Grupo2046.svg"
-                      alt=""
-                    />
-                  </td>
-                  <tr>
-                    <td className={style.documents}>Identificación</td>
-                  </tr>
-                  <tr>
-                    <td>123456789</td>
-                  </tr>
+                  <td>Cédula de Ciudadanía</td>
                 </tr>
-              </table>
-            </div>
+              </tr>
+            </table>
           </div>
+          <div>
+            <table>
+              <tr>
+                <td>
+                  <div className={style.line} />
+                </td>
+                <td>
+                  <img className={style.Image} src="Grupo2046.svg" alt="" />
+                </td>
+                <tr>
+                  <td className={style.documents}>Identificación</td>
+                </tr>
+                <tr>
+                  <td>123456789</td>
+                </tr>
+              </tr>
+            </table>
+          </div>
+        </div>
+        {/* </div> */}
+      </div>
+
+      {/* <div className={style.floatingInput}>
+        <input
+          type="text"
+          id="nombre"
+          placeholder=""
+          className={style.input}
+        />
+        <label htmlFor="nombre" className={style.label}>
+          Primer nombre
+        </label>
+      </div> */}
+
+      <div className={style.container_inputs}>
+        <div className={style.InputForm1}>
+          <InputForm />
+        </div>
+
+        <div className={style.InputForm2}>
+          <InputForm label="primer apellido" />
         </div>
       </div>
 
-      <InputForm />
+      {/* <label className={style.container_input}>
+        <input className={style.input} type="text" placeholder="nuevo valor" />
+        <p className={style.placeholder}></p>
+      </label> */}
 
-      <p>Genero</p>
+      {/* <p>Genero</p>
       <form>
         <div className={style.gender}>
           <label>
@@ -80,7 +97,7 @@ export const InfoPerson = () => {
             Femenino
           </label>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };

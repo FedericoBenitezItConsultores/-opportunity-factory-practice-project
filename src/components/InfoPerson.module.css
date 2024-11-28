@@ -27,13 +27,6 @@
   border: 1px solid #e6e6e6;
 }
 
-.InfoPerson div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  gap: 100px;
-  padding-top: 20px;
-}
 
 .InfoPerson img {
   max-width: 100px;
@@ -53,12 +46,12 @@
   text-align: center;
 }
 
-.Grupo7616 {
+.Image {
   display: flex;
   height: 48px;
   width: 49px;
-  top: 458px;
-  left: 517px;
+  /* top: 458px;
+  left: 517px; */
 }
 
 .documents {
@@ -80,6 +73,24 @@
   justify-content: center;
   /* display: grid; */
   /* grid-gap: 20px; */
+}
+
+.container_inputs{
+  column-count: 2;
+  justify-content: center;
+
+}
+
+.InputForm1{
+  display: flex;
+  margin-left: -280px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.InputForm2{
+  display: flex;
+
 }
 
 
@@ -124,9 +135,7 @@
   transition: border-color 0.3s ease;
 }
 
-/* .input:focus {
-  border-color: #28a3af;
-} */
+
 
 .label {
   position: absolute;
@@ -145,3 +154,8 @@
   font-size: 12px;
   /* color: #28a3af;  */
 }
+
+
+
+
+
