@@ -4,32 +4,33 @@ export default function TablesPlans({ plan }) {
   return (
     <div className={styles.div_root}>
       <table style={{ width: "100%", textAlign: "center" }}>
-        <thead>
+        <thead className={styles.coverturas}>
           <tr>
-            <th>coberturas</th>
+            <th>3 coberturas</th>
             <th>Capital</th>
             <th>Deducibles</th>
           </tr>
         </thead>
-        <tbody>
-          {plan.coberturas.map((cobertura) => (
-            <tr>
-              <td>{cobertura.cobertura}</td>
+        
+        <tbody className={styles.tbody}>
+          {plan.coberturas.map((cobertura, index) => (
+            <tr key={index}>
+              <td className={styles.cell}>{cobertura.cobertura}</td>
+
               {cobertura.capital && typeof cobertura.capital === "number" ? (
-                <td>{cobertura.capital}</td>
+                <td className={styles.cell}>{cobertura.capital}</td>
               ) : (
-                <td>
+                <td className={styles.cell}>
                   {cobertura.capital && (
-                    <select>
-                      {cobertura.capital?.map((item) => (
-                        <option>{item}</option>
+                    <select className={styles.select}>
+                      {cobertura.capital?.map((item, idx) => (
+                        <option key={idx}>{item}</option>
                       ))}
                     </select>
                   )}
                 </td>
               )}
-
-              <td>{cobertura.deducibles}</td>
+              <td className={styles.cell}>{cobertura.deducibles}</td>
             </tr>
           ))}
         </tbody>

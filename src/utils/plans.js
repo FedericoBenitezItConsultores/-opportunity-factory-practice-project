@@ -15,7 +15,7 @@ export const plans = [
       {
         cobertura: "Responsabilidad Civil Extracontractual",
         capital: [3000000000],
-        deducibles: 0,
+        deducibles:  0,
       },
       {
         cobertura: "Pérdida total por hurto",
