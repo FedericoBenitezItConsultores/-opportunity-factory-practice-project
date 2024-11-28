@@ -24,7 +24,7 @@ export const InfoPerson = () => {
                   </td>
                   <td>
                     <img
-                      className={style.Grupo7616}
+                      className={style.Image}
                       src="Grupo7616.svg"
                       alt=""
                     />
@@ -46,7 +46,7 @@ export const InfoPerson = () => {
                   </td>
                   <td>
                     <img
-                      className={style.Grupo7616}
+                      className={style.Image}
                       src="Grupo2046.svg"
                       alt=""
                     />
@@ -64,7 +64,7 @@ export const InfoPerson = () => {
         </div>
       </div>
 
-      <div className={style.floatingInput}>
+      {/* <div className={style.floatingInput}>
         <input
           type="text"
           id="nombre"
@@ -74,7 +74,7 @@ export const InfoPerson = () => {
         <label htmlFor="nombre" className={style.label}>
           Primer nombre
         </label>
-      </div>
+      </div> */}
 
       <label className={style.container_input}>
         <input className={style.input} type="text" placeholder="nuevo valor" />
