@@ -5,17 +5,17 @@ export default function TableAsistencia({ plan }) {
   if (!plan) return;
   return (
     <div className={styles.div_root}>
-      <table style={{ width: "100%", textAlign: "center" }}>
+      <table style={{ width: "100%"}}>
         <thead className={styles.coverturas}>
           <tr>
             <th>Asistencia</th>
-            <th>Capital</th>
+            <th className={styles.capital}>Capital</th>
           </tr>
         </thead>
 
         <tbody className={styles.tbody}>
           {plan.asistencias.map((asistencia, index) => (
-            <tr key={index}>
+            <tr className={styles.row} key={index}>
               <td className={styles.cell}>
                 {asistencia.typeCheck === "icon_done" && (
                   <img src={icon_done} alt="" />

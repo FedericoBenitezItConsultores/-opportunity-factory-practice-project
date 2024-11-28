@@ -8,7 +8,7 @@ export default function TableCobertura({ plan }) {
       <table style={{ width: "100%", textAlign: "center" }}>
         <thead className={styles.coverturas}>
           <tr>
-            <th>3 coberturas</th>
+            <th>coberturas</th>
             <th>Capital</th>
             <th>Deducibles</th>
           </tr>
@@ -16,7 +16,7 @@ export default function TableCobertura({ plan }) {
 
         <tbody className={styles.tbody}>
           {plan.coberturas.map((cobertura, index) => (
-            <tr key={index}>
+            <tr className={styles.row} key={index}>
               <td className={styles.cell}>
                 {cobertura.typeCheck === "icon_done" && (
                   <img src={icon_done} alt="" />
