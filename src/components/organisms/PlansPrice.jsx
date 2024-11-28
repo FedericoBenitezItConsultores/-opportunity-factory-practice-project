@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { plans } from "../../utils/plans";
 import CardPlan from "../molecules/card-plan/CardPlan";
 import styles from "./styles.module.css";
-import TablesPlans from "../molecules/tables-plans/TablesPlans";
+import InfPlans from "../molecules/tables-plans/InfPlans";
 export default function PlansPrice() {
   const [planSelect, setPlanSelect] = useState(null);
-  console.log(planSelect);
   return (
     <div>
       <div className={styles.div_root}>
@@ -18,7 +17,7 @@ export default function PlansPrice() {
           />
         ))}
       </div>
-      <TablesPlans />
+      <InfPlans plan={planSelect} />
       <div className={styles.div_table}>
         <h1>{planSelect?.name}</h1>
       </div>

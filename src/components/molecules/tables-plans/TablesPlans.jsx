@@ -1,38 +1,39 @@
 import styles from "./styles.module.css";
-import img_financing from "../../../assets/svg/CombinedShape.svg";
-import img_arrow_down from "../../../assets/svg/Icon-Arrowdown.svg";
-export default function TablesPlans() {
+export default function TablesPlans({ plan }) {
+  if (!plan) return;
   return (
     <div className={styles.div_root}>
-      <img className={styles.img_arrow_down} src={img_arrow_down} alt="" />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        className={styles.div_inf}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <img className={styles.financing_icon} src={img_financing} />
-          <p className={styles.p_inf}>
-            En este plan no están seleccionadas las siguientes coberturas,
-            puedes agregarlas de manera opcional:
-          </p>
-        </div>
-        <p className={styles.p_inf_2}>
-          - Pérdida parcial por daños y Pérdida parcial por hurto
-        </p>
-      </div>
-      <div></div>
+      <table style={{ width: "100%", textAlign: "center" }}>
+        <thead>
+          <tr>
+            <th>coberturas</th>
+            <th>Capital</th>
+            <th>Deducibles</th>
+          </tr>
+        </thead>
+        <tbody>
+          {plan.coberturas.map((cobertura) => (
+            <tr>
+              <td>{cobertura.cobertura}</td>
+              {cobertura.capital && typeof cobertura.capital === "number" ? (
+                <td>{cobertura.capital}</td>
+              ) : (
+                <td>
+                  {cobertura.capital && (
+                    <select>
+                      {cobertura.capital?.map((item) => (
+                        <option>{item}</option>
+                      ))}
+                    </select>
+                  )}
+                </td>
+              )}
+
+              <td>{cobertura.deducibles}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
