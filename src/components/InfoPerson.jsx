@@ -79,7 +79,8 @@ export const InfoPerson = () => {
         <p className={style.placeholder}></p>
       </label> */}
 
-      {/* <p>Genero</p>
+      <div className={style.container_gender}>
+      <p className={style.gender_p}>Genero</p>
       <form>
         <div className={style.gender}>
           <label>
@@ -94,7 +95,9 @@ export const InfoPerson = () => {
             Femenino
           </label>
         </div>
-      </form> */}
+      </form>
+      </div>
+
     </div>
   );
 };

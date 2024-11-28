@@ -77,8 +77,19 @@
 
 .containerOne{
   column-count: 2;
-  justify-content: center;
+  margin-top: 30px;
+  /* justify-content: center;
+  bordes de los input
+  */
+  /* border: 1px solid #919191;
+  border-radius: 10px; */
+}
 
+.container_gender{
+  margin-right: 400px;
+  margin-top: 10px;
+  border: 1px solid #919191;
+  border-radius: 10px;
 }
 
 .InputForm1{
@@ -96,8 +107,8 @@
 
 
 .gender{
-  height: 50px;
   width: 174px;
+  height: 50px;
   background-color: #E6E6E6;
   border: 1px solid #919191;
   font-size: 13px;
@@ -112,7 +123,7 @@
   justify-content: space-between; 
   gap: 9px; 
   width: 104px;
-  margin-top: -23px;
+  margin-top: 20px;
 }
 
 
