@@ -11,33 +11,26 @@
 }
 
 .financing_icon {
-  /* Layout Properties */
   width: 16px;
   height: 16px;
-  /* UI Properties */
-  opacity: 1;
 }
-
 .p_inf {
-  top: 759px;
-  left: 447px;
+  top: 750px;
+  left: 400px;
   width: 737px;
   height: 19px;
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-0061f5);
   text-align: left;
   letter-spacing: 0px;
-  color: #0061f5;
-  opacity: 1;
+  margin-left: 50px;
 }
 
 .p_inf_2 {
-  /* Layout Properties */
   top: 784px;
   left: 447px;
   width: 727px;
   height: 19px;
-  /* UI Properties */
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-343741);
   text-align: left;
@@ -48,36 +41,39 @@
 
 .div_inf {
   top: 737px;
-  right: 90px;
   width: 851px;
   height: 86px;
-  /* UI Properties */
-  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-  border: 1px solid var(--unnamed-color-c0bfc0);
+  font-size: 16px;
+  font-family: "roboto Bold";
+  white-space: nowrap;
+  color: #0061f5;
+  padding-right: 100px;
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #c0bfc0;
   border-radius: 3px;
   opacity: 1;
-  border-left: 4px solid #0723c1;
+  border-left: 4px solid #0061f5;
+  margin: 30px;
 }
 
 .img_arrow_down {
-  /* Layout Properties */
   position: absolute;
-  top: 29px;
+  top: 20px;
   left: 1108px;
   width: 24px;
   height: 13px;
-  /* UI Properties */
-  background: transparent url("img/Icon-Arrow down.png") 0% 0% no-repeat padding-box;
+  background: transparent url("img/Icon-Arrow down.png") 0% 0% no-repeat
+    padding-box;
   opacity: 1;
 }
 
 .coverturas {
   font-size: 24px;
   color: #1a1446;
-  font-size: "roboto Bold";
-  left: 215px;
+  font-family: "roboto Bold";
+  padding-left: 10px;
+  left: 20px;
+  position: relative;
   width: 249px;
   height: 39px;
 }
@@ -93,9 +89,8 @@
 }
 
 .cell {
-
-  padding: 40px;
   border-bottom: 1px solid #ddd;
+  padding: 40px;
 }
 
 .select {
@@ -107,25 +102,27 @@
 
 .fallo {
   display: flex;
-  margin-right: 30px;
+  margin-right: -10px;
   justify-content: flex-end;
   padding: 30px;
+  padding-bottom: 0px;
 }
 
 .title_table {
   /* Layout Properties */
   top: 738px;
   left: 189px;
-  width: 100%;
+  width: 1063px;
   height: 74px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* UI Properties */
   background: var(--unnamed-color-99e5ea) 0% 0% no-repeat padding-box;
-  background: #99E5EA 0% 0% no-repeat padding-box;
+  background: #99e5ea 0% 0% no-repeat padding-box;
   border-radius: 6px 6px 0px 0px;
   opacity: 1;
+  margin-left: 50px;
+  margin-bottom: 40px;
 }
 
 .title_table h1 {
@@ -152,8 +149,16 @@
   /* UI Properties */
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
   border: 1px solid var(--unnamed-color-707070);
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   opacity: 1;
   border-radius: 2px;
+}
+
+.capital {
+  padding-left: 0; /* No es necesario si centramos completamente */
+  left: 10; /* Elimina el desplazamiento izquierdo */
+  margin: 0 auto; /* Centra horizontalmente */
+  display: block; /* Asegúrate de que sea un bloque */
+  text-align: center; /* Centra el texto dentro del elemento */
 }
