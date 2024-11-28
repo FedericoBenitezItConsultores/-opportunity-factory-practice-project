@@ -6,8 +6,7 @@ const Input = ({ value, onChange, placeholder, ...props }) => {
   const labelRef = useRef(null);
 
   function clickEnELDOM(e) {
-    console.log(e.composedPath().includes(labelRef.current));
-
+    // console.log(e.composedPath().includes(labelRef.current));
     if (!e.composedPath().includes(labelRef.current)) {
       setInputActive(false);
     } else {

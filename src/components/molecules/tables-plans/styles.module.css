@@ -5,15 +5,15 @@
 
 .div_root {
   border-top: none !important;
-  /* border: 1px #e6e6e6 solid; */
-  /* min-height: 200em; */
   position: relative;
+  padding: 25px;
 }
 
 .financing_icon {
   width: 16px;
   height: 16px;
 }
+
 .p_inf {
   top: 750px;
   left: 400px;
@@ -62,8 +62,7 @@
   left: 1108px;
   width: 24px;
   height: 13px;
-  background: transparent url("img/Icon-Arrow down.png") 0% 0% no-repeat
-    padding-box;
+  background: transparent url("img/Icon-Arrow down.png") 0% 0% no-repeat padding-box;
   opacity: 1;
 }
 
@@ -86,6 +85,7 @@
   color: #343741;
   text-align: left;
   left: 214px;
+
 }
 
 .cell {
@@ -156,9 +156,14 @@
 }
 
 .capital {
-  padding-left: 0; /* No es necesario si centramos completamente */
-  left: 10; /* Elimina el desplazamiento izquierdo */
-  margin: 0 auto; /* Centra horizontalmente */
-  display: block; /* Asegúrate de que sea un bloque */
-  text-align: center; /* Centra el texto dentro del elemento */
+  padding-left: 0;
+  /* No es necesario si centramos completamente */
+  left: 10;
+  /* Elimina el desplazamiento izquierdo */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  display: block;
+  /* Asegúrate de que sea un bloque */
+  text-align: center;
+  /* Centra el texto dentro del elemento */
 }

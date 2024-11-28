@@ -6,11 +6,21 @@ import { FooterDiligenciación } from "../../molecules/footer-delecation/FooterD
 export default function PriceTemplate() {
   return (
     <div className={styles.div_father}>
-      <h1 className={styles.title}>Cotización</h1>
-      <p className={styles.sub_title}>
-        Listo, te sugerimos un paquete recomendado, sin embargo puedes
-        personalizarlo de acuerdo a la necesidad.
-      </p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "20px",
+        }}
+      >
+        <h1 className={styles.title}>Cotización</h1>
+        <p className={styles.sub_title}>
+          Listo, te sugerimos un paquete recomendado, sin embargo puedes
+          personalizarlo de acuerdo a la necesidad.
+        </p>
+      </div>
       <div className={styles.div_plan_price}>
         <PlansPrice />
       </div>

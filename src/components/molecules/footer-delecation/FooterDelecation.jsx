@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./style.module.css";
 
 export const FooterDiligenciación = () => {
-  console.log("object");
   return (
     <div className={styles.container}>
       <div

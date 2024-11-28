@@ -2,21 +2,20 @@ import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 
 export default function Calificasion() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const tiempo = setTimeout(() => {
-      setVisible(false);
-    }, 3000);
+      setVisible(true);
+    }, 30000);
 
     return () => clearTimeout(tiempo);
   }, []);
 
   if (!visible) return null;
-
   return (
     <div className={styles.container}>
-      <div className={styles.close}>
+      <div className={styles.close} onClick={() => setVisible(false)}>
         <img src="/public/IconClose.svg" alt="#" />
       </div>
       <div>

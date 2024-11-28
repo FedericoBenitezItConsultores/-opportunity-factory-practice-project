@@ -36,7 +36,7 @@ export default function CardPlan(plan) {
           />
         </div>
       </div>
-      <h3 className={styles.name}>{plan.name}</h3>
+      <h3 className={styles.name}>{plan.name.toUpperCase()}</h3>
       <p className={styles.price}>
         ${plan.price.toLocaleString("es-ES").replace(".", "'")}
       </p>

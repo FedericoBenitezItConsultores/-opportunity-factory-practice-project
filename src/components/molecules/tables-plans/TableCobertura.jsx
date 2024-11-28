@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 import icon_done from "../../../assets/svg/icon_done.svg";
 export default function TableCobertura({ plan }) {
-  console.log(plan);
   if (!plan) return;
   return (
     <div className={styles.div_root}>

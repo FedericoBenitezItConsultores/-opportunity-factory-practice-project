@@ -24,7 +24,7 @@
 
 .div_father {
     /* Layout Properties */
-
+    margin-top: 50px;
     /* UI Properties */
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     background: #FFFFFF 0% 0% no-repeat padding-box;
