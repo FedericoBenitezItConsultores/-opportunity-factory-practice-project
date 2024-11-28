@@ -50,6 +50,7 @@ export const InfoPerson = () => {
                 </tr>
               </tr>
             </table>
+            
           </div>
         </div>
         {/* </div> */}
@@ -67,14 +68,10 @@ export const InfoPerson = () => {
         </label>
       </div> */}
 
-      <div className={style.container_inputs}>
-        <div className={style.InputForm1}>
+      <div className={style.containerOne}>
           <InputForm />
-        </div>
 
-        <div className={style.InputForm2}>
           <InputForm label="primer apellido" />
-        </div>
       </div>
 
       {/* <label className={style.container_input}>

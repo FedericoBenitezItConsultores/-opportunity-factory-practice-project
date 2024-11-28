@@ -75,7 +75,7 @@
   /* grid-gap: 20px; */
 }
 
-.container_inputs{
+.containerOne{
   column-count: 2;
   justify-content: center;
 
@@ -86,12 +86,13 @@
   margin-left: -280px;
   padding-top: 20px;
   padding-bottom: 70px;
+  gap: 50px;
 }
 
-.InputForm2{
+/* .InputForm2{
   display: flex;
 
-}
+} */
 
 
 .gender{

@@ -14,9 +14,11 @@
 }
 
 .p_text {
-    top: 10px;
+    /* top: 10px;
     left: 10px;
-    width: 100%;
+    width: 100%; */
+    left: 10px;
+    padding-top: 10px;
     position: absolute;
     display: flex;
     justify-content: center;
