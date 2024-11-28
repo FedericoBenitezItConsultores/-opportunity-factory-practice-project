@@ -26,13 +26,17 @@ export default function TableAsistencia({ plan }) {
                 {asistencia.asisitecia}
               </td>
               {asistencia.capital && typeof asistencia.capital === "number" ? (
-                <td className={styles.cell}>{asistencia.capital}</td>
+                <td className={styles.cell}>
+                  {asistencia.capital.toLocaleString("es-ES").replace(".", "'")}
+                </td>
               ) : (
                 <td className={styles.cell}>
                   {asistencia.capital && (
                     <select className={styles.select}>
                       {asistencia.capital?.map((item, idx) => (
-                        <option key={idx}>{item}</option>
+                        <option key={idx}>
+                          {item.toLocaleString("es-ES").replace(".", "'")}
+                        </option>
                       ))}
                     </select>
                   )}

@@ -80,7 +80,7 @@ export const plans = [
       {
         typeCheck: "icon_done",
         asisitecia: "Asistencia jurídica civil",
-        capital: 6770.66,
+        capital: 677066,
       },
       {
         typeCheck: "icon_done",
@@ -194,7 +194,7 @@ export const plans = [
       {
         typeCheck: "icon_done",
         asisitecia: "Asistencia jurídica civil",
-        capital: 6770.66,
+        capital: 677066,
       },
       {
         typeCheck: "icon_done",
@@ -323,7 +323,7 @@ export const plans = [
       {
         typeCheck: "icon_done",
         asisitecia: "Asistencia jurídica civil",
-        capital: 6770.66,
+        capital: 677066,
       },
       {
         typeCheck: "icon_done",
@@ -460,7 +460,7 @@ export const plans = [
       {
         typeCheck: "icon_done",
         asisitecia: "Asistencia jurídica civil",
-        capital: 6770.66,
+        capital: 677066,
       },
       {
         typeCheck: "icon_done",

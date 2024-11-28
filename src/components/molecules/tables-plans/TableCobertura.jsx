@@ -27,13 +27,17 @@ export default function TableCobertura({ plan }) {
                 {cobertura.cobertura}
               </td>
               {cobertura.capital && typeof cobertura.capital === "number" ? (
-                <td className={styles.cell}>{cobertura.capital}</td>
+                <td className={styles.cell}>
+                  {cobertura.capital.toLocaleString("es-ES").replace(".", "'")}
+                </td>
               ) : (
                 <td className={styles.cell}>
                   {cobertura.capital && (
                     <select className={styles.select}>
                       {cobertura.capital?.map((item, idx) => (
-                        <option key={idx}>{item}</option>
+                        <option key={idx}>
+                          {item.toLocaleString("es-ES").replace(".", "'")}
+                        </option>
                       ))}
                     </select>
                   )}
@@ -41,13 +45,19 @@ export default function TableCobertura({ plan }) {
               )}
               {cobertura.deducibles &&
               typeof cobertura.deducibles === "number" ? (
-                <td className={styles.cell}>{cobertura.deducibles}</td>
+                <td className={styles.cell}>
+                  {cobertura.deducibles
+                    .toLocaleString("es-ES")
+                    .replace(".", "'")}
+                </td>
               ) : (
                 <td className={styles.cell}>
                   {cobertura.deducibles && (
                     <select className={styles.select}>
                       {cobertura.deducibles?.map((item, idx) => (
-                        <option key={idx}>{item}</option>
+                        <option key={idx}>
+                          {item.toLocaleString("es-ES").replace(".", "'")}
+                        </option>
                       ))}
                     </select>
                   )}
