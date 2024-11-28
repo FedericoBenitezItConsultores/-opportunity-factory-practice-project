@@ -13,7 +13,6 @@ export const InfoPerson = () => {
       <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
       <div className={style.containerCard}>
-        {/* <div className={style.grid}> */}
         <div className={style.document1}>
           <div>
             <table>
@@ -50,54 +49,57 @@ export const InfoPerson = () => {
                 </tr>
               </tr>
             </table>
-            
           </div>
         </div>
-        {/* </div> */}
       </div>
 
-      {/* <div className={style.floatingInput}>
-        <input
-          type="text"
-          id="nombre"
-          placeholder=""
-          className={style.input}
-        />
-        <label htmlFor="nombre" className={style.label}>
-          Primer nombre
-        </label>
-      </div> */}
 
       <div className={style.containerOne}>
-          <InputForm />
+        <InputForm />
 
-          <InputForm label="primer apellido" />
+        <InputForm label="primer apellido" />
+        
       </div>
 
-      {/* <label className={style.container_input}>
-        <input className={style.input} type="text" placeholder="nuevo valor" />
-        <p className={style.placeholder}></p>
-      </label> */}
+      <div className={style.containerTwo}>
+        <div className={style.container_gender}>
+          <p className={style.gender_p}>Genero</p>
+          <form>
+            <div className={style.gender}>
+              <label>
+                <input type="radio" name="genero" value="masculino" />
+                Masculino
+              </label>
+            </div>
 
-      <div className={style.container_gender}>
-      <p className={style.gender_p}>Genero</p>
-      <form>
-        <div className={style.gender}>
-          <label>
-            <input type="radio" name="genero" value="masculino" />
-            Masculino
-          </label>
+            <div className={style.gender}>
+              <label>
+                <input type="radio" name="genero" value="femenino" />
+                Femenino
+              </label>
+            </div>
+          </form>
         </div>
 
-        <div className={style.gender}>
-          <label>
-            <input type="radio" name="genero" value="femenino" />
-            Femenino
-          </label>
+        <div className={style.info_date}>
+          <p className={style.gender_birth}>Fecha de nacimiento</p>
+          <form>
+            <div className={style.gender}>
+              <label>
+                <input type="radio" name="genero" value="masculino" />
+                Masculino
+              </label>
+            </div>
+
+            <div className={style.gender}>
+              <label>
+                <input type="radio" name="genero" value="femenino" />
+                Femenino
+              </label>
+            </div>
+          </form>
         </div>
-      </form>
       </div>
-
     </div>
   );
 };
