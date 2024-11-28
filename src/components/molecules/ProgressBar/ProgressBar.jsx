@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./ProgressBar.module.css";
-import Triangle from "../../assets/Triangle.png";
+import styles from "../ProgressBar/ProgressBar.module.css";
+import Triangle from "../../../assets/Triangle.png";
 
 const ProgressBar = () => {
   const steps = [

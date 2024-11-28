@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from '../organisms/NavBar';
-import ProgressBar from '../molecules/ProgressBar';
-import styles from './MainLayout.module.css'; 
+import NavBar from '../../organisms/NavBar/NavBar';
+import ProgressBar from '../../molecules/ProgressBar/ProgressBar';
+import styles from '../MainLayout/MainLayout.module.css'; 
 const MainLayout = ({ children }) => {
   return (
     <div>

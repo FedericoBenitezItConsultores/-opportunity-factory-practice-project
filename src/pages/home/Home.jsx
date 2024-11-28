@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayout from "../../components/template/MainLayout";
+import MainLayout from "../../components/template/MainLayout/MainLayout";
 import styles from "./Home.module.css";
 import icon_left from "../../assets/Icon-Left.png";
 
