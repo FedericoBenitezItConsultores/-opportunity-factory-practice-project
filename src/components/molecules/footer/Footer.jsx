@@ -1,12 +1,12 @@
-import { CotizacionPdf } from "../cotizacion-pdf/CotizacionPdf";
-import { FooterDiligenciación } from "../footer-deligenciación/FooterDeligenciacion";
+import { CotizacionPdf } from "../price-pdf/PricePdf";
+import { FooterDiligenciación } from "../footer-delecation/FooterDelecation";
 import styles from "./style.module.css";
 export const Footer = () => {
   return (
     <>
       <footer>
         <div className={styles.cotizacion}>
-          <CotizacionPdf/>
+          <CotizacionPdf />
         </div>
         <div>
           <div className={styles.container}>
