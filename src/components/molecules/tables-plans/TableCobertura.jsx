@@ -1,14 +1,20 @@
 import styles from "./styles.module.css";
 import icon_done from "../../../assets/svg/icon_done.svg";
 export default function TableCobertura({ plan }) {
-  console.log(plan);
   if (!plan) return;
   return (
     <div className={styles.div_root}>
       <table style={{ width: "100%", textAlign: "center" }}>
         <thead className={styles.coverturas}>
           <tr>
-            <th>3 coberturas</th>
+            <th>
+              {
+                plan.coberturas.filter(
+                  (cobertura) => cobertura.typeCheck === "icon_done"
+                ).length
+              }{" "}
+              coberturas
+            </th>
             <th>Capital</th>
             <th>Deducibles</th>
           </tr>

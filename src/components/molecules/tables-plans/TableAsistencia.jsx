@@ -8,7 +8,14 @@ export default function TableAsistencia({ plan }) {
       <table style={{ width: "100%", textAlign: "center" }}>
         <thead className={styles.coverturas}>
           <tr>
-            <th>Asistencia</th>
+            <th>
+              {
+                plan.coberturas.filter(
+                  (cobertura) => cobertura.typeCheck === "icon_done"
+                ).length
+              }
+              Asistencia
+            </th>
             <th>Capital</th>
           </tr>
         </thead>
@@ -22,7 +29,7 @@ export default function TableAsistencia({ plan }) {
                 )}
                 {asistencia.typeCheck === "square" && (
                   <span className={styles.square}> </span>
-                )}{" "}
+                )}
                 {asistencia.asisitecia}
               </td>
               {asistencia.capital && typeof asistencia.capital === "number" ? (
