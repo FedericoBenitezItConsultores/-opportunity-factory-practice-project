@@ -12,8 +12,8 @@ const NavBar = () => {
       <div className={styles.container}>
       <div className={styles.rightSection}>
       <img src={page_tab} alt="page_tab"  />
-        <span>Andrés Salamanca</span>
-        <img src={Profile} alt="Profile" className={styles.Profile} />
+        <span className={styles.name}>Andrés Salamanca</span>
+        <img src={Profile} alt="Profile" className={styles.profile} />
         <button className={styles.button}>
           Cerrar sesión
         </button>

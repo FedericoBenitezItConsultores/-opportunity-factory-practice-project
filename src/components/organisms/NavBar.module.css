@@ -42,13 +42,24 @@
  
   
   .button {
-    color: black; 
+    color: #1a1446; 
     background-color: #ffd000;
-    top: 25px;
-    left: 1174px;
+    font-size: 15px;
+    font-weight: 600;
     width: 122px;
     height: 36px;
     border: 1px solid #1E1045;
     border-radius: 3px;
     opacity: 100%;
+  }
+
+  .name{
+    font-size: 14px;
+    color: #1a1446;
+    font-weight: 600;
+  }
+
+  .profile{
+    width: 30px;
+    height: 30px;
   }

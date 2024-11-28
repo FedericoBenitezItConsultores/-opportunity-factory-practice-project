@@ -1,37 +1,44 @@
 .container {
   display: flex;
-  justify-content: space-between;
   background-color: #e6e6e668;
-  padding: 10px 50px; /* Reduje el padding para hacerlo más compacto */
-  height: 60px;
+  padding: 10px 50px;
+  min-height: 45px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .price {
   gap: 5px;
   display: flex;
-  padding: 5px 20px; /* Reducido el espacio */
-  padding-left: 80px;
-  padding-top: 23px;
+  padding: 5px 20px;
+  padding-left: 92px;
+  padding-top: 15px;
   padding-bottom: 5.5px;
   padding-right: 60px;
 }
 
 .title {
   gap: 5px;
-  font-size: 0.800rem;
+  font-size: 11px;
   color: #343741;
 }
 
 .id {
   color: #1a1446;
   font-weight: 600;
-  font-size: 0.800rem;
+  font-size: 11px;
+  margin-right: 10px;
 }
 
 .stepContainer {
   display: flex;
   align-items: center;
-  margin-right: 10px; /* Reducido el margen para hacer que los elementos estén más juntos */
+  margin-right: 20px;
 }
 
 .stepNumber {
@@ -39,56 +46,72 @@
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  width: 1.5rem; /* Mantengo el tamaño general */
-  height: 1.5rem;
-  font-size: 0.8rem; /* Asegura que el texto encaje */
+  font-size: 12px;
   text-align: center;
-  margin-right: 5px; /* Reduje el margen para acercar los elementos */
+  margin-right: 5px;
+  width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-/* Estilos específicos para cada número */
 .stepNumber1 {
-  background-color: #99e3ea; /* Diferente color para el primer número */
+  background-color: #99e3ea;
   color: #1a1446;
   border: 1px solid #28a3af;
 }
 
 .stepNumber2 {
-  background-color: #99e3ea; /* Diferente color para el primer número */
+  background-color: #99e3ea;
   color: #1a1446;
   border: 1px solid #28a3af;
+  margin-left: -15px;
 }
 
 .stepNumber3 {
-  background-color: #e6e6e668; /* Diferente color para el tercer número */
+  background-color: #e6e6e668;
   color: #1a1446;
   border: 2px solid #28a3af;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -15px;
 }
 
 .stepNumber4 {
-  background-color: #e6e6e668; /* Diferente color para el cuarto número */
+  background-color: #e6e6e668;
   color: #808080;
   border: 1px solid #c0bfc0;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -15px;
 }
 
 .stepText {
-  margin-left: 0.5rem;
-  font-size: 0.800rem;
+  margin-left: 1px;
+  font-size: 11px;
   color: #1a1446;
   font-weight: 600;
+}
+
+.cotizacionFinal {
+  color: #808080;
+  margin-left: 1px;
 }
 
 .divider {
   width: 1rem;
   height: 1px;
   background-color: #1a1416;
-  margin: 0 0.5rem;
-  margin-left: 1rem;
+  margin: 0 0.1rem;
+  margin-left: 0.5rem;
   border: 1px solid #1a1416;
+}
+
+.divider3 {
+  background-color: #c0c0c0;
+  border: 0px solid #c0c0c0;
 }
 
 .completed {
@@ -96,9 +119,9 @@
   color: #1a1446;
   border-width: 2px;
   border: 1px solid #28a3af;
-  font-size: 0.800rem;
-  width: 1.1rem;
-  height: 1.1rem;
+  font-size: 12px;
+  width: 1rem;
+  height: 1rem;
 }
 
 .pending {
@@ -107,7 +130,9 @@
 
 .triangle {
   position: absolute;
-  margin-left: 1007px;
-  margin-top: 30px;
+  margin-left: 395px;
+  margin-top: 65px;
+  width: 43px;
+  height: 20px;
   color: #ffffff;
 }

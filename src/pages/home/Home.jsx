@@ -6,12 +6,18 @@ import icon_left from "../../assets/Icon-Left.png";
 const Home = () => {
   return (
     <MainLayout>
-      <p className={styles.title}>Póliza Express</p>
-      <img src={icon_left} alt="icon_left" className={styles.arrow} />
-      <p className={styles.title}>Mis negocios en linea</p>
-      <img src={icon_left} alt="icon_left" className={styles.arrow}/>
-      <p className={styles.title}>Nueva cotización</p>
-      <button className={styles.button}>Ir a mis negocios</button>
+      <div className={styles.container}>
+        <div>
+          <p className={`${styles.title} ${styles.grey}`}>Póliza Express</p>
+          <img src={icon_left} alt="icon_left" className={styles.arrow} />
+          <p className={`${styles.title} ${styles.grey}`}>
+            Mis negocios en línea
+          </p>
+          <img src={icon_left} alt="icon_left" className={styles.arrow} />
+          <p className={`${styles.title} ${styles.blue}`}>Nueva cotización</p>
+        </div>
+        <button className={styles.button}>Ir a mis negocios</button>
+      </div>
     </MainLayout>
   );
 };
