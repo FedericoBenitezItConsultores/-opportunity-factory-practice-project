@@ -30,9 +30,9 @@
 .InfoPerson div {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   gap: 100px;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 .InfoPerson img {
@@ -101,6 +101,11 @@
   gap: 9px; 
   width: 104px;
   margin-top: -23px;
+}
+.tex_gender{
+width: 63px;
+height: 19px;
+margin-right: 30px;
 }
 .input_age{
   position: relative;

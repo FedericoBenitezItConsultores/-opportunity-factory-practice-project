@@ -64,11 +64,12 @@ export const InfoPerson = () => {
         </div>
       </div>
 
-      <div>
-        <input type="text" id="nombre" placeholder="Primer nombre" />
+      <div className="style.input_age">
+        <label htmlFor="">Primer nombre *</label>
+        <input type="text" id="nombre" placeholder="" />
       </div>
 
-      <p>Genero *</p>
+      <label className={style.tex_gender}>Genero *</label>
       <form>
         <div className={style.gender}>
         <label>
