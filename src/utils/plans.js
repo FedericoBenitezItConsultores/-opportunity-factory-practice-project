@@ -16,7 +16,7 @@ export const plans = [
         typeCheck: "icon_done",
         cobertura: "Responsabilidad Civil Extracontractual",
         capital: [3000000000],
-        deducibles: 0,
+        deducibles:  0,
       },
       {
         typeCheck: "icon_done",
