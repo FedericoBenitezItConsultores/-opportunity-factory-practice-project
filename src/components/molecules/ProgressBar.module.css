@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e6e6e668;
+  padding: 10px 50px; /* Reduje el padding para hacerlo más compacto */
+  height: 60px;
+}
+
+.price {
+  gap: 5px;
+  display: flex;
+  padding: 5px 20px; /* Reducido el espacio */
+  padding-left: 80px;
+  padding-top: 23px;
+  padding-bottom: 5.5px;
+  padding-right: 60px;
+}
+
+.title {
+  gap: 5px;
+  font-size: 0.800rem;
+  color: #343741;
+}
+
+.id {
+  color: #1a1446;
+  font-weight: 600;
+  font-size: 0.800rem;
+}
+
+.stepContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Reducido el margen para hacer que los elementos estén más juntos */
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  width: 1.5rem; /* Mantengo el tamaño general */
+  height: 1.5rem;
+  font-size: 0.8rem; /* Asegura que el texto encaje */
+  text-align: center;
+  margin-right: 5px; /* Reduje el margen para acercar los elementos */
+}
+
+/* Estilos específicos para cada número */
+.stepNumber1 {
+  background-color: #99e3ea; /* Diferente color para el primer número */
+  color: #1a1446;
+  border: 1px solid #28a3af;
+}
+
+.stepNumber2 {
+  background-color: #99e3ea; /* Diferente color para el primer número */
+  color: #1a1446;
+  border: 1px solid #28a3af;
+}
+
+.stepNumber3 {
+  background-color: #e6e6e668; /* Diferente color para el tercer número */
+  color: #1a1446;
+  border: 2px solid #28a3af;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.stepNumber4 {
+  background-color: #e6e6e668; /* Diferente color para el cuarto número */
+  color: #808080;
+  border: 1px solid #c0bfc0;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.stepText {
+  margin-left: 0.5rem;
+  font-size: 0.800rem;
+  color: #1a1446;
+  font-weight: 600;
+}
+
+.divider {
+  width: 1rem;
+  height: 1px;
+  background-color: #1a1416;
+  margin: 0 0.5rem;
+  margin-left: 1rem;
+  border: 1px solid #1a1416;
+}
+
+.completed {
+  background-color: #99e3ea;
+  color: #1a1446;
+  border-width: 2px;
+  border: 1px solid #28a3af;
+  font-size: 0.800rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.pending {
+  background-color: #e6e6e668;
+}
+
+.triangle {
+  position: absolute;
+  margin-left: 1007px;
+  margin-top: 30px;
+  color: #ffffff;
+}
