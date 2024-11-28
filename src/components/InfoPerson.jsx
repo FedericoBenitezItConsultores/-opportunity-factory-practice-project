@@ -13,7 +13,7 @@ export const InfoPerson = () => {
 
       <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
-      <div className={style.document}>
+      <div className={style.containerCard}>
         <div className={style.grid}>
           <div className={style.document1}>
             <div>
@@ -64,26 +64,38 @@ export const InfoPerson = () => {
         </div>
       </div>
 
-      <div>
-        <input type="text" id="nombre" placeholder="Primer nombre" />
+      <div className={style.floatingInput}>
+        <input
+          type="text"
+          id="nombre"
+          placeholder=""
+          className={style.input}
+        />
+        <label htmlFor="nombre" className={style.label}>
+          Primer nombre
+        </label>
       </div>
+
+      <label className={style.container_input}>
+        <input className={style.input} type="text" placeholder="nuevo valor" />
+        <p className={style.placeholder}></p>
+      </label>
 
       <p>Genero</p>
       <form>
         <div className={style.gender}>
-        <label>
-          <input type="radio" name="genero" value="masculino" />
-          Masculino
-        </label>
+          <label>
+            <input type="radio" name="genero" value="masculino" />
+            Masculino
+          </label>
         </div>
 
         <div className={style.gender}>
-        <label>
-          <input type="radio" name="genero" value="femenino" />
-          Femenino
-        </label>
+          <label>
+            <input type="radio" name="genero" value="femenino" />
+            Femenino
+          </label>
         </div>
-
       </form>
     </div>
   );
