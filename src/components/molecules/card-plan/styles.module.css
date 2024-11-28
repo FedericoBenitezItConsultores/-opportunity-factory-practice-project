@@ -1,5 +1,4 @@
 .div_root {
-    /* Layout Properties */
     width: 288px;
     height: 256px;
     position: relative;
@@ -8,12 +7,31 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-
-    /* UI Properties */
     background: #FFFFFF;
     border: 1px solid #E6E6E6;
     border-radius: 3px 3px 0 0;
     opacity: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.div_root2 {
+    transform: scale(1.05);
+    /* Incrementa ligeramente el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra adicional */
+    width: 288px;
+    height: 256px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px 3px 0 0;
+    opacity: 1;
+    z-index: 2;
 }
 
 .img_premium {
@@ -31,7 +49,7 @@
     left: 10px;
 
     /* UI Properties */
-    border: 1.1px solid #979797;
+    /* border: 1.1px solid #979797; */
     background: transparent url('../../../assets/Oval4.jpg') no-repeat center;
     opacity: 0.6;
 }

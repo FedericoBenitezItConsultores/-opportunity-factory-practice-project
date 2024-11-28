@@ -4,7 +4,6 @@ import img_arrow_down from "../../../assets/svg/flechitaArriba.svg";
 import TableCobertura from "./TableCobertura";
 import TableAsistencia from "./TableAsistencia";
 export default function InfPlans({ plan }) {
-  console.log(plan);
   return (
     <div className={styles.div_root1}>
       <img

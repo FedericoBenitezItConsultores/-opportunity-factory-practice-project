@@ -3,22 +3,39 @@ import styles from "./styles.module.css";
 import img_financing from "../../../assets/svg/CombinedShape.svg";
 import premium from "../../../assets/svg/Grupo18933.svg";
 import Triangle from "../../../assets/components/Triangle.jsx";
+import oval from "../../../assets/svg/Oval.svg";
+import ovalBlue from "../../../assets/svg/OvalBlue.svg";
+import checked from "../../../assets/svg/checked.svg";
 // Grupo18933.svg;
 export default function CardPlan(plan) {
   const { setPlanSelect, planSelect } = plan;
 
   return (
-    <div className={styles.div_root}>
+    <div
+      className={
+        planSelect?.name === plan.name ? styles.div_root2 : styles.div_root
+      }
+      onClick={() => setPlanSelect(plan)}
+    >
       <img
         className={styles.img_premium}
         src={plan.name === "Premium" ? premium : ""}
       />
-      <input
-        className={styles.input_select}
-        type="checkbox"
-        checked={planSelect?.name === plan.name}
-        onChange={() => setPlanSelect(plan)}
-      />
+      <div className={styles.input_select}>
+        <div style={{ position: "relative" }}>
+          <img src={planSelect?.name === plan.name ? ovalBlue : oval} alt="" />
+          <img
+            style={{
+              position: "absolute",
+              top: "5px",
+              left: "3.5px",
+              width: "16px",
+            }}
+            src={planSelect?.name === plan.name ? checked : ""}
+            alt=""
+          />
+        </div>
+      </div>
       <h3 className={styles.name}>{plan.name}</h3>
       <p className={styles.price}>
         ${plan.price.toLocaleString("es-ES").replace(".", "'")}

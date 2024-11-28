@@ -4,7 +4,7 @@ import CardPlan from "../molecules/card-plan/CardPlan";
 import styles from "./styles.module.css";
 import InfPlans from "../molecules/tables-plans/InfPlans";
 export default function PlansPrice() {
-  const [planSelect, setPlanSelect] = useState(null);
+  const [planSelect, setPlanSelect] = useState(plans[0]);
   return (
     <div>
       <div className={styles.div_root}>

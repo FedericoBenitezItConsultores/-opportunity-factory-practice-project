@@ -5,11 +5,11 @@ export default function TableAsistencia({ plan }) {
   if (!plan) return;
   return (
     <div className={styles.div_root}>
-      <table style={{ width: "100%"}}>
+      <table style={{ width: "100%" }}>
         <thead className={styles.coverturas}>
           <tr>
             <th>Asistencia</th>
-            <th className={styles.capital}>Capital</th>
+            <th>Capital</th>
           </tr>
         </thead>
 
@@ -22,7 +22,7 @@ export default function TableAsistencia({ plan }) {
                 )}
                 {asistencia.typeCheck === "square" && (
                   <span className={styles.square}> </span>
-                )}{" "}
+                )}
                 {asistencia.asisitecia}
               </td>
               {asistencia.capital && typeof asistencia.capital === "number" ? (
