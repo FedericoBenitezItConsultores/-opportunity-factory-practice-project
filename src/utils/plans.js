@@ -131,6 +131,26 @@ export const plans = [
         capital: 1200000,
         deducibles: null,
       },
+      {
+        cobertura: "Vehículo Sustituto",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Accidentes personales",
+        capital: 40000000,
+        deducibles: null,
+      },
+      {
+        cobertura: "RC General Familiar",
+        capital: 44000000,
+        deducibles: 950000,
+      },
+      {
+        cobertura: "Cobertura de vidrios",
+        capital: null,
+        deducibles: null,
+      },
     ],
     asistencias: [
       {
@@ -144,6 +164,18 @@ export const plans = [
       {
         asisitecia: "Asistencia en viaje",
         capital: ["Tradicional"],
+      },
+      {
+        asisitecia: "Asistencia odontológica autos",
+        capital: null,
+      },
+      {
+        asisitecia: "Exequial",
+        capital: null,
+      },
+      {
+        asisitecia: "Trámite de Tránsito",
+        capital: null,
       },
     ],
   },
@@ -205,6 +237,26 @@ export const plans = [
         capital: 1200000,
         deducibles: null,
       },
+      {
+        cobertura: "Vehículo Sustituto",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Accidentes personales",
+        capital: 40000000,
+        deducibles: null,
+      },
+      {
+        cobertura: "RC General Familiar",
+        capital: 44000000,
+        deducibles: 950000,
+      },
+      {
+        cobertura: "Cobertura de vidrios",
+        capital: null,
+        deducibles: null,
+      },
     ],
     asistencias: [
       {
@@ -218,6 +270,18 @@ export const plans = [
       {
         asisitecia: "Asistencia en viaje",
         capital: ["Tradicional"],
+      },
+      {
+        asisitecia: "Asistencia odontológica autos",
+        capital: null,
+      },
+      {
+        asisitecia: "Exequial",
+        capital: null,
+      },
+      {
+        asisitecia: "Trámite de Tránsito",
+        capital: null,
       },
     ],
   },
@@ -279,6 +343,26 @@ export const plans = [
         capital: 1200000,
         deducibles: null,
       },
+      {
+        cobertura: "Gastos de transporte por pérdida total daños",
+        capital: 1200000,
+        deducibles: null,
+      },
+      {
+        cobertura: "Vehículo Sustituto",
+        capital: null,
+        deducibles: null,
+      },
+      {
+        cobertura: "Accidentes personales",
+        capital: 13385000,
+        deducibles: null,
+      },
+      {
+        cobertura: "RC General Familiar",
+        capital: 6770660,
+        deducibles: null,
+      },
     ],
     asistencias: [
       {
@@ -292,6 +376,18 @@ export const plans = [
       {
         asisitecia: "Asistencia en viaje",
         capital: ["Tradicional"],
+      },
+      {
+        asisitecia: "Asistencia odontológica autos",
+        capital: null,
+      },
+      {
+        asisitecia: "Exequial",
+        capital: null,
+      },
+      {
+        asisitecia: "Trámite de Tránsito",
+        capital: null,
       },
     ],
   },
