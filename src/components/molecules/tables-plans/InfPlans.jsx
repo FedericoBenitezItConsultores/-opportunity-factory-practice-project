@@ -44,12 +44,24 @@ export default function InfPlans({ plan }) {
             >
               <h1>Coberturas {plan.name}</h1>
             </div>
-            <TableCobertura plan={plan} />
+            {plan.coberturas.length > 0 ? (
+              <TableCobertura plan={plan} />
+            ) : (
+              <div style={{ display: "flex", justifyContent: "left" }}>
+                <div
+                  style={{
+                    width: "93%",
+                    borderTop: "1px #C0BFC0 solid",
+                    marginLeft: "31px",
+                  }}
+                />
+              </div>
+            )}
           </div>
           <div>
             <div
               style={{
-                marginTop: "100px",
+                marginTop: plan.coberturas.length > 0 ? "100px" : "40px",
                 backgroundColor: plan.styles_tables.bg,
                 color: plan.styles_tables.color,
               }}
@@ -57,7 +69,11 @@ export default function InfPlans({ plan }) {
             >
               <h1>Asistencias {plan.name}</h1>
             </div>
-            <TableAsistencia plan={plan} />
+            {plan.asistencias.length > 0 ? (
+              <TableAsistencia plan={plan} />
+            ) : (
+              <br />
+            )}
           </div>
         </>
       )}
