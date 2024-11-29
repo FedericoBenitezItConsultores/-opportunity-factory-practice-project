@@ -76,6 +76,8 @@
 .containerTwo{
   display: flex;
   white-space: nowrap;
+    /*cambio*/
+  gap: 100px;
 }
 
 .InputForm1{
@@ -110,6 +112,8 @@
   display: flex;
   border: 1px solid #919191; 
   align-items: flex-start;
+  /*cambio*/
+  margin-left: 10px;
 }
 
 .gender_birth{
