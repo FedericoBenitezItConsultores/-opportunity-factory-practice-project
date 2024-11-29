@@ -28,7 +28,7 @@ const yearOptions = Array.from({ length: 100 }, (_, i) => ({
   label: `${new Date().getFullYear() - i}`,
 }));
 
-// stilos 
+// stilos
 const customStyles = {
   control: (base) => ({
     ...base,
@@ -160,13 +160,13 @@ export const InfoPerson = () => {
         <div className={style.info_date}>
           <p className={style.gender_birth}>Fecha de nacimiento</p>
           <div style={{ display: "flex", gap: "10px" }}>
-
             <Select
               options={dayOptions}
               styles={customStyles}
               placeholder="Día"
               onChange={handleDayChange}
               isSearchable={false}
+              menuPlacement="top"
             />
 
             <Select
@@ -175,6 +175,7 @@ export const InfoPerson = () => {
               placeholder="Mes"
               onChange={handleMonthChange}
               isSearchable={false}
+              menuPlacement="top"
             />
 
             <Select
@@ -183,6 +184,7 @@ export const InfoPerson = () => {
               placeholder="Año"
               onChange={handleYearChange}
               isSearchable={false}
+              menuPlacement="top"
             />
           </div>
         </div>
