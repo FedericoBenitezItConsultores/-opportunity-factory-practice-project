@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./InfoPerson.module.css";
 import InputForm from "./atoms/InputForm";
 import Select from "react-select";
@@ -6,6 +6,7 @@ import Navbar from "./organisms/navbar-2/Navbar";
 import { Footer } from "./molecules/Footer/Footer";
 import FooterButtons from "./molecules/Footer/FooterButtons";
 import CardDiscount from "./molecules/card-discount/CardDiscount";
+import { data, useNavigate } from "react-router-dom";
 
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
   value: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
@@ -209,8 +210,7 @@ export const InfoPerson = () => {
           marginBottom: "7em",
         }}
       >
-        
-        <FooterButtons />
+        <FooterButtons type={3} nextRouter={"/price"} />
       </div>
     </>
   );

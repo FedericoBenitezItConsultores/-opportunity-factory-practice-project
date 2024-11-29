@@ -32,7 +32,7 @@ export default function PriceTemplate() {
           marginBottom: "7em",
         }}
       >
-        <Footer />
+        <Footer type={4} nextRouter={"/"} />
       </div>
     </div>
   );
