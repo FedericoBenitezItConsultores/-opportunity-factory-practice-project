@@ -1,7 +1,7 @@
 import { CotizacionPdf } from "../price-pdf/PricePdf";
 import { FooterDiligenciación } from "../footer-delecation/FooterDelecation";
 import styles from "./style.module.css";
-import FooterButtons from "./footer/FooterButtons.jsx";
+import FooterButtons from "./FooterButtons";
 export const Footer = () => {
   return (
     <>
