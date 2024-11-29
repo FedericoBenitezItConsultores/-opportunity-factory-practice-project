@@ -3,7 +3,7 @@ import style from "./InfoPerson.module.css";
 import InputForm from "./atoms/InputForm";
 import Select from "react-select";
 import Navbar from "./organisms/navbar-2/Navbar";
-import { Footer } from "./molecules/Footer/Footer";
+// import { Footer } from "./molecules/Footer/Footer";
 import FooterButtons from "./molecules/footer/FooterButtons";
 
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
