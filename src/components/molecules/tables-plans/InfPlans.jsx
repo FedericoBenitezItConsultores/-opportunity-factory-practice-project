@@ -42,7 +42,7 @@ export default function InfPlans({ plan }) {
               }}
               className={styles.title_table}
             >
-              <h1>{plan.name}</h1>
+              <h1>Coberturas {plan.name}</h1>
             </div>
             <TableCobertura plan={plan} />
           </div>

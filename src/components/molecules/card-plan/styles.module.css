@@ -59,7 +59,8 @@
   width: 112px;
   height: 29px;
   text-align: center;
-  font: bold 24px/29px Roboto;
+  font-family: "roboto Bold";
+
   letter-spacing: 0;
   color: #1a1446;
   opacity: 1;
@@ -77,18 +78,18 @@
 }
 
 .div_financing {
-  /* Layout Properties */
   width: 272px;
   height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  /* UI Properties */
   background-color: #d9e8fe;
   border-radius: 16px;
   opacity: 1;
   margin: 0 10px;
+  font-family: "roboto Bold";
+  font-size: 14px;
 }
 
 .financing_icon {
@@ -107,13 +108,7 @@
   text-align: center;
 }
 
-/* 'Fill583.jpg' */
 .div_show_details p {
-  /* Layout Properties */
-
-  /* width: 88px;
-    height: 19px; */
-  /* UI Properties */
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-06748c);
   letter-spacing: 0px;
@@ -126,4 +121,7 @@
   position: absolute;
   bottom: -40;
   left: 36%;
+}
+.financiacion {
+  font-family: "roboto Bold";
 }
