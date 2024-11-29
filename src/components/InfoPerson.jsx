@@ -3,7 +3,6 @@ import style from "./InfoPerson.module.css";
 import InputForm from "./atoms/InputForm";
 import Select from "react-select";
 
-// Opciones para los selectores de fecha
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
   value: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
   label: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
@@ -29,38 +28,47 @@ const yearOptions = Array.from({ length: 100 }, (_, i) => ({
   label: `${new Date().getFullYear() - i}`,
 }));
 
-// Estilos personalizados para React Select
+// stilos 
 const customStyles = {
   control: (base) => ({
     ...base,
-    background: "#f7f7f7",
-    border: "1px solid #ccc",
+    background: "#ffffff",
+    border: "1px solid #d9d9d9",
     borderRadius: "8px",
-    padding: "4px",
+    padding: "5px",
     fontSize: "14px",
-    cursor: "pointer",
+    color: "#333333",
+    boxShadow: "none",
     "&:hover": {
-      borderColor: "#0066ff",
+      borderColor: "#0073e6",
     },
   }),
   menu: (base) => ({
     ...base,
+    background: "#ffffff",
     borderRadius: "8px",
-    overflow: "hidden",
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
     zIndex: 10,
   }),
   option: (base, state) => ({
     ...base,
-    background: state.isFocused ? "#e6f7ff" : "white",
-    color: state.isFocused ? "#0066ff" : "#333",
-    textAlign: "left",
+    backgroundColor: state.isFocused ? "#f0f8ff" : "#ffffff",
+    color: state.isFocused ? "#0073e6" : "#333333",
     padding: "10px",
     cursor: "pointer",
+    fontSize: "14px",
+  }),
+  dropdownIndicator: (base) => ({
+    ...base,
+    color: "#0073e6",
+  }),
+  placeholder: (base) => ({
+    ...base,
+    color: "#b3b3b3",
   }),
 };
 
 export const InfoPerson = () => {
-  // Manejo de cambios
   const handleDayChange = (selectedDay) => {
     console.log("Día seleccionado:", selectedDay.value);
   };
@@ -84,7 +92,6 @@ export const InfoPerson = () => {
 
       <div className={style.containerCard}>
         <div className={style.document1}>
-          {/* Tipo de documento e identificación */}
           <div>
             <table>
               <tr>
@@ -153,7 +160,7 @@ export const InfoPerson = () => {
         <div className={style.info_date}>
           <p className={style.gender_birth}>Fecha de nacimiento</p>
           <div style={{ display: "flex", gap: "10px" }}>
-            {/* Selector de Día */}
+
             <Select
               options={dayOptions}
               styles={customStyles}
@@ -162,7 +169,6 @@ export const InfoPerson = () => {
               isSearchable={false}
             />
 
-            {/* Selector de Mes */}
             <Select
               options={monthOptions}
               styles={customStyles}
@@ -171,7 +177,6 @@ export const InfoPerson = () => {
               isSearchable={false}
             />
 
-            {/* Selector de Año */}
             <Select
               options={yearOptions}
               styles={customStyles}
@@ -181,6 +186,10 @@ export const InfoPerson = () => {
             />
           </div>
         </div>
+      </div>
+      <div className={style.containerOne}>
+        <InputForm />
+        <InputForm label="primer apellido" />
       </div>
     </div>
   );

@@ -26,22 +26,14 @@
 }
 
 .input {
-    /* Layout Properties */
-    /* top: 567px;
-    left: 333px; */
     width: 375px;
     height: 50px;
     text-align: left !important;
     padding-bottom: 15px !important;
     padding-top: 45px !important;
-    /* Empuja el texto hacia abajo */
     box-sizing: border-box;
-    /* Incluye el padding en el tamaño total del input */
-    /* UI Properties */
-    /* background: var(--unnamed-color-e6e6e6) 0% 0% no-repeat padding-box;
-    border: 1px solid var(--unnamed-color-919191); */
     background: #E6E6E6 0% 0% no-repeat padding-box;
     border: 1px solid #919191;
     opacity: 1;
-    /* text-align: left; */
+    border-radius: 5px;
 }
