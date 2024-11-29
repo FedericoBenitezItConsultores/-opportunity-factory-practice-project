@@ -2,6 +2,7 @@ import React from "react";
 import style from "./InfoPerson.module.css";
 import InputForm from "./atoms/InputForm";
 import Select from "react-select";
+import Navbar from "./organisms/navbar-2/Navbar";
 
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
   value: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
@@ -82,6 +83,8 @@ export const InfoPerson = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className={style.InfoPerson}>
       <h1 className={style.persona}>Persona</h1>
       <p className={style.information}>
@@ -194,5 +197,6 @@ export const InfoPerson = () => {
         <InputForm label="primer apellido" />
       </div>
     </div>
+    </>
   );
 };

@@ -6,6 +6,6 @@ import { InfoPerson } from './components/InfoPerson.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <InfoPerson />
+    <App />
   </StrictMode>,
 )
