@@ -12,7 +12,7 @@ export default function PriceTemplate() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          gap: "20px",
+          gap: "10px",
         }}
       >
         <h1 className={styles.title}>Cotización</h1>

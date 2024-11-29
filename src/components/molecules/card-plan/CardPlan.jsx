@@ -6,12 +6,16 @@ import Triangle from "../../../assets/components/Triangle.jsx";
 import oval from "../../../assets/svg/Oval.svg";
 import ovalBlue from "../../../assets/svg/OvalBlue.svg";
 import checked from "../../../assets/svg/checked.svg";
-// Grupo18933.svg;
+
 export default function CardPlan(plan) {
   const { setPlanSelect, planSelect } = plan;
 
   return (
     <div
+      style={{
+        transform: plan.name === "Premium" ? "scaleY(1.04)" : "scaleY(1)",
+        transformOrigin: "bottom",
+      }}
       className={
         planSelect?.name === plan.name ? styles.div_root2 : styles.div_root
       }

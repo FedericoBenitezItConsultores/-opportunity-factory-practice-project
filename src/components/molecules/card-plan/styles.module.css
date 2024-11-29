@@ -19,7 +19,7 @@
     /* Incrementa ligeramente el tamaño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Sombra adicional */
-    width: 288px;
+    width: 310px;
     height: 256px;
     position: relative;
     display: flex;
