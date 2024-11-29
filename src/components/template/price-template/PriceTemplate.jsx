@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.css";
 import PlansPrice from "../../organisms/PlansPrice";
 import { Footer } from "../../molecules/Footer/Footer";
-import { FooterDiligenciación } from "../../molecules/footer-delecation/FooterDelecation";
 export default function PriceTemplate() {
   return (
     <div className={styles.div_father}>
