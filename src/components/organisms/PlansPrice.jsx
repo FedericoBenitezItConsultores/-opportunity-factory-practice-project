@@ -11,6 +11,7 @@ export default function PlansPrice() {
         {plans.map((plan) => (
           <CardPlan
             key={plan.id}
+            quantityPlans={plans.length}
             {...plan}
             setPlanSelect={setPlanSelect}
             planSelect={planSelect}
