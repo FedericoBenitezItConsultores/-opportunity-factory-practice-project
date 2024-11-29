@@ -3,6 +3,8 @@ import style from "./InfoPerson.module.css";
 import InputForm from "./atoms/InputForm";
 import Select from "react-select";
 import Navbar from "./organisms/navbar-2/Navbar";
+import { Footer } from "./molecules/Footer/Footer";
+import FooterButtons from "./molecules/footer/FooterButtons";
 
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
   value: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
@@ -197,6 +199,16 @@ export const InfoPerson = () => {
         <InputForm label="primer apellido" />
       </div>
     </div>
+    <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "4em",
+          marginBottom: "7em",
+        }}>
+     <FooterButtons />
+     </div>
+
     </>
   );
 };
