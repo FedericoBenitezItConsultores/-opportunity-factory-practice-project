@@ -5,6 +5,7 @@ import Select from "react-select";
 import Navbar from "./organisms/navbar-2/Navbar";
 // import { Footer } from "./molecules/Footer/Footer";
 import FooterButtons from "./molecules/footer/FooterButtons";
+import CardDiscount from "./card-discount/CardDiscount";
 
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
   value: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
@@ -86,129 +87,131 @@ export const InfoPerson = () => {
 
   return (
     <>
-    <Navbar />
-    <div className={style.InfoPerson}>
-      <h1 className={style.persona}>Persona</h1>
-      <p className={style.information}>
-        Ingresa la información de la persona, conocerla es importante para hacer
-        una propuesta <br /> acorde a sus necesidades
-      </p>
-      <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
+      <Navbar />
+      <div className={style.InfoPerson}>
+        <h1 className={style.persona}>Persona</h1>
+        <p className={style.information}>
+          Ingresa la información de la persona, conocerla es importante para
+          hacer una propuesta <br /> acorde a sus necesidades
+        </p>
+        <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
-      <div className={style.containerCard}>
-        <div className={style.document1}>
-          <div>
-            <table>
-              <tr>
-                <td>
-                  <div className={style.line} />
-                </td>
-                <td>
-                  <img className={style.Image} src="Grupo7616.svg" alt="" />
-                </td>
+        <div className={style.containerCard}>
+          <div className={style.document1}>
+            <div>
+              <table>
                 <tr>
-                  <td className={style.documents}>Tipo de documento</td>
+                  <td>
+                    <div className={style.line} />
+                  </td>
+                  <td>
+                    <img className={style.Image} src="Grupo7616.svg" alt="" />
+                  </td>
+                  <tr>
+                    <td className={style.documents}>Tipo de documento</td>
+                  </tr>
+                  <tr>
+                    <td>Cédula de Ciudadanía</td>
+                  </tr>
                 </tr>
-                <tr>
-                  <td>Cédula de Ciudadanía</td>
-                </tr>
-              </tr>
-            </table>
-          </div>
-          <div>
-            <table>
-              <tr>
-                <td>
-                  <div className={style.line} />
-                </td>
-                <td>
-                  <img className={style.Image} src="Grupo2046.svg" alt="" />
-                </td>
-                <tr>
-                  <td className={style.documents}>Identificación</td>
-                </tr>
-                <tr>
-                  <td>123456789</td>
-                </tr>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div className={style.containerOne}>
-        <InputForm />
-        <InputForm label="primer apellido" />
-      </div>
-
-      <div className={style.containerTwo}>
-        {/* Género */}
-        <div className={style.container_gender}>
-          <p className={style.gender_p}>Género</p>
-          <form>
-            <div className={style.gender}>
-              <label>
-                <input type="radio" name="genero" value="masculino" />
-                Masculino
-              </label>
+              </table>
             </div>
-            <div className={style.gender}>
-              <label>
-                <input type="radio" name="genero" value="femenino" />
-                Femenino
-              </label>
+            <div>
+              <table>
+                <tr>
+                  <td>
+                    <div className={style.line} />
+                  </td>
+                  <td>
+                    <img className={style.Image} src="Grupo2046.svg" alt="" />
+                  </td>
+                  <tr>
+                    <td className={style.documents}>Identificación</td>
+                  </tr>
+                  <tr>
+                    <td>123456789</td>
+                  </tr>
+                </tr>
+              </table>
             </div>
-          </form>
+          </div>
+          {/* <CardDiscount/> */}
         </div>
 
-        {/* Fecha de nacimiento */}
-        <div className={style.info_date}>
-          <p className={style.gender_birth}>Fecha de nacimiento</p>
-          <div style={{ display: "flex", gap: "10px" }}>
-            <Select
-              options={dayOptions}
-              styles={customStyles}
-              placeholder="Día"
-              onChange={handleDayChange}
-              isSearchable={false}
-              menuPlacement="top"
-            />
+        <div className={style.containerOne}>
+          <InputForm />
+          <InputForm label="primer apellido" />
+        </div>
 
-            <Select
-              options={monthOptions}
-              styles={customStyles}
-              placeholder="Mes"
-              onChange={handleMonthChange}
-              isSearchable={false}
-              menuPlacement="top"
-            />
+        <div className={style.containerTwo}>
+          {/* Género */}
+          <div className={style.container_gender}>
+            <p className={style.gender_p}>Género</p>
+            <form>
+              <div className={style.gender}>
+                <label>
+                  <input type="radio" name="genero" value="masculino" />
+                  Masculino
+                </label>
+              </div>
+              <div className={style.gender}>
+                <label>
+                  <input type="radio" name="genero" value="femenino" />
+                  Femenino
+                </label>
+              </div>
+            </form>
+          </div>
 
-            <Select
-              options={yearOptions}
-              styles={customStyles}
-              placeholder="Año"
-              onChange={handleYearChange}
-              isSearchable={false}
-              menuPlacement="top"
-            />
+          {/* Fecha de nacimiento */}
+          <div className={style.info_date}>
+            <p className={style.gender_birth}>Fecha de nacimiento</p>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <Select
+                options={dayOptions}
+                styles={customStyles}
+                placeholder="Día"
+                onChange={handleDayChange}
+                isSearchable={false}
+                menuPlacement="top"
+              />
+
+              <Select
+                options={monthOptions}
+                styles={customStyles}
+                placeholder="Mes"
+                onChange={handleMonthChange}
+                isSearchable={false}
+                menuPlacement="top"
+              />
+
+              <Select
+                options={yearOptions}
+                styles={customStyles}
+                placeholder="Año"
+                onChange={handleYearChange}
+                isSearchable={false}
+                menuPlacement="top"
+              />
+            </div>
           </div>
         </div>
+        <div className={style.containerOne}>
+          <InputForm />
+          <InputForm label="primer apellido" />
+        </div>
       </div>
-      <div className={style.containerOne}>
-        <InputForm />
-        <InputForm label="primer apellido" />
-      </div>
-    </div>
-    <div
+      <CardDiscount />
+      <div
         style={{
           display: "flex",
           justifyContent: "center",
           marginTop: "4em",
           marginBottom: "7em",
-        }}>
-     <FooterButtons />
-     </div>
-
+        }}
+      >
+        <FooterButtons />
+      </div>
     </>
   );
 };
