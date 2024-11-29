@@ -1,10 +1,12 @@
 import styles from "./styles.module.css";
 import icon_done from "../../../assets/svg/icon_done.svg";
+
 export default function TableCobertura({ plan }) {
-  if (!plan) return;
+  if (!plan) return null;
+
   return (
     <div className={styles.div_root}>
-      <table style={{ width: "100%", textAlign: "center" }}>
+      <table className={styles.table}>
         <thead className={styles.coverturas}>
           <tr>
             <th>coberturas</th>
@@ -25,43 +27,42 @@ export default function TableCobertura({ plan }) {
                 )}{" "}
                 {cobertura.cobertura}
               </td>
-              {cobertura.capital && typeof cobertura.capital === "number" ? (
-                <td className={styles.cell}>
-                  {cobertura.capital.toLocaleString("es-ES").replace(".", "'")}
-                </td>
-              ) : (
-                <td className={styles.cell}>
-                  {cobertura.capital && (
-                    <select className={styles.select}>
-                      {cobertura.capital?.map((item, idx) => (
-                        <option key={idx}>
-                          {item.toLocaleString("es-ES").replace(".", "'")}
-                        </option>
-                      ))}
-                    </select>
-                  )}
-                </td>
-              )}
-              {cobertura.deducibles &&
-              typeof cobertura.deducibles === "number" ? (
-                <td className={styles.cell}>
-                  {cobertura.deducibles
+
+              <td className={styles.cell}>
+                {typeof cobertura.capital === "number" ? (
+                  `$${cobertura.capital
                     .toLocaleString("es-ES")
-                    .replace(".", "'")}
-                </td>
-              ) : (
-                <td className={styles.cell}>
-                  {cobertura.deducibles && (
-                    <select className={styles.select}>
-                      {cobertura.deducibles?.map((item, idx) => (
-                        <option key={idx}>
-                          {item.toLocaleString("es-ES").replace(".", "'")}
-                        </option>
-                      ))}
-                    </select>
-                  )}
-                </td>
-              )}
+                    .replace(".", "'")}`
+                ) : cobertura.capital ? (
+                  <select className={styles.select}>
+                    {cobertura.capital.map((item, idx) => (
+                      <option key={idx}>
+                        ${item.toLocaleString("es-ES").replace(".", "'")}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  ""
+                )}
+              </td>
+
+              <td className={styles.cell}>
+                {typeof cobertura.deducibles === "number" ? (
+                  `$${cobertura.deducibles
+                    .toLocaleString("es-ES")
+                    .replace(".", "'")}`
+                ) : cobertura.deducibles ? (
+                  <select className={styles.select}>
+                    {cobertura.deducibles.map((item, idx) => (
+                      <option key={idx}>
+                        {item.toLocaleString("es-ES").replace(".", "'")}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  ""
+                )}
+              </td>
             </tr>
           ))}
         </tbody>

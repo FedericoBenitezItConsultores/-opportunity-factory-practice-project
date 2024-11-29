@@ -12,23 +12,13 @@ export default function InfPlans({ plan }) {
         alt="img_arrow_down"
       />
       <div className={styles.fallo}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className={styles.div_inf}
-        >
-          {" "}
+        <div className={styles.div_inf}>
           <div
             style={{
               display: "flex",
-              justifyContent: "center",
-
+              justifyContent: "left",
               alignItems: "center",
-              gap: "10px",
+              gap: "0px",
             }}
           >
             <img className={styles.financing_icon} src={img_financing} />

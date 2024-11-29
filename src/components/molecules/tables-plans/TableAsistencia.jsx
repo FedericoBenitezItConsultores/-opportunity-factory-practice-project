@@ -5,7 +5,7 @@ export default function TableAsistencia({ plan }) {
   if (!plan) return;
   return (
     <div className={styles.div_root}>
-      <table style={{ width: "100%" }}>
+      <table className={styles.table} style={{ width: "100%" }}>
         <thead className={styles.coverturas}>
           <tr>
             <th>Asistencia</th>
@@ -27,6 +27,7 @@ export default function TableAsistencia({ plan }) {
               </td>
               {asistencia.capital && typeof asistencia.capital === "number" ? (
                 <td className={styles.cell}>
+                  $
                   {asistencia.capital.toLocaleString("es-ES").replace(".", "'")}
                 </td>
               ) : (
@@ -35,7 +36,11 @@ export default function TableAsistencia({ plan }) {
                     <select className={styles.select}>
                       {asistencia.capital?.map((item, idx) => (
                         <option key={idx}>
-                          {item.toLocaleString("es-ES").replace(".", "'")}
+                          {typeof item == "number"
+                            ? `$${item
+                                .toLocaleString("es-ES")
+                                .replace(".", "'")}`
+                            : item}
                         </option>
                       ))}
                     </select>
