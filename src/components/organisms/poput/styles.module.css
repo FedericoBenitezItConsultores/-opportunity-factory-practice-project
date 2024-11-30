@@ -10,5 +10,5 @@
     background: var(--unnamed-color-1e1045) 0% 0% no-repeat padding-box;
     background: #1E1045 0% 0% no-repeat padding-box;
     opacity: 0.9;
-    z-index: 200;
+    z-index: 0;
 }
