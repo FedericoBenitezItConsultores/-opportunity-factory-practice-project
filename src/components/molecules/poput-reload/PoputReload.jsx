@@ -1,3 +1,4 @@
+import FooterPoput from "../../molecules/footer-pooput/FooterPoput";
 import styles from "./styles.module.css";
 //  className={styles.div_root}
 export default function PoputReload({
@@ -27,6 +28,7 @@ export default function PoputReload({
       >
         Continuar
       </button>
+      <FooterPoput />
     </div>
   );
 }
