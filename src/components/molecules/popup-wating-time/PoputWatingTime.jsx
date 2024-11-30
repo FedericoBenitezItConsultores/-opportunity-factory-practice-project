@@ -9,7 +9,6 @@ export default function PoputWatingTime({
   handleContinuar,
   tiempoRestante,
 }) {
-  console.log(tiempoRestante);
   return (
     <>
       {popup && (
