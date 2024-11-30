@@ -24,11 +24,16 @@
   font-family: Roboto-Bold, Roboto;
   margin-right: 10px;
   font-weight: 700;
+
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+.button:hover {
+  background-color: #06748c; /* Color cuando el mouse está encima */
 }
 
 .container {
   padding-bottom: 40px;
 }
-.cotizacion{
+.cotizacion {
   padding-bottom: 40px;
 }
