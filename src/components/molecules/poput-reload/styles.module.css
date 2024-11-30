@@ -5,14 +5,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* left: 407px; */
     width: 626px;
     height: 513px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* gap: 10px; */
     padding: 40px;
     /* UI Properties */
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;

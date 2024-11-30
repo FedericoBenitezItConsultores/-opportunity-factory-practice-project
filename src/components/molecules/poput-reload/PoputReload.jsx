@@ -3,7 +3,8 @@ import styles from "./styles.module.css";
 import warning from "../../../assets/svg/Grupo5094.svg";
 //  className={styles.div_root}
 export default function PoputReload({
-  continarCotizacion: continuarCotizacion = true,
+  continuarCotizacion = true,
+  btnReintentar,
 }) {
   return (
     <div>
@@ -41,12 +42,14 @@ export default function PoputReload({
             >
               Mis Negocios
             </button>
-            <button
-              onClick={() => console.log("continuar")}
-              className={styles.button}
-            >
-              Reintentar
-            </button>
+            {btnReintentar && (
+              <button
+                onClick={() => console.log("continuar")}
+                className={styles.button}
+              >
+                Reintentar
+              </button>
+            )}
           </div>
         </div>
         <div
