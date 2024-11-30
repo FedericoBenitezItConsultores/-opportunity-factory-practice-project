@@ -3,9 +3,7 @@ import styles from "./styles.module.css";
 import warning from "../../../assets/svg/Grupo5094.svg";
 
 export default function PoputReload({
-  continuarCotizacion = true,
-  mostrarParrafos = true, // Controla qué texto principal se muestra
-  modoInformativo = false, // Controla el tipo de mensaje adicional
+  continarCotizacion: continuarCotizacion = true,
 }) {
   return (
     <div>
@@ -43,35 +41,19 @@ export default function PoputReload({
           <p className={styles.text_num_quotation}>
             Número de cotización <span>100030819</span>
           </p>
-          {/* Botones controlados por continuarCotizacion */}
-          <div
-            className={`${styles.div_btn} ${
-              !continuarCotizacion ? styles.singleButton : ""
-            }`}
-          >
-            {continuarCotizacion ? (
-              <>
-                <button
-                  onClick={() => console.log("Ir a Mis Negocios")}
-                  className={styles.button1}
-                >
-                  Mis Negocios
-                </button>
-                <button
-                  onClick={() => console.log("Reintentar")}
-                  className={styles.button}
-                >
-                  Reintentar
-                </button>
-              </>
-            ) : (
-              <button
-                onClick={() => console.log("Ir a Mis Negocios")}
-                className={styles.button1}
-              >
-                Ir a Mis Negocios
-              </button>
-            )}
+          <div className={styles.div_btn}>
+            <button
+              onClick={() => console.log("continuar")}
+              className={styles.button1}
+            >
+              Mis Negocios
+            </button>
+            <button
+              onClick={() => console.log("continuar")}
+              className={styles.button}
+            >
+              Reintentar
+            </button>
           </div>
         </div>
         <div
