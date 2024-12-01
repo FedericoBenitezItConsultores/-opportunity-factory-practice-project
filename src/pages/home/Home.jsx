@@ -11,9 +11,9 @@ const Home = () => {
     <div>
       {/* <h1>Home</h1> */}
       <Navbar />
-      <Poput>
+      <>
         <PoputReloadContainer />
-      </Poput>
+      </>
       {/* <WatingTime /> */}
     </div>
   );

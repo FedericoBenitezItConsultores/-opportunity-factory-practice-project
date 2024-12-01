@@ -3,75 +3,49 @@ import styles from "./styles.module.css";
 import warning from "../../../assets/svg/Grupo5094.svg";
 
 export default function PoputReload({
-  continuarCotizacion = true,
-  mostrarParrafos = false, // Controla qué texto principal se muestra
-  modoInformativo = false, // Controla el tipo de mensaje adicional
+  buttons = [],
+  num_cotizacion = true,
+  stylesParrafo1 = null,
+  btnReintentar = false,
+  title = "¡Ups! Lo sentimos",
+  parrafo1 = "", // Controla qué texto principal se muestra
+  parrafo2 = "", // Controla el tipo de mensaje adicional
 }) {
   return (
     <div>
       <div className={styles.div_root}>
         <img src={warning} />
         <div className={styles.div_text}>
-          <p className={styles.title}>¡Ups! Lo sentimos</p>
+          <p className={styles.title}>{title}</p>
           {/* Mensajes principales controlados por mostrarParrafos */}
-          {mostrarParrafos ? (
-            <p className={styles.text1}>
-              No podemos continuar con la <b>cotización</b> en este momento
-              debido a problemas técnicos.
-            </p>
-          ) : (
-            <p className={styles.text1}>
-              No podemos generar el documento de la <b>cotización</b> en este
-              momento debido a problemas técnicos.
-            </p>
-          )}
-          {/* Mensajes adicionales controlados por modoInformativo */}
-          {modoInformativo ? (
-            <p className={styles.text1}>
-              Reporta la falla en la mesa de ayuda al correo{" "}
-              <b>soporte.aplicativos@libertycolombia.com</b>.
-            </p>
-          ) : (
-            <p className={styles.text1}>
-              Por favor, intenta nuevamente a través del botón <b>Reintentar</b>
-              . Si el error persiste, retoma la cotización en unos minutos desde{" "}
-              <b>Mis Negocios.</b>
-            </p>
-          )}
+          <p
+            style={stylesParrafo1 ? stylesParrafo1 : { height: "45px" }}
+            className={styles.text1}
+          >
+            {parrafo1}
+          </p>
+          <p className={styles.text1}>{parrafo2}</p>
         </div>
         <div>
-          <p className={styles.text_num_quotation}>
-            Número de cotización <span>100030819</span>
-          </p>
+          {num_cotizacion && (
+            <p className={styles.text_num_quotation}>
+              Número de cotización <span>100030819</span>
+            </p>
+          )}
           {/* Botones controlados por continuarCotizacion */}
           <div
             className={`${styles.div_btn} ${
-              !continuarCotizacion ? styles.singleButton : ""
+              !btnReintentar ? styles.singleButton : ""
             }`}
           >
-            {continuarCotizacion ? (
-              <>
-                <button
-                  onClick={() => console.log("Ir a Mis Negocios")}
-                  className={styles.button1}
-                >
-                  Mis Negocios
-                </button>
-                <button
-                  onClick={() => console.log("Reintentar")}
-                  className={styles.button}
-                >
-                  Reintentar
-                </button>
-              </>
-            ) : (
+            {buttons.map((buton) => (
               <button
-                onClick={() => console.log("Ir a Mis Negocios")}
-                className={styles.button1}
+                onClick={() => buton.action()}
+                className={styles[buton.style]}
               >
-                Ir a Mis Negocios
+                {buton.text}
               </button>
-            )}
+            ))}
           </div>
         </div>
         <div
