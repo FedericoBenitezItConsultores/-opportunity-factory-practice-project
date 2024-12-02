@@ -4,7 +4,7 @@ import warning from "../../../assets/svg/Grupo5094.svg";
 
 export default function PoputReload({
   continuarCotizacion = true,
-  mostrarParrafos = false, // Controla qué texto principal se muestra
+  mostrarParrafos = true, // Controla qué texto principal se muestra
   modoInformativo = false, // Controla el tipo de mensaje adicional
 }) {
   return (

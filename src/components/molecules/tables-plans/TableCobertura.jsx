@@ -55,7 +55,7 @@ export default function TableCobertura({ plan }) {
                   <select className={styles.select}>
                     {cobertura.deducibles.map((item, idx) => (
                       <option key={idx}>
-                        {item.toLocaleString("es-ES").replace(".", "'")}
+                        ${item.toLocaleString("es-ES").replace(".", "'")}
                       </option>
                     ))}
                   </select>
