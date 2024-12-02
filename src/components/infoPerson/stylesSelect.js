@@ -48,7 +48,6 @@ export const citisStyles = {
   control: (base) => ({
     ...base,
     background: "#ffffff",
-    border: "1px solid #d9d9d9",
     border: "1px solid #919191",
     borderRadius: "8px",
     padding: "5px",
@@ -60,6 +59,13 @@ export const citisStyles = {
     },
     width: "375px",
     height: "63px",
+  }),
+  
+  placeholder: (base) => ({
+    ...base,
+    color: "#b3b3b3",
+    textAlign: "left", // Alinear el texto a la izquierda
+    marginLeft: "-10px", // Ajustar el espacio desde el borde izquierdo
   }),
   
   menu: (base) => ({
@@ -80,9 +86,5 @@ export const citisStyles = {
   dropdownIndicator: (base) => ({
     ...base,
     color: "#333333", // Cambiado a gris
-  }),
-  placeholder: (base) => ({
-    ...base,
-    color: "#b3b3b3",
   }),
 };
