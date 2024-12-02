@@ -3,7 +3,7 @@ import styles from "../Modal/Modal.module.css";
 import AlertIcon from "../../../assets/Alert.svg";
 import Modal from "@mui/material/Modal";
 
-const ModalBase = ({ show, onClose,title }) => {
+const ModalBase = ({ show, onClose, title, buttonText }) => {
   if (!show) return null;
 
   return (
@@ -40,7 +40,7 @@ const ModalBase = ({ show, onClose,title }) => {
         </div>
         <div className={styles.modalFooter}>
           <button onClick={onClose} className={styles.secondaryButton}>
-            Mis Negocios
+            {buttonText || "Mis Negocios"}  
           </button>
           <button className={styles.primaryButton}>Reintentar</button>
         </div>
