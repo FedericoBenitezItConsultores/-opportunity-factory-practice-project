@@ -62,12 +62,14 @@
 .stepNumber1 {
   background-color: #99e3ea;
   color: #1a1446;
+  font-family: normal normal normal 12px/14px Roboto-Bold;
   border: 1px solid #28a3af;
 }
 
 .stepNumber2 {
   background-color: #99e3ea;
   color: #1a1446;
+  font-family: normal normal normal 12px/14px Roboto-Bold;
   border: 1px solid #28a3af;
   margin-left: -15px;
 }
@@ -76,6 +78,7 @@
   background-color: #e6e6e668;
   color: #1a1446;
   border: 2px solid #28a3af;
+  font-family: normal normal normal 12px/14px Roboto-Bold;
   width: 1rem;
   height: 1rem;
   margin-left: -15px;
@@ -84,6 +87,7 @@
 .stepNumber4 {
   background-color: #e6e6e668;
   color: #808080;
+  font-family: normal normal normal 12px/14px Roboto-Bold;
   border: 1px solid #c0bfc0;
   width: 1rem;
   height: 1rem;
@@ -93,12 +97,14 @@
 .stepText {
   margin-left: 1px;
   font-size: 11px;
+  font-family: normal normal bold 14px/17px Roboto;;
   color: #1a1446;
   font-weight: 600;
 }
 
 .cotizacionFinal {
   color: #808080;
+  font-family: normal normal bold 14px/17px Roboto;
   margin-left: 1px;
 }
 

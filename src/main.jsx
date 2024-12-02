@@ -1,12 +1,10 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import AppRouter from "./routes/Router.jsx";
-import  Modal from "./components/molecules/Modal/ModalBase.jsx";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App'
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AppRouter />
-    <Modal/> 
-  </StrictMode>
-);
+    <App />
+  </StrictMode>,
+)

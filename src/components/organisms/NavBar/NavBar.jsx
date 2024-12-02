@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "../NavBar/NavBar.module.css";
-import logo from "../../../assets/Logo-Principal.png";
-import Profile from "../../../assets/Profile.png";
-import page_tab from "../../../assets/page-tab.png";
+import logo from "../../../assets/png/Logo-Principal.png";
+import Profile from "../../../assets/png/Profile.png";
+import page_tab from "../../../assets/png/page-tab.png";
 import Modal from "../../molecules/Modal/ModalBase.jsx";
 
 const NavBar = () => {
