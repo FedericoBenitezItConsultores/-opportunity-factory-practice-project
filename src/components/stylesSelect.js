@@ -3,15 +3,16 @@
 export const customStyles = {
   control: (base) => ({
     ...base,
-    background: "#ffffff",
+    background: "#e6e6e6",
     border: "1px solid #d9d9d9",
-    borderRadius: "8px",
+    borderRadius: "5px",
+    border: "1px solid #919191",
     padding: "5px",
     fontSize: "14px",
-    color: "#333333",
+    color: "#e6e6e6",
     boxShadow: "none",
     "&:hover": {
-      borderColor: "#0073e6",
+      borderColor: "#333333", // Cambiado a gris
     },
     width: "116px",
     height: "50px",
@@ -34,7 +35,7 @@ export const customStyles = {
   }),
   dropdownIndicator: (base) => ({
     ...base,
-    color: "#0073e6",
+    color: "#333333", // Cambiado a gris
   }),
   placeholder: (base) => ({
     ...base,
@@ -48,13 +49,14 @@ export const citisStyles = {
     ...base,
     background: "#ffffff",
     border: "1px solid #d9d9d9",
+    border: "1px solid #919191",
     borderRadius: "8px",
     padding: "5px",
     fontSize: "14px",
     color: "#333333",
     boxShadow: "none",
     "&:hover": {
-      borderColor: "#0073e6",
+      borderColor: "#333333", // Cambiado a gris
     },
     width: "375px",
     height: "63px",
@@ -77,7 +79,7 @@ export const citisStyles = {
   }),
   dropdownIndicator: (base) => ({
     ...base,
-    color: "#0073e6",
+    color: "#333333", // Cambiado a gris
   }),
   placeholder: (base) => ({
     ...base,
