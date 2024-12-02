@@ -3,11 +3,10 @@ import styles from "../NavBar/NavBar.module.css";
 import logo from "../../../assets/png/Logo-Principal.png";
 import Profile from "../../../assets/png/Profile.png";
 import page_tab from "../../../assets/png/page-tab.png";
-import Modal from "../../molecules/Modal/ModalBase.jsx";
+import Modal from "../../molecules/Modal/Modal1/ModalBase.jsx";
+
 
 const NavBar = () => {
-
-
   return (
     <div className={styles.container}>
       <div className={styles.leftSection}>
@@ -18,9 +17,7 @@ const NavBar = () => {
         <img src={page_tab} alt="page_tab" />
         <span className={styles.name}>Andrés Salamanca</span>
         <img src={Profile} alt="Profile" className={styles.profile} />
-        <button className={styles.button} >
-          Cerrar sesión
-        </button>
+        <button className={styles.button}>Cerrar sesión</button>
       </div>
 
       {/* {isModalOpen && (
@@ -38,7 +35,6 @@ const NavBar = () => {
           </div>
         </div>
       )} */}
-     
     </div>
   );
 };

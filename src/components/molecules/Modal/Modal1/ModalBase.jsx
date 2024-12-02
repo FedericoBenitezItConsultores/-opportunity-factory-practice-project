@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../Modal/Modal.module.css";
-import AlertIcon from "../../../assets/Alert.svg";
+import styles from "../Modal1/Modal.module.css";
+import AlertIcon from "../../../../assets/Alert.svg";
 import Modal from "@mui/material/Modal";
 
 const ModalBase = ({ show, onClose,title }) => {
@@ -38,12 +38,18 @@ const ModalBase = ({ show, onClose,title }) => {
             <span className={styles.quoteNumber}>100030819</span>
           </p>
         </div>
+
+
+
         <div className={styles.modalFooter}>
           <button onClick={onClose} className={styles.secondaryButton}>
             Mis Negocios
           </button>
           <button className={styles.primaryButton}>Reintentar</button>
         </div>
+
+
+
         <div className={styles.modalExtraInfo}>
           <p className={styles.additionalText}>
             Para obtener información adicional comunícate con la mesa de ayuda

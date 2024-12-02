@@ -2,24 +2,24 @@ import { CotizacionPdf } from "../price-pdf/PricePdf";
 import { FooterDiligenciación } from "../footer-delecation/FooterDelecation";
 import styles from "./style.module.css";
 import { useState } from "react";
-import Modal from "../../molecules/Modal/ModalBase.jsx";
+import Modal from "../Modal/Modal1/ModalBase.jsx";
 
 export const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleLogoutClick = () => {
+    setIsModalOpen(true);
+  };
 
-    const handleLogoutClick = () => {
-      setIsModalOpen(true); 
-    };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
-    const closeModal = () => {
-      setIsModalOpen(false); 
-    };
+  const handleLogout = () => {
+    console.log("Sesión cerrada");
+    setIsModalOpen(false);
+  };
 
-    const handleLogout = () => {
-      console.log("Sesión cerrada");
-      setIsModalOpen(false);
-    };
   return (
     <>
       <footer>
