@@ -42,3 +42,30 @@
     opacity: 1;
     /* text-align: left; */
 }
+
+
+/* .container_input {
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    width: 100px;
+    height: 20px;
+    margin: 20px;
+  
+    & .placeholder {
+      position: absolute;
+      top: var(--top-placeholder);
+      left: 0;
+      transition: top 0.5s ease;
+    }
+    & .input2 {
+      height: 50px;
+      width: 375px;
+    }
+  }
+  
+  .placeholder{
+      color: aqua;
+      border: 1px solid color(srgb red green blue);
+  }
+   */

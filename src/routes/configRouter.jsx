@@ -1,4 +1,4 @@
-import { InfoPerson } from "../components/InfoPerson";
+import { InfoPerson } from "../components/infoPerson/InfoPerson";
 import Calificasion from "../components/molecules/qualification/qualification";
 import Home from "../pages/home/Home";
 import PricePage from "../pages/price-page/PricePage";
