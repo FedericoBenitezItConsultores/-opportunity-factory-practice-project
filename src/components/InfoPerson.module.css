@@ -13,12 +13,16 @@
 }
 
 .information {
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.information2{
+  margin-bottom: 15px; 
 }
 
 .parragraf {
-  margin-top: 0;
+  margin-top: 5px;
+  margin-bottom: 30px;
   color: #28a3af;
 }
 
@@ -40,7 +44,7 @@
 }
 
 .InfoPerson input[type="text"] {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 8px;
   font-size: 16px;
   text-align: center;

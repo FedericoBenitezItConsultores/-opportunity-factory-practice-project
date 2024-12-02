@@ -6,6 +6,7 @@ import Navbar from "./organisms/navbar-2/Navbar";
 import { Footer } from "./molecules/Footer/Footer";
 import FooterButtons from "./molecules/Footer/FooterButtons";
 import CardDiscount from "./molecules/card-discount/CardDiscount";
+import Input from "./atoms/input-form/Input";
 
 const dayOptions = Array.from({ length: 31 }, (_, i) => ({
   value: i + 1 < 10 ? `0${i + 1}` : `${i + 1}`,
@@ -92,8 +93,9 @@ export const InfoPerson = () => {
         <h1 className={style.persona}>Persona</h1>
         <p className={style.information}>
           Ingresa la información de la persona, conocerla es importante para
-          hacer una propuesta <br /> acorde a sus necesidades
+          hacer una propuesta
         </p>
+        <p className={style.information2}>acorde a sus necesidades</p>
         <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
         <div className={style.containerCard}>
@@ -139,6 +141,7 @@ export const InfoPerson = () => {
 
         <div className={style.containerOne}>
           <InputForm />
+          {/* <Input placehorder="primer nombre"/> */}
           <InputForm label="primer apellido" />
         </div>
 
@@ -209,7 +212,6 @@ export const InfoPerson = () => {
           marginBottom: "7em",
         }}
       >
-        
         <FooterButtons />
       </div>
     </>
