@@ -9,7 +9,6 @@ import citys from "./atoms/input/citys.js";
 import { citisStyles, customStyles } from "./stylesSelect.js";
 import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 
-
 export const InfoPerson = () => {
   const handleDayChange = (selectedDay) => {
     console.log("Día seleccionado:", selectedDay.value);
@@ -37,49 +36,49 @@ export const InfoPerson = () => {
 
         <div className={style.containerCard}>
           {/* <div className={style.document1}> */}
-            <div>
-              <table>
+          <div>
+            <table>
+              <tr>
+                <td>
+                  <div className={style.line} />
+                </td>
+                <td>
+                  <img className={style.Image} src="Grupo7616.svg" alt="" />
+                </td>
                 <tr>
-                  <td>
-                    <div className={style.line} />
-                  </td>
-                  <td>
-                    <img className={style.Image} src="Grupo7616.svg" alt="" />
-                  </td>
-                  <tr>
-                    <td className={style.documents}>Tipo de documento</td>
-                  </tr>
-                  <tr>
-                    <td>Cédula de Ciudadanía</td>
-                  </tr>
+                  <td className={style.documents}>Tipo de documento</td>
                 </tr>
-              </table>
-            </div>
-            <div>
-              <table>
                 <tr>
-                  <td>
-                    <div className={style.line} />
-                  </td>
-                  <td>
-                    <img className={style.Image} src="Grupo2046.svg" alt="" />
-                  </td>
-                  <tr>
-                    <td className={style.documents}>Identificación</td>
-                  </tr>
-                  <tr>
-                    <td className={style.numberCc}>123456789</td>
-                  </tr>
+                  <td>Cédula de Ciudadanía</td>
                 </tr>
-              </table>
-            </div>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td>
+                  <div className={style.line} />
+                </td>
+                <td>
+                  <img className={style.Image} src="Grupo2046.svg" alt="" />
+                </td>
+                <tr>
+                  <td className={style.documents}>Identificación</td>
+                </tr>
+                <tr>
+                  <td className={style.numberCc}>123456789</td>
+                </tr>
+              </tr>
+            </table>
+          </div>
           {/* </div> */}
         </div>
 
         <div className={style.containerOne}>
           <InputForm />
           {/* <Input placehorder="primer nombre"/> */}
-          <InputForm label="primer apellido" />
+          <InputForm label="Primer apellido" />
         </div>
 
         <div className={style.containerTwo}>
@@ -138,14 +137,14 @@ export const InfoPerson = () => {
         <div className={style.containerOne}>
           <InputForm type="number" label="Años de experiencia" />
           <Select
-          className={style.inputCity}
-                options={citys}
-                styles={citisStyles}
-                placeholder="Ciudades de movilizacion"
-                onChange={handleYearChange}
-                isSearchable={false}
-                menuPlacement="top"
-              />
+            className={style.inputCity}
+            options={citys}
+            styles={citisStyles}
+            placeholder="Ciudades de movilizacion"
+            onChange={handleYearChange}
+            isSearchable={false}
+            menuPlacement="top"
+          />
         </div>
       </div>
       <CardDiscount />
