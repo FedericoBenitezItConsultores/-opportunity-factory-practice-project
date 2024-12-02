@@ -1,7 +1,25 @@
-import Router from "./routes/Router";
+import React, { useState } from "react";
+import Modal from "../src/components/molecules/Modal/Modal.jsx";
 
-function App() {
-  return <Router />;
-}
+const Modal= () => {
+  const [showPopup, setShowPopup] = useState(true); 
 
-export default App;
+  const handleClose = () => {
+    setShowPopup(false); 
+  };
+
+  const handleRetry = () => {
+    console.log("Intentar de nuevo...");
+
+  };
+
+  return (
+    <div>
+      <Popup show={showPopup} onClose={handleClose} onRetry={handleRetry} />
+      <button onClick={() => setShowPopup(true)}>Mostrar Popup</button>{" "}
+    
+    </div>
+  );
+};
+
+export default Modal;
