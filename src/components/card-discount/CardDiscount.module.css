@@ -1,17 +1,16 @@
 .CardDiscount {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 775px;
-  height: 228px;
-  /* background: #f0f9ff; */
+  justify-content: center;
+  height: 227px;
+  max-width: 775px;
+  height: auto;
   border-radius: 20px;
   overflow: hidden;
   padding: 20px;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-
-  margin-left: 35px;
+  margin: 20px auto;
 }
 
 .fondo {
@@ -27,8 +26,8 @@
 .imagenAmarila {
   position: relative;
   z-index: 2;
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: #ffd700;
   display: flex;
@@ -36,31 +35,58 @@
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  
 }
 
 .textContainer {
   position: relative;
   z-index: 2;
-  text-align: right;
-
+  text-align: end;
+  width: 309px;
+  height: 175px;
 }
 
 .title {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0 0 5px 0;
-  color: #333;
+  color: #1c1149;
 }
 
 .subtitle {
   font-size: 14px;
   margin: 0 0 10px 0;
-  color: #666;
+  color: #333742;
+  text-align: right;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .discount {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
-  color: #00c4ff;
+  height: 67px;
+  color: #28a3af;
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .CardDiscount {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 228px;
+  }
+
+  .imagenAmarila {
+    width: 180px;
+    height: 180px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .discount {
+    font-size: 32px;
+  }
 }

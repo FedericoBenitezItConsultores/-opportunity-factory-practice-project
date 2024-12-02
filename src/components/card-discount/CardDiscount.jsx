@@ -13,9 +13,10 @@ const CardDiscount = () => {
           alt="Icono amarillo"
         />
         <div className={styles.textContainer}>
-          <h3 className={styles.title}>Tienes un descuento</h3>
+          <h1 className={styles.title}>Tienes un descuento</h1>
           <p className={styles.subtitle}>
-            De acuerdo a tus puntos, el porcentaje de descuento es
+            De acuerdo al expertis del conductor,
+            <br /> el porcentaje de descuento es
           </p>
           <h2 className={styles.discount}>20% OFF</h2>
         </div>

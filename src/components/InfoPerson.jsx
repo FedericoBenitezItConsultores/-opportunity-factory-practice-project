@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./InfoPerson.module.css";
 import InputForm from "./atoms/InputForm";
 import Select from "react-select";
@@ -73,18 +73,67 @@ const customStyles = {
 };
 
 export const InfoPerson = () => {
+  const [data, setData] = useState({
+    primerNombre: "",
+    primerApellido: "",
+    genero: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
   const handleDayChange = (selectedDay) => {
     console.log("Día seleccionado:", selectedDay.value);
+    setData((prev) => ({
+      ...prev,
+      date: { ...prev.date, day: selectedDay.value },
+    }));
   };
 
   const handleMonthChange = (selectedMonth) => {
     console.log("Mes seleccionado:", selectedMonth.value);
+    setData((prev) => ({
+      ...prev,
+      date: { ...prev.date, month: selectedMonth.value },
+    }));
   };
 
   const handleYearChange = (selectedYear) => {
     console.log("Año seleccionado:", selectedYear.value);
+    setData((prev) => ({
+      ...prev,
+      date: { ...prev.date, year: selectedYear.value },
+    }));
   };
 
+  
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setData((prev) => ({ ...prev, [name]: value }));
+    validateField(name, value);
+  };
+
+  const validateField = (name, value) =>{
+  setErrors((prevErrors) => ({
+    ...prevErrors,
+    [name]: value.trim() === "" ? "Este campo es obligatorio" : "",
+  }));
+  }
+  const handleSubmit = () => {
+    const newErrors = {};
+    Object.keys(data).forEach((key) => {
+      if (!data[key]) {
+        newErrors[key] = "Este campo es obligatorio";
+      }
+    });
+
+    if (Object.keys(newErrors).length === 0) {
+      alert("Formulario enviado correctamente");
+    } else {
+      setErrors(newErrors);
+    }
+  };
+
+  console.log(data);
   return (
     <>
       <Navbar />
@@ -135,28 +184,47 @@ export const InfoPerson = () => {
               </table>
             </div>
           </div>
-          {/* <CardDiscount/> */}
         </div>
 
         <div className={style.containerOne}>
-          <InputForm />
-          <InputForm label="primer apellido" />
+          <InputForm action={handleInput} name={"primerNombre"} />
+          <InputForm
+            action={handleInput}
+            name={"primerApellido"}
+            label="primer apellido"
+          />
         </div>
 
         <div className={style.containerTwo}>
           {/* Género */}
           <div className={style.container_gender}>
-            <p className={style.gender_p}>Género</p>
+            <p className={style.gender_p}>Género *</p>
             <form>
               <div className={style.gender}>
                 <label>
-                  <input type="radio" name="genero" value="masculino" />
+                  <input
+                    type="radio"
+                    checked={data?.genero === "masculino"}
+                    onChange={() =>
+                      setData((prev) => ({ ...prev, genero: "masculino" }))
+                    }
+                    name="genero"
+                    value="masculino"
+                  />
                   Masculino
                 </label>
               </div>
               <div className={style.gender}>
                 <label>
-                  <input type="radio" name="genero" value="femenino" />
+                  <input
+                    type="radio"
+                    checked={data?.genero === "femenino"}
+                    onChange={() =>
+                      setData((prev) => ({ ...prev, genero: "femenino" }))
+                    }
+                    name="genero "
+                    value="femenino"
+                  />
                   Femenino
                 </label>
               </div>
@@ -165,7 +233,7 @@ export const InfoPerson = () => {
 
           {/* Fecha de nacimiento */}
           <div className={style.info_date}>
-            <p className={style.gender_birth}>Fecha de nacimiento</p>
+            <p className={style.gender_birth}>Fecha de nacimiento *</p>
             <div style={{ display: "flex", gap: "10px" }}>
               <Select
                 options={dayOptions}
@@ -197,8 +265,19 @@ export const InfoPerson = () => {
           </div>
         </div>
         <div className={style.containerOne}>
-          <InputForm />
-          <InputForm label="primer apellido" />
+          <InputForm action={handleInput} name={'añosExperiencia'} label="Años de experiencia "
+             style ={{borderColor: errors.añosExperiencia ? "red" : "green",}}
+             />
+             {errors.añosExperiencia && (
+               <p style={{ color: "red"}}>{errors.añosExperiencia}</p>
+             )}
+
+          <InputForm action={handleInput} name={'ciudadMovilizacion'} label="Ciudad de movilizacion "
+          style ={{borderColor: errors.ciudadMovilizacion ? "red" : "green",}}
+          />
+          {errors.ciudadMovilizacion && (
+            <p style={{ color: "red"}}>{errors.ciudadMovilizacion}</p>
+          )}
         </div>
       </div>
       <CardDiscount />
