@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./InfoPerson.module.css";
 import InputForm from "../atoms/InputForm.jsx";
 import Select from "react-select";
@@ -6,20 +6,75 @@ import Navbar from "../organisms/navbar-2/Navbar.jsx";
 import FooterButtons from "../molecules/Footer/FooterButtons.jsx";
 import CardDiscount from "../molecules/card-discount/CardDiscount.jsx";
 import citys from "../atoms/input/citys.js";
-import { citisStyles, customStyles } from "./stylesSelect.js";
+import {
+  citisStyles,
+  citisStylesError,
+  customStyles,
+  customStylesError,
+} from "./stylesSelect.js";
 import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
+import { validateForm } from "./validatedForm.js";
 
 export const InfoPerson = () => {
+  const [error, setError] = useState({
+    primerNombre: "",
+    primerApellido: "",
+    genero: "",
+    dia: "",
+    mes: "",
+    año: "",
+    añosExperiencia: "",
+    ciuadadesMovilizacion: "",
+  });
+  const [formData, setFormData] = useState({
+    primerNombre: "",
+    primerApellido: "",
+    genero: "",
+    date: {},
+    añosExperiencia: "",
+    ciuadadesMovilizacion: "",
+  });
   const handleDayChange = (selectedDay) => {
-    console.log("Día seleccionado:", selectedDay.value);
+    setFormData((prev) => ({
+      ...prev,
+      date: { ...prev.date, dia: selectedDay.value },
+    }));
+    setError((prev) => ({ ...prev, dia: "" }));
   };
-
   const handleMonthChange = (selectedMonth) => {
-    console.log("Mes seleccionado:", selectedMonth.value);
+    setFormData((prev) => ({
+      ...prev,
+      date: { ...prev.date, mes: selectedMonth.value },
+    }));
+    setError((prev) => ({ ...prev, mes: "" }));
   };
-
   const handleYearChange = (selectedYear) => {
-    console.log("Año seleccionado:", selectedYear.value);
+    setFormData((prev) => ({
+      ...prev,
+      date: { ...prev.date, año: selectedYear.value },
+    }));
+    setError((prev) => ({ ...prev, año: "" }));
+  };
+  const handleCitys = (selectedcity) => {
+    setFormData((prev) => ({
+      ...prev,
+      ciuadadesMovilizacion: selectedcity.value,
+    }));
+    setError((prev) => ({ ...prev, ciuadadesMovilizacion: "" }));
+  };
+  const handleSubmit = () => {
+    const returnError = validateForm(formData);
+    if (returnError.length > 0) {
+      returnError.map((item) =>
+        setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
+      );
+      return;
+    }
+  };
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setError((prev) => ({ ...prev, [name]: "" }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -76,9 +131,36 @@ export const InfoPerson = () => {
         </div>
 
         <div className={style.containerOne}>
-          <InputForm />
-          {/* <Input placehorder="primer nombre"/> */}
-          <InputForm label="Primer apellido" />
+          <div style={{ position: "relative" }}>
+            {/* primerNombre */}
+            {error && <p className={style.error_form}>{error.primerNombre}</p>}
+            <InputForm
+              name="primerNombre"
+              action={handleInput}
+              style={
+                error.primerNombre
+                  ? { border: "#E92243 solid 2px", backgroundColor: "#FAF1F1 " }
+                  : {}
+              }
+            />
+          </div>
+          <div style={{ position: "relative" }}>
+            {error && (
+              <p className={style.error_form}>{error.primerApellido}</p>
+            )}
+            {/* primerApellido */}
+            {/* <Input placehorder="primer nombre"/> */}
+            <InputForm
+              name="primerApellido"
+              action={handleInput}
+              label="Primer apellido"
+              style={
+                error.primerApellido
+                  ? { border: "#E92243 solid 2px", backgroundColor: "#FAF1F1 " }
+                  : {}
+              }
+            />
+          </div>
         </div>
 
         <div className={style.containerTwo}>
@@ -86,15 +168,55 @@ export const InfoPerson = () => {
           <div className={style.container_gender}>
             <p className={style.gender_p}>Género</p>
             <form>
-              <div className={style.gender}>
-                <label>
-                  <input style={{ width: "60px", height: "15px" }} type="radio" name="genero" value="masculino" />
+              <div
+                style={
+                  error.genero
+                    ? {
+                        border: "#E92243 solid 2px",
+                        backgroundColor: "#FAF1F1 ",
+                      }
+                    : {}
+                }
+                className={style.gender}
+              >
+                <label style={{ position: "relative" }}>
+                  {/* genero */}
+                  <input
+                    type="radio"
+                    name="genero"
+                    value={formData.genero === "masculino"}
+                    onChange={(e) => {
+                      setFormData((prev) => ({ ...prev, genero: "masculino" }));
+                      setError((prev) => ({ ...prev, genero: "" }));
+                    }}
+                    style={{ width: "60px", height: "15px" }}
+                  />
                   Masculino
                 </label>
               </div>
-              <div className={style.gender}>
-                <label>
-                  <input style={{ width: "60px", height: "15px", backgroundColor: "#707070" }} type="radio" name="genero" value="femenino" />
+              <div
+                style={
+                  error.genero
+                    ? {
+                        border: "#E92243 solid 2px",
+                        backgroundColor: "#FAF1F1 ",
+                      }
+                    : {}
+                }
+                className={style.gender}
+              >
+                <label style={{ position: "relative" }}>
+                  {/* genero */}
+                  <input
+                    type="radio"
+                    name="genero"
+                    value={formData.genero === "femenino"}
+                    onChange={(e) => {
+                      setFormData((prev) => ({ ...prev, genero: "femenino" }));
+                      setError((prev) => ({ ...prev, genero: "" }));
+                    }}
+                    style={{ width: "60px", height: "15px" }}
+                  />
                   Femenino
                 </label>
               </div>
@@ -105,48 +227,86 @@ export const InfoPerson = () => {
           <div className={style.info_date}>
             <p className={style.gender_birth}>Fecha de nacimiento</p>
             <div style={{ display: "flex", gap: "10px" }}>
-              <Select
-                options={dayOptions}
-                styles={customStyles}
-                placeholder="Día"
-                onChange={handleDayChange}
-                isSearchable={false}
-                menuPlacement="top"
-              />
-
-              <Select
-                options={monthOptions}
-                styles={customStyles}
-                placeholder="Mes"
-                onChange={handleMonthChange}
-                isSearchable={false}
-                menuPlacement="top"
-              />
-
-              <Select
-                options={yearOptions}
-                styles={customStyles}
-                placeholder="Año"
-                onChange={handleYearChange}
-                isSearchable={false}
-                menuPlacement="top"
-              />
+              <div style={{ position: "relative" }}>
+                {/* {error && <p className={style.error_form}>{error.dia}</p>} */}
+                {/* dia */}
+                <Select
+                  options={dayOptions}
+                  styles={!error.dia ? customStyles : customStylesError}
+                  placeholder="Día"
+                  onChange={handleDayChange}
+                  isSearchable={false}
+                  menuPlacement="top"
+                />
+              </div>
+              <div style={{ position: "relative" }}>
+                {/* {error && <p className={style.error_form}>{error.mes}</p>} */}
+                {/* mes */}
+                <Select
+                  options={monthOptions}
+                  styles={!error.mes ? customStyles : customStylesError}
+                  placeholder="Mes"
+                  onChange={handleMonthChange}
+                  isSearchable={false}
+                  menuPlacement="top"
+                />
+              </div>
+              <div style={{ position: "relative" }}>
+                {/* {error && <p className={style.error_form}>{error.año}</p>} */}
+                {/* año */}
+                <Select
+                  options={yearOptions}
+                  styles={!error.año ? customStyles : customStylesError}
+                  placeholder="Año"
+                  onChange={handleYearChange}
+                  isSearchable={false}
+                  menuPlacement="top"
+                />
+              </div>
             </div>
           </div>
         </div>
+
         <div className={style.containerOne}>
-          <InputForm type="number" label="Años de experiencia" />
-          <Select
-            className={style.inputCity}
-            options={citys}
-            styles={citisStyles}
-            placeholder="Ciudades de movilizacion"
-            onChange={handleYearChange}
-            isSearchable={true}
-            menuPlacement="top"
-            menuPortalTarget={document.body} 
-          />
+          <div style={{ position: "relative" }}>
+            {error && (
+              <p className={style.error_form}>{error.añosExperiencia}</p>
+            )}
+            {/* añosExperiencia */}
+            <InputForm
+              action={handleInput}
+              name="añosExperiencia"
+              type="number"
+              label="Años de experiencia"
+              style={
+                error.añosExperiencia
+                  ? { border: "#E92243 solid 2px", backgroundColor: "#FAF1F1 " }
+                  : {}
+              }
+            />
+          </div>
+          <div style={{ position: "relative" }}>
+            {error && (
+              <p className={style.error_form}>{error.ciuadadesMovilizacion}</p>
+            )}
+            {/* ciuadadesMovilizacion */}
+            <Select
+              className={style.inputCity}
+              options={citys}
+              styles={
+                !error.ciuadadesMovilizacion ? citisStyles : citisStylesError
+              }
+              placeholder="Ciudades de movilizacion"
+              onChange={handleCitys}
+              isSearchable={true} // Permitir búsqueda y escritura
+              menuPlacement="top"
+              menuPortalTarget={document.body} // Esto dibuja el menú en el body
+            />
+          </div>
         </div>
+        <button onClick={handleSubmit}>
+          dwhjbaedfjbfsdbgdkjnfljkfdkjleñfkdjeksnfkjlekfkl
+        </button>
       </div>
       <CardDiscount />
       <div

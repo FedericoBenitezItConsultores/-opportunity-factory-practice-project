@@ -2,14 +2,31 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 // const stylesLabel1 = ;
 // const stylesLabel2 =
-export default function InputForm({ label = "Primer nombre" }) {
+export default function InputForm({
+  label = "Primer nombre",
+  action,
+  name,
+  style,
+  type = "text",
+}) {
   const [isFocused, setIsFocused] = useState(false);
   const [Input, setInput] = useState("");
 
   useEffect(() => {
     if (Input) setIsFocused(true);
   }, [Input, isFocused]);
-
+  const handleChange = (e) => {
+    const inputValue = e.target.value;
+    if (type == "number") {
+      if (/^\d*$/.test(inputValue)) {
+        setInput(inputValue);
+        action(e);
+      }
+      return
+    }
+    setInput(inputValue);
+    action(e);
+  };
   return (
     <div>
       <label className={styles.label}>
@@ -27,11 +44,13 @@ export default function InputForm({ label = "Primer nombre" }) {
 
         <input
           value={Input}
+          name={name}
+          style={style}
           onFocus={() => setIsFocused(true)} // Se activa cuando el input tiene foco
           onBlur={() => setIsFocused(false)} // Se activa cuando el input pierde foco
-          onChange={(e) => setInput(e.target.value)}
+          onChange={handleChange}
           className={styles.input}
-          type="text"
+          type={'text'}
         />
       </label>
     </div>
