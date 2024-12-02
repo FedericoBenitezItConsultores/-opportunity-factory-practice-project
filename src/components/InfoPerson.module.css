@@ -54,6 +54,11 @@
   text-align: center;
 }
 
+.inputCity{
+  width: 375px;
+  height: 50px;
+}
+
 .Image {
   display: flex;
   height: 48px;
@@ -92,7 +97,7 @@
   margin-top: 20px;
   white-space: nowrap;
     /*cambio*/
-  gap: 100px;
+  gap: 20px;
 }
 
 .InputForm1{
