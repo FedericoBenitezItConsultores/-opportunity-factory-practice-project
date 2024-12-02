@@ -100,7 +100,7 @@ export default function PricePage() {
          setUserActive(false);
          setIsModalOpen(true);
          startCountdown();
-       }, 1000); // 15 segundos de inactividad
+       }, 10000); 
      };
 
      // Escucha eventos de actividad del usuario

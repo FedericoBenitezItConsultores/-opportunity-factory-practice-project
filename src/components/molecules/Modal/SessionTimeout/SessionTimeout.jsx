@@ -14,7 +14,6 @@ const SessionTimeout = ({
   timeLeft,
   sessionEnded,
 }) => {
-
   const [isModalVisible, setIsModalVisible] = useState(true);
 
   const formatTime = (time) => {
