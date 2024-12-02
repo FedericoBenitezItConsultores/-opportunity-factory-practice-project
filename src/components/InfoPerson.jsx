@@ -88,13 +88,13 @@ export const InfoPerson = () => {
             <form>
               <div className={style.gender}>
                 <label>
-                  <input type="radio" name="genero" value="masculino" />
+                  <input style={{ width: "60px", height: "15px" }} type="radio" name="genero" value="masculino" />
                   Masculino
                 </label>
               </div>
               <div className={style.gender}>
                 <label>
-                  <input type="radio" name="genero" value="femenino" />
+                  <input style={{ width: "60px", height: "15px", backgroundColor: "#707070" }} type="radio" name="genero" value="femenino" />
                   Femenino
                 </label>
               </div>

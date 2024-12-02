@@ -10,14 +10,17 @@
 .persona {
   color: #1c1149;
   margin-bottom: 0px;
+  font-family: "roboto Medium";
 }
 
 .information {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: "roboto Medium";
 }
 .information2{
   margin-bottom: 15px; 
+  font-family: "roboto Medium";
 }
 
 .parragraf {
@@ -125,7 +128,7 @@
   align-items: center; 
   justify-content: space-between; 
   gap: 9px; 
-  width: 104px;
+  width: 110px;
   margin-top: 20px;
 }
 
