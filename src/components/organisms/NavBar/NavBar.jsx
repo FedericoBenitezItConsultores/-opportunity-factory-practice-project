@@ -6,20 +6,7 @@ import page_tab from "../../../assets/png/page-tab.png";
 import Modal from "../../molecules/Modal/ModalBase.jsx";
 
 const NavBar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleLogoutClick = () => {
-    setIsModalOpen(true); // Mostrar el modal
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false); // Ocultar el modal
-  };
-
-  const handleLogout = () => {
-    console.log("Sesión cerrada");
-    setIsModalOpen(false);
-  };
 
   return (
     <div className={styles.container}>
@@ -31,7 +18,7 @@ const NavBar = () => {
         <img src={page_tab} alt="page_tab" />
         <span className={styles.name}>Andrés Salamanca</span>
         <img src={Profile} alt="Profile" className={styles.profile} />
-        <button className={styles.button} onClick={handleLogoutClick}>
+        <button className={styles.button} >
           Cerrar sesión
         </button>
       </div>
@@ -51,7 +38,7 @@ const NavBar = () => {
           </div>
         </div>
       )} */}
-      <Modal show={isModalOpen} onClose={closeModal} />
+     
     </div>
   );
 };

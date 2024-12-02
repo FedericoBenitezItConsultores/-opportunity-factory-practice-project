@@ -3,7 +3,7 @@ import styles from "../Modal/Modal.module.css";
 import AlertIcon from "../../../assets/Alert.svg";
 import Modal from "@mui/material/Modal";
 
-const ModalBase = ({ show, onClose }) => {
+const ModalBase = ({ show, onClose,title }) => {
   if (!show) return null;
 
   return (
@@ -19,7 +19,7 @@ const ModalBase = ({ show, onClose }) => {
       <div className={styles.modalContainer}>
         <div className={styles.modalHeader}>
           <img className={styles.alertIcon} src={AlertIcon} alt="Alerta" />
-          <h2 className={styles.modalTitle}>¡Ups! Lo sentimos</h2>
+          <h2 className={styles.modalTitle}>{title}</h2>
         </div>
         <div className={styles.modalBody}>
           <p className={styles.modalText}>
@@ -29,8 +29,8 @@ const ModalBase = ({ show, onClose }) => {
           </p>
           <p className={styles.modalText}>
             Por favor, intenta nuevamente a través del botón{" "}
-            <span className={styles.bold}>Reintentar</span>. Si el error
-            persiste, retoma la cotización en unos minutos desde{" "}
+            <span className={styles.bold}>Reintentar.</span> <br /> Si el error
+            persiste, retoma la cotización en unos minutos desde <br />
             <span className={styles.bold}>Mis Negocios</span>.
           </p>
           <p className={styles.modalText}>
@@ -46,9 +46,8 @@ const ModalBase = ({ show, onClose }) => {
         </div>
         <div className={styles.modalExtraInfo}>
           <p className={styles.additionalText}>
-            Para obtener información adicional, comunícate con la mesa de ayuda
-            al correo
-            
+            Para obtener información adicional comunícate con la mesa de ayuda
+            al correo <br />
             <a
               href="mailto:soporte.aplicativos@libertycolombia.com"
               className={styles.contactLink}
