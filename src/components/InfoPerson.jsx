@@ -142,8 +142,9 @@ export const InfoPerson = () => {
             styles={citisStyles}
             placeholder="Ciudades de movilizacion"
             onChange={handleYearChange}
-            isSearchable={false}
+            isSearchable={true} // Permitir búsqueda y escritura
             menuPlacement="top"
+            menuPortalTarget={document.body} // Esto dibuja el menú en el body
           />
         </div>
       </div>
