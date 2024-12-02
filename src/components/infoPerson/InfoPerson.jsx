@@ -304,9 +304,6 @@ export const InfoPerson = () => {
             />
           </div>
         </div>
-        <button onClick={handleSubmit}>
-          dwhjbaedfjbfsdbgdkjnfljkfdkjleñfkdjeksnfkjlekfkl
-        </button>
       </div>
       <CardDiscount />
       <div
@@ -317,7 +314,7 @@ export const InfoPerson = () => {
           marginBottom: "7em",
         }}
       >
-        <FooterButtons />
+        <FooterButtons handleSubmit={handleSubmit} />
       </div>
     </>
   );
