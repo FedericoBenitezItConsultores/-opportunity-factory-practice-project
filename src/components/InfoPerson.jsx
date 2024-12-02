@@ -99,7 +99,7 @@ export const InfoPerson = () => {
         <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
         <div className={style.containerCard}>
-          <div className={style.document1}>
+          {/* <div className={style.document1}> */}
             <div>
               <table>
                 <tr>
@@ -131,12 +131,12 @@ export const InfoPerson = () => {
                     <td className={style.documents}>Identificación</td>
                   </tr>
                   <tr>
-                    <td>123456789</td>
+                    <td className={style.numberCc}>123456789</td>
                   </tr>
                 </tr>
               </table>
             </div>
-          </div>
+          {/* </div> */}
         </div>
 
         <div className={style.containerOne}>
