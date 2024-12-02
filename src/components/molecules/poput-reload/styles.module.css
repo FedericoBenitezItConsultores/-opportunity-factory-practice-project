@@ -27,9 +27,7 @@
   width: 476px;
   height: 43px;
   /* UI Properties */
-  font: var(--unnamed-font-style-normal) normal
-    var(--unnamed-font-weight-medium) var(--unnamed-font-size-32) / 38.4px
-    var(--unnamed-font-family-roboto-medium);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-32) / 38.4px var(--unnamed-font-family-roboto-medium);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-1a1446);
   text-align: center;
@@ -51,7 +49,7 @@
 .text1 {
   /* Layout Properties */
   width: 464px;
-  height: 45px;
+  /* height: 45px; */
   /* UI Properties */
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-343741);
@@ -80,8 +78,7 @@
   width: 62px;
   height: 14px;
   /* UI Properties */
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
-    var(--unnamed-font-size-12) / 19.2px var(--unnamed-font-family-roboto);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-12) / 19.2px var(--unnamed-font-family-roboto);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-28a3af);
   text-align: center;
@@ -134,7 +131,10 @@
   box-shadow: 0px 3px 0px #919191;
   border: 1px solid #1a1446;
   opacity: 1;
+  color: #1a1446;
+  font-family: "roboto Bold";
 }
+
 .button2 {
   width: 220px;
   height: 48px;
@@ -149,6 +149,7 @@
   text-align: center;
   display: flex;
 }
+
 .div_btn.single-button {
   justify-content: center;
 }
