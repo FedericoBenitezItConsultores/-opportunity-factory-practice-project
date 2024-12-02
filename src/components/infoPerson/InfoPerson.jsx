@@ -1,11 +1,11 @@
 import React from "react";
 import style from "./InfoPerson.module.css";
-import InputForm from "./atoms/InputForm";
+import InputForm from "../atoms/InputForm.jsx";
 import Select from "react-select";
-import Navbar from "./organisms/navbar-2/Navbar";
-import FooterButtons from "./molecules/Footer/FooterButtons";
-import CardDiscount from "./molecules/card-discount/CardDiscount";
-import citys from "./atoms/input/citys.js";
+import Navbar from "../organisms/navbar-2/Navbar.jsx";
+import FooterButtons from "../molecules/Footer/FooterButtons.jsx";
+import CardDiscount from "../molecules/card-discount/CardDiscount.jsx";
+import citys from "../atoms/input/citys.js";
 import { citisStyles, customStyles } from "./stylesSelect.js";
 import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 
