@@ -3,14 +3,16 @@ import { FooterDiligenciación } from "../footer-delecation/FooterDelecation";
 import styles from "./style.module.css";
 import { useState } from "react";
 import Modal from "../Modal/Modal1/ModalBase.jsx";
+import Spiner from "../Spiner/Spiner.jsx";
 
 export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+   const [isModalOpenBack, setIsModalOpenBack] = useState(false); 
+  const [isModalOpenLogout, setIsModalOpenLogout] = useState(false); 
+  const [isLoading, setIsLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Mis Negocios"); 
 
-  const handleLogoutClick = () => {
-    setIsModalOpen(true);
-  };
-
+ 
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -18,6 +20,33 @@ export const Footer = () => {
   const handleLogout = () => {
     console.log("Sesión cerrada");
     setIsModalOpen(false);
+  };
+
+
+  const handleBackClick = () => {
+    setButtonText("Usar descuento conductor"); 
+    setIsModalOpenBack(true); 
+  };
+
+  const handleLogoutClick = () => {
+    setButtonText("Mis Negocios"); 
+    setIsModalOpenLogout(true); 
+  };
+
+  const closeModalBack = () => {
+    setIsModalOpenBack(false); 
+  };
+
+  const closeModalLogout = () => {
+    setIsModalOpenLogout(false); 
+  };
+
+  const handleContinue = () => {
+    setIsLoading(true); 
+  };
+
+  const handleCloseSpinner = () => {
+    setIsLoading(false); 
   };
 
   return (
@@ -31,18 +60,26 @@ export const Footer = () => {
             <FooterDiligenciación />
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className={styles.buttonVolver}>Volver</button>
-            <button className={styles.button} onClick={handleLogoutClick}>
-              Guardar y salir{" "}
+            <button className={styles.buttonVolver} onClick={handleBackClick}>
+              Volver
             </button>
-            <button className={styles.button}>Continuar</button>
+            <button className={styles.button} onClick={handleLogoutClick}>
+              Guardar y salir
+            </button>
+            <button className={styles.button} onClick={handleContinue}>
+              Continuar
+            </button>
           </div>
         </div>
+
         <Modal
-          show={isModalOpen}
-          onClose={closeModal}
-          title="¡Ups! Lo sentimos "
+          show={isModalOpenBack || isModalOpenLogout} 
+          onClose={isModalOpenBack ? closeModalBack : closeModalLogout} 
+          title="¡Ups! Lo sentimos" 
+          buttonText={buttonText} 
         />
+
+        {isLoading && <Spiner onClose={handleCloseSpinner} />}
       </footer>
     </>
   );

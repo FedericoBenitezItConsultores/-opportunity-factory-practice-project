@@ -95,6 +95,7 @@
   border-bottom: 3px solid #919191;
    width: 220px;
   height: 48px;
+  white-space:nowrap;
 }
 
 .secondaryButton:hover {
