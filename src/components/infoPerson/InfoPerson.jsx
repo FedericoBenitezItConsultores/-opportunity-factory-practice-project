@@ -71,9 +71,12 @@ export const InfoPerson = () => {
       returnError.map((item) =>
         setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
       );
+      const element = document.getElementById("form");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
       return;
     }
-
     navigate("/price");
   };
   const handleInput = (e) => {
@@ -94,7 +97,7 @@ export const InfoPerson = () => {
         <p className={style.information2}>acorde a sus necesidades</p>
         <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
-        <div className={style.containerCard}>
+        <div id="form" className={style.containerCard}>
           <div>
             <table>
               <tr>

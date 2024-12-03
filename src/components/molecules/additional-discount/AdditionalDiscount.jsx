@@ -23,7 +23,7 @@ export const AdditionalDiscount = () => {
     { value: "opcion8", type: "2", label: "Documento de Identidad Consular" },
     { value: "opcion9", type: "0", label: "Certificado de Nacimiento" },
     {
-      value: "opcion6",
+      value: "opcion10",
       type: "2",
       label: "Número Único deIdentificación Personal (NIUP)",
     },
