@@ -1,8 +1,18 @@
 import styles from "./styles.module.css";
 import icon_done from "../../../assets/svg/icon_done.svg";
+import { useEffect, useState } from "react";
 
-export default function TableAsistencia({ plan }) {
-  if (!plan) return;
+export default function TableAsistencia({ plan, infTables }) {
+  const [arrayInf, setArrayInf] = useState([]);
+  if (!plan) return null;
+  useEffect(() => {
+    if (infTables) {
+      setArrayInf(plan.asistencias);
+    } else {
+      setArrayInf([]);
+    }
+  }, [infTables]);
+  if (!plan || arrayInf.length <= 0) return;
   return (
     <div className={styles.div_root}>
       <table className={styles.table} style={{ width: "100%" }}>
@@ -14,7 +24,7 @@ export default function TableAsistencia({ plan }) {
         </thead>
 
         <tbody className={styles.tbody}>
-          {plan.asistencias.map((asistencia, index) => (
+          {arrayInf.map((asistencia, index) => (
             <tr className={styles.row} key={index}>
               <td className={styles.cell}>
                 {asistencia.typeCheck === "icon_done" && (

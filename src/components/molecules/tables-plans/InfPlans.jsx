@@ -3,14 +3,19 @@ import img_financing from "../../../assets/svg/CombinedShape.svg";
 import img_arrow_down from "../../../assets/svg/flechitaArriba.svg";
 import TableCobertura from "./TableCobertura";
 import TableAsistencia from "./TableAsistencia";
+import { useState } from "react";
 export default function InfPlans({ plan }) {
+  const [infTables, setInfTables] = useState(true);
   return (
     <div className={styles.div_root1}>
-      <img
-        className={styles.img_arrow_down}
-        src={img_arrow_down}
-        alt="img_arrow_down"
-      />
+      <div style={{ cursor: "pointer", backgroundColor: "red" }}>
+        <img
+          onClick={() => setInfTables(!infTables)}
+          className={styles.img_arrow_down}
+          src={img_arrow_down}
+          alt="img_arrow_down"
+        />
+      </div>
       <div className={styles.fallo}>
         <div className={styles.div_inf}>
           <div
@@ -45,7 +50,11 @@ export default function InfPlans({ plan }) {
               <h1>Coberturas {plan.name}</h1>
             </div>
             {plan.coberturas.length > 0 ? (
-              <TableCobertura plan={plan} />
+              <TableCobertura
+                plan={plan}
+                setInfTables={setInfTables}
+                infTables={infTables}
+              />
             ) : (
               <div style={{ display: "flex", justifyContent: "left" }}>
                 <div
@@ -58,7 +67,7 @@ export default function InfPlans({ plan }) {
               </div>
             )}
           </div>
-          <div>
+          <div style={{ paddingBottom: "25px" }}>
             <div
               style={{
                 marginTop: plan.coberturas.length > 0 ? "100px" : "40px",
@@ -70,7 +79,7 @@ export default function InfPlans({ plan }) {
               <h1>Asistencias {plan.name}</h1>
             </div>
             {plan.asistencias.length > 0 ? (
-              <TableAsistencia plan={plan} />
+              <TableAsistencia plan={plan} infTables={infTables} />
             ) : (
               <br />
             )}

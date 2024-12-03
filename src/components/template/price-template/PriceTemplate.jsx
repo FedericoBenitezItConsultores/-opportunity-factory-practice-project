@@ -2,7 +2,9 @@ import React from "react";
 import styles from "./styles.module.css";
 import PlansPrice from "../../organisms/PlansPrice";
 import { Footer } from "../../molecules/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 export default function PriceTemplate() {
+  const navigate = useNavigate();
   return (
     <div className={styles.div_father}>
       <div
@@ -31,7 +33,12 @@ export default function PriceTemplate() {
           marginBottom: "7em",
         }}
       >
-        <Footer type={4} nextRouter={"/"} />
+        <Footer
+          type={4}
+          functionContinuar={() => navigate("/")}
+          functionVolver={() => navigate(-1)}
+          functionGuardar={() => console.log("guardar")}
+        />
       </div>
     </div>
   );

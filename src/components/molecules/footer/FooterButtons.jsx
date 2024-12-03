@@ -2,7 +2,12 @@ import { useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
 import { useEffect } from "react";
 
-export default function FooterButtons({ type, nextRouter = "/" }) {
+export default function FooterButtons({
+  type,
+  functionContinuar,
+  functionVolver,
+  functionGuardar,
+}) {
   const navigate = useNavigate();
   const action = (act) => {
     let data = JSON.parse(localStorage.getItem("steps"));
@@ -13,18 +18,17 @@ export default function FooterButtons({ type, nextRouter = "/" }) {
       }
       if (act == "guardar") {
         data[type - 1].state = "pending";
-        navigate("/");
+        // navigate("/");
       }
       if (act == "continuar") {
         data[type - 1].state = "completed";
-        navigate(nextRouter);
       }
       localStorage.setItem("steps", JSON.stringify(data));
     }
   };
   useEffect(() => {
-    let data = JSON.parse(localStorage.getItem("steps"));
-    if (data) {
+    let data = JSON.parse(localStorage.getItem("steps")) || null;
+    if (data && data[type - 1]) {
       data[type - 1].state = "pending";
       localStorage.setItem("steps", JSON.stringify(data));
     }
@@ -32,13 +36,31 @@ export default function FooterButtons({ type, nextRouter = "/" }) {
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <button onClick={() => action("volver")} className={styles.buttonVolver}>
+      <button
+        onClick={() => {
+          action("volver");
+          functionVolver();
+        }}
+        className={styles.buttonVolver}
+      >
         Volver
       </button>
-      <button onClick={() => action("guardar")} className={styles.button}>
-        Guardar y salir{" "}
+      <button
+        onClick={() => {
+          action("guardar");
+          functionGuardar();
+        }}
+        className={styles.button}
+      >
+        Guardar y salir
       </button>
-      <button onClick={() => action("continuar")} className={styles.button}>
+      <button
+        onClick={() => {
+          action("continuar");
+          functionContinuar();
+        }}
+        className={styles.button}
+      >
         Continuar
       </button>
     </div>

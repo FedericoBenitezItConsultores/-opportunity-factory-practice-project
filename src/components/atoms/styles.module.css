@@ -14,16 +14,16 @@
 }
 
 .p_text {
-    /* top: 10px;
-    left: 10px;
-    width: 100%; */
-    left: 10px;
-    padding-top: 10px;
     position: absolute;
     display: flex;
     justify-content: center;
     white-space: nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    /* Asegúrate de tener transición por defecto */
 }
+
+
 
 .input {
     width: 375px;
