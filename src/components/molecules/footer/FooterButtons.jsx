@@ -11,7 +11,7 @@ export default function FooterButtons({
   const navigate = useNavigate();
   const action = (act) => {
     let data = JSON.parse(localStorage.getItem("steps"));
-    if (data) {
+    if (data && data[type -1]) {
       if (act == "volver") {
         data[type - 1].state = "none";
         navigate(-1);
@@ -22,6 +22,7 @@ export default function FooterButtons({
       }
       if (act == "continuar") {
         data[type - 1].state = "completed";
+        functionContinuar();
       }
       localStorage.setItem("steps", JSON.stringify(data));
     }
@@ -57,7 +58,6 @@ export default function FooterButtons({
       <button
         onClick={() => {
           action("continuar");
-          functionContinuar();
         }}
         className={styles.button}
       >

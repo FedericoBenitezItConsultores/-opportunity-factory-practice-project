@@ -8,7 +8,6 @@ import CardDiscount from "../molecules/card-discount/CardDiscount.jsx";
 import citys from "../atoms/input/citys.js";
 import PoputReloadContainer from "../../components/molecules/pooput-spinner/pooput-spinner.jsx";
 
-
 import {
   citisStyles,
   citisStylesError,
@@ -22,9 +21,8 @@ import { useNavigate } from "react-router-dom";
 import Poput from "../organisms/poput/Poput.jsx";
 import PoputReload from "../molecules/poput-reload/PoputReload.jsx";
 
-
 export const InfoPerson = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState({
     primerNombre: "",
     primerApellido: "",
@@ -73,21 +71,33 @@ export const InfoPerson = () => {
     setError((prev) => ({ ...prev, ciuadadesMovilizacion: "" }));
   };
   const handleSubmit = () => {
-    setLoading(true)
-    setTimeout(() => {
     const returnError = validateForm(formData);
     if (returnError.length > 0) {
       returnError.forEach((item) =>
         setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
       );
-      setLoading(false);
       return;
     }
-    setLoading(false);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/price");
+    }, 2000);
+  };
+  const handleVolver = () => {
+    setLoading(true);
+    setTimeout(() => {
+      navigate("/");
+      setLoading(false);
+    }, 2000);
+  };
+  const handleOtroBoton = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
 
-    navigate("/price");
-  },2000)
-}
   const handleInput = (e) => {
     const { name, value } = e.target;
     setError((prev) => ({ ...prev, [name]: "" }));
@@ -402,6 +412,7 @@ export const InfoPerson = () => {
       <CardDiscount />
       <AdditionalDiscount />
       {loading && <PoputReloadContainer />}
+
       <div
         style={{
           display: "flex",
@@ -410,9 +421,12 @@ export const InfoPerson = () => {
           marginBottom: "7em",
         }}
       >
-        <FooterButtons type={3} functionContinuar={handleSubmit}
-         />
-
+        <FooterButtons
+          type={3}
+          functionVolver={handleVolver}
+          functionContinuar={handleSubmit}
+          functionOtroBoton={handleOtroBoton}
+        />
       </div>
     </>
   );
