@@ -6,6 +6,9 @@ import Navbar from "../organisms/navbar-2/Navbar.jsx";
 import FooterButtons from "../molecules/Footer/FooterButtons.jsx";
 import CardDiscount from "../molecules/card-discount/CardDiscount.jsx";
 import citys from "../atoms/input/citys.js";
+import PoputReloadContainer from "../../components/molecules/pooput-spinner/pooput-spinner.jsx";
+
+
 import {
   citisStyles,
   citisStylesError,
@@ -17,7 +20,9 @@ import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
 import { useNavigate } from "react-router-dom";
 
+
 export const InfoPerson = () => {
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState({
     primerNombre: "",
     primerApellido: "",
@@ -66,16 +71,21 @@ export const InfoPerson = () => {
     setError((prev) => ({ ...prev, ciuadadesMovilizacion: "" }));
   };
   const handleSubmit = () => {
+    setLoading(true)
+    setTimeout(() => {
     const returnError = validateForm(formData);
     if (returnError.length > 0) {
-      returnError.map((item) =>
+      returnError.forEach((item) =>
         setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
       );
+      setLoading(false);
       return;
     }
+    setLoading(false);
 
     navigate("/price");
-  };
+  },2000)
+}
   const handleInput = (e) => {
     const { name, value } = e.target;
     setError((prev) => ({ ...prev, [name]: "" }));
@@ -310,6 +320,7 @@ export const InfoPerson = () => {
       </div>
       <CardDiscount />
       <AdditionalDiscount />
+      {loading && <PoputReloadContainer />}
       <div
         style={{
           display: "flex",
@@ -318,7 +329,9 @@ export const InfoPerson = () => {
           marginBottom: "7em",
         }}
       >
-        <FooterButtons type={3} functionContinuar={handleSubmit} />
+        <FooterButtons type={3} functionContinuar={handleSubmit}
+         />
+
       </div>
     </>
   );
