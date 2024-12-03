@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Modal1/Modal.module.css";
 import AlertIcon from "../../../../assets/Alert.svg";
 import Modal from "@mui/material/Modal";
 
 const ModalBase = ({ show, onClose, title, buttonText }) => {
+  const [retryClicked, setRetryClicked] = useState(false); 
+
+  
+  const handleRetry = () => {
+    setRetryClicked(true); 
+  };
+
   if (!show) return null;
 
   return (
@@ -27,28 +34,47 @@ const ModalBase = ({ show, onClose, title, buttonText }) => {
             <span className={styles.bold}>cotización</span> en este momento
             debido a problemas técnicos.
           </p>
-          <p className={styles.modalText}>
-            Por favor, intenta nuevamente a través del botón{" "}
-            <span className={styles.bold}>Reintentar.</span> <br /> Si el error
-            persiste, retoma la cotización en unos minutos desde <br />
-            <span className={styles.bold}>Mis Negocios</span>.
-          </p>
+          {!retryClicked ? (
+            <p className={styles.modalText}>
+              Por favor, intenta nuevamente a través del botón{" "}
+              <span className={styles.bold}>Reintentar.</span> <br /> Si el error
+              persiste, retoma la cotización en unos minutos desde <br />
+              <span className={styles.bold}>Mis Negocios</span>.
+            </p>
+          ) : (
+            <p className={styles.modalText}>
+              Reporta la falla en la mesa de ayuda al correo{" "}
+              <a
+                href="mailto:soporte.aplicativos@libertycolombia.com"
+                className={styles.contactLink2}
+              >
+                soporte.aplicativos@libertycolombia.com
+              </a>
+            </p>
+          )}
           <p className={styles.modalText}>
             Número de cotización{" "}
             <span className={styles.quoteNumber}>100030819</span>
           </p>
         </div>
 
-
-
         <div className={styles.modalFooter}>
-          <button onClick={onClose} className={styles.secondaryButton}>
-            {buttonText || "Mis Negocios"}  
-          </button>
-          <button className={styles.primaryButton}>Reintentar</button>
+          {retryClicked ? (
+           
+            <button onClick={onClose} className={styles.button2}>
+              Ir a Mis Negocios
+            </button>
+          ) : (
+            <>
+              <button onClick={onClose} className={styles.secondaryButton}>
+                {buttonText || "Mis Negocios"}
+              </button>
+              <button onClick={handleRetry} className={styles.primaryButton}>
+                Reintentar
+              </button>
+            </>
+          )}
         </div>
-
-
 
         <div className={styles.modalExtraInfo}>
           <p className={styles.additionalText}>

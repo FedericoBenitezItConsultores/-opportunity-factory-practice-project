@@ -133,3 +133,31 @@
   color: #999999;
   margin-top: 9px;
 }
+
+.contactLink2{
+  font-weight: bold;
+  color: #343741;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #1a1446;
+  border: 1px solid #1a1446;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "roboto Medium";
+  border-radius: 5px;
+  cursor: pointer;
+  border-bottom: 3px solid #919191;
+   width: 220px;
+  height: 48px;
+  white-space:nowrap;
+}
+
+.button2:hover {
+  background-color: #06748c;
+  color: #ffffff;
+}

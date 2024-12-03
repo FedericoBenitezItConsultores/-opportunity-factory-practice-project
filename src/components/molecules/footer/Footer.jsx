@@ -8,7 +8,7 @@ import Spiner from "../Spiner/Spiner.jsx";
 export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
    const [isModalOpenBack, setIsModalOpenBack] = useState(false); 
-  const [isModalOpenLogout, setIsModalOpenLogout] = useState(false); 
+  const [isModalOpenLogout, setIsModalOpenLogout] = useState(true); 
   const [isLoading, setIsLoading] = useState(false);
   const [buttonText, setButtonText] = useState("Mis Negocios"); 
 
@@ -28,10 +28,10 @@ export const Footer = () => {
     setIsModalOpenBack(true); 
   };
 
-  const handleLogoutClick = () => {
-    setButtonText("Mis Negocios"); 
-    setIsModalOpenLogout(true); 
-  };
+  // const handleLogoutClick = () => {
+  //   setButtonText("Mis Negocios"); 
+  //   setIsModalOpenLogout(true); 
+  // };
 
   const closeModalBack = () => {
     setIsModalOpenBack(false); 
@@ -63,7 +63,7 @@ export const Footer = () => {
             <button className={styles.buttonVolver} onClick={handleBackClick}>
               Volver
             </button>
-            <button className={styles.button} onClick={handleLogoutClick}>
+            <button className={styles.button} >
               Guardar y salir
             </button>
             <button className={styles.button} onClick={handleContinue}>
