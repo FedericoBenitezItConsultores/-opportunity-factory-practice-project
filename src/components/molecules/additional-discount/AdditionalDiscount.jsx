@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 import warningIcons from "../../../assets/svg/warningicons.svg";
-
+import CardDiscount from "../card-discount/CardDiscount";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
+import imgConyugal from "../../../assets/svg/Wedding_Ring_CMYK_Yellow.svg";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 export const AdditionalDiscount = () => {
   const [showPopup, setShowPopup] = useState(false); // Estado para controlar el popup
-
+  const [selectValue, setSelectValue] = useState(0);
+  const [numeroTI, setNumeroTI] = useState("");
   const handleCheckboxChange = (e) => {
     setShowPopup(e.target.checked); // Muestra el popup si el checkbox está marcado
   };
-
+  const identidades = [
+    { value: "opcion1", type: "0", label: "Cédula de extranjería" },
+    { value: "opcion2", type: "1", label: "Carnet Diplomático" },
+    { value: "opcion3", type: "2", label: "Pasaporte" },
+    { value: "opcion4", type: "0", label: "Tarjeta de Identidad" },
+    { value: "opcion5", type: "1", label: "Registro Civil" },
+    {
+      value: "opcion6",
+      type: "2",
+      label: "Número Único deIdentificación Personal (NIUP)",
+    },
+  ];
+  console.log("selectValue", selectValue);
   return (
     <div className={styles.container}>
       <div>
@@ -54,7 +70,7 @@ export const AdditionalDiscount = () => {
       {/* Popup */}
       {showPopup && (
         <div className={styles.popup}>
-                   <div className={styles.lineContainer}></div> 
+          <div className={styles.lineContainer}></div>
           <div className={styles.popupContent}>
             <p>
               Ingresa la identificación de tu cónyuge si quieres aplicar su
@@ -62,23 +78,67 @@ export const AdditionalDiscount = () => {
             </p>
           </div>
           <div className={styles.inputContainer}>
-            <select id="opciones" name="opciones" className={styles.selectBox}>
-              <option value="opcion1">Cédula de extranjería</option>
-              <option value="opcion2">Carnet Diplomático</option>
-              <option value="opcion3">Pasaporte</option>
-              <option value="opcion4">Tarjeta de Identidad</option>
-              <option value="opcion5">Registro Civil</option>
-              <option value="opcion6">
-                Número Único de Identificación Personal (NIUP)
-              </option>
+            <select
+              id="opciones"
+              name="opciones"
+              value={selectValue}
+              onChange={(e) => setSelectValue(e.target.value)}
+              className={styles.selectBox}
+            >
+              {identidades.map((option) => (
+                <option key={option.value} value={option.type}>
+                  {option.label}
+                </option>
+              ))}
             </select>
             <input
               type="number"
               placeholder="Número de identificación"
               className={styles.inputBox}
+              value={numeroTI}
+              onChange={(e) => setNumeroTI(e.target.value)}
             />
           </div>
-          <div className={styles.cuadro}>%<br/>El porcentaje de descuento de tu cónyuge es:</div>
+          <div className={styles.divCardDiscount}>
+            {numeroTI && selectValue == "2" && (
+              <CardDiscount
+                title="Descuento de cónyuge"
+                text1={"De acuerdo al expertis del conductor,"}
+                porcentaje={{
+                  text: "20% OFF",
+                  color: "#D32F2F",
+                  textDescuento:
+                    "No aplica por descuento menor. Se aplica descuento del conductor.",
+                  icon: ErrorOutlineIcon,
+                  bg: "#F9E1E1",
+                  colorIcon: "#aa0000",
+                  img: imgConyugal,
+                }}
+              />
+            )}
+            {numeroTI && selectValue == "1" && (
+              <CardDiscount
+                title="Descuento de cónyuge"
+                text1={"De acuerdo al expertis del conductor,"}
+                porcentaje={{
+                  text: "30% OFF",
+                  color: "#28A3AF",
+                  textDescuento:
+                    "Aplica y se prioriza el descuento del conductor",
+                  icon: CheckCircleOutlineIcon,
+                  bg: "#E1F2E6",
+                  colorIcon: "#00aa00",
+                  img: imgConyugal,
+                }}
+              />
+            )}
+          </div>
+          {(!numeroTI || selectValue == "0") && (
+            <div className={styles.cuadro}>
+              %<br />
+              El porcentaje de descuento de tu cónyuge es:
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -13,7 +13,7 @@ export const Footer = () => {
           <div className={styles.container}>
             <FooterDiligenciación />
           </div>
-     <FooterButtons />
+          <FooterButtons />
         </div>
       </footer>
     </>
