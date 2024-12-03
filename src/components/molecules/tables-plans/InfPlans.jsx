@@ -6,6 +6,7 @@ import TableAsistencia from "./TableAsistencia";
 import { useState } from "react";
 export default function InfPlans({ plan }) {
   const [infTables, setInfTables] = useState(true);
+
   return (
     <div className={styles.div_root1}>
       <div style={{ cursor: "pointer", backgroundColor: "red" }}>
