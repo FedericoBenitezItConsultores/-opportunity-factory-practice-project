@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import warningIcons from "../../../assets/svg/warningicons.svg";
 import CardDiscount from "../card-discount/CardDiscount";
@@ -11,12 +11,14 @@ export const AdditionalDiscount = () => {
   const [selectValue, setSelectValue] = useState(0);
   const [numeroTI, setNumeroTI] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingText, setLoadingText] = useState(false);
   const handleCheckboxChange = (e) => {
+    if (!e.target.checked) return setShowPopup(e.target.checked);
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       setShowPopup(e.target.checked); // Muestra el popup si el checkbox está marcado
-    }, 2000);
+    }, 1000);
   };
   const identidades = [
     { value: "opcion1", type: "0", label: "Cédula de extranjería" },
@@ -30,16 +32,29 @@ export const AdditionalDiscount = () => {
       label: "Número Único deIdentificación Personal (NIUP)",
     },
   ];
-
+  useEffect(() => {
+    if (selectValue && numeroTI > 6) {
+      setTimeout(() => {
+        setLoading(true);
+        setTimeout(() => {
+          setLoadingText(true);
+          setTimeout(() => {
+            setLoading(false);
+            setLoadingText(false);
+          }, 2000);
+        }, 3000);
+      }, 2000);
+    }
+  }, [selectValue, numeroTI]);
   return (
     <>
-      {loading && <Spinner />}
+      {loading && <Spinner showText={loadingText} />}
       <div className={styles.container}>
         <div>
           <p className={styles.titulo}>Descuento adicional</p>
         </div>
         <div className={styles.checkboxGroups}>
-          <form>
+          <div>
             <div className={styles.checkboxGroup}>
               <input
                 type="checkbox"
@@ -49,7 +64,7 @@ export const AdditionalDiscount = () => {
                 Deseo utilizar el descuento de mi cónyuge
               </p>
             </div>
-          </form>
+          </div>
         </div>
         <div>
           <div className={styles.fallo}>
@@ -108,7 +123,7 @@ export const AdditionalDiscount = () => {
               />
             </div>
             <div className={styles.divCardDiscount}>
-              {numeroTI && selectValue == "2" && (
+              {!loading && !loadingText && numeroTI && selectValue == "2" && (
                 <CardDiscount
                   title="Descuento de cónyuge"
                   text1={"De acuerdo al expertis del conductor,"}
@@ -124,7 +139,7 @@ export const AdditionalDiscount = () => {
                   }}
                 />
               )}
-              {numeroTI && selectValue == "1" && (
+              {!loading && !loadingText && numeroTI && selectValue == "1" && (
                 <CardDiscount
                   title="Descuento de cónyuge"
                   text1={"De acuerdo al expertis del conductor,"}
@@ -141,12 +156,14 @@ export const AdditionalDiscount = () => {
                 />
               )}
             </div>
-            {(!numeroTI || selectValue == "0") && (
-              <div className={styles.cuadro}>
-                %<br />
-                El porcentaje de descuento de tu cónyuge es:
-              </div>
-            )}
+            {!numeroTI ||
+              selectValue == "0" ||
+              ((loading || loadingText) && (
+                <div className={styles.cuadro}>
+                  %<br />
+                  El porcentaje de descuento de tu cónyuge es:
+                </div>
+              ))}
           </div>
         )}
       </div>
