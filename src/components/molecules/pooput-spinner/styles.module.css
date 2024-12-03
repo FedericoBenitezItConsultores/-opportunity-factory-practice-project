@@ -1,6 +1,6 @@
 .loading {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .container {
   height: auto;
   width: auto;
@@ -25,6 +26,7 @@
   width: 130px;
   height: 130px;
 }
+
 .img {
   width: 200px;
   height: 200px;
@@ -34,7 +36,7 @@
   font-size: 24px;
   font-family: "Roboto Bold", sans-serif;
   color: #ffffff;
-  z-index: 101;
+  z-index: 11;
   margin-top: 120px;
   display: flex;
   justify-content: center;

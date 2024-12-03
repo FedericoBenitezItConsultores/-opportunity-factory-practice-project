@@ -46,7 +46,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   height: 100%;
   object-fit: cover;
 }
@@ -55,7 +55,7 @@
   position: absolute;
   top: 50px;
   left: 200px;
-  z-index: 2;
+  z-index: 0;
 }
 
 .title {
@@ -99,7 +99,7 @@
 
 .containerText {
   margin-left: 30px;
-  z-index: 445;
+  z-index: 0;
 }
 
 .DivtextDescuento {
