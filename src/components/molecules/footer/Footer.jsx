@@ -1,13 +1,54 @@
 import { CotizacionPdf } from "../price-pdf/PricePdf";
 import { FooterDiligenciación } from "../footer-delecation/FooterDelecation";
 import styles from "./style.module.css";
-import FooterButtons from "./FooterButtons";
-export const Footer = ({
-  type,
-  functionContinuar,
-  functionVolver,
-  functionGuardar,
-}) => {
+import { useState } from "react";
+import Modal from "../Modal/Modal1/ModalBase.jsx";
+import Spiner from "../Spiner/Spiner.jsx";
+
+export const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+   const [isModalOpenBack, setIsModalOpenBack] = useState(false); 
+  const [isModalOpenLogout, setIsModalOpenLogout] = useState(true); 
+  const [isLoading, setIsLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Mis Negocios"); 
+
+ 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleLogout = () => {
+    console.log("Sesión cerrada");
+    setIsModalOpen(false);
+  };
+
+
+  const handleBackClick = () => {
+    setButtonText("Usar descuento conductor"); 
+    setIsModalOpenBack(true); 
+  };
+
+  // const handleLogoutClick = () => {
+  //   setButtonText("Mis Negocios"); 
+  //   setIsModalOpenLogout(true); 
+  // };
+
+  const closeModalBack = () => {
+    setIsModalOpenBack(false); 
+  };
+
+  const closeModalLogout = () => {
+    setIsModalOpenLogout(false); 
+  };
+
+  const handleContinue = () => {
+    setIsLoading(true); 
+  };
+
+  const handleCloseSpinner = () => {
+    setIsLoading(false); 
+  };
+
   return (
     <>
       <footer>
@@ -18,13 +59,27 @@ export const Footer = ({
           <div className={styles.container}>
             <FooterDiligenciación />
           </div>
-          <FooterButtons
-            type={type}
-            functionContinuar={functionContinuar}
-            functionVolver={functionVolver}
-            functionGuardar={functionGuardar}
-          />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <button className={styles.buttonVolver} onClick={handleBackClick}>
+              Volver
+            </button>
+            <button className={styles.button} >
+              Guardar y salir
+            </button>
+            <button className={styles.button} onClick={handleContinue}>
+              Continuar
+            </button>
+          </div>
         </div>
+
+        <Modal
+          show={isModalOpenBack || isModalOpenLogout} 
+          onClose={isModalOpenBack ? closeModalBack : closeModalLogout} 
+          title="¡Ups! Lo sentimos" 
+          buttonText={buttonText} 
+        />
+
+        {isLoading && <Spiner onClose={handleCloseSpinner} />}
       </footer>
     </>
   );
