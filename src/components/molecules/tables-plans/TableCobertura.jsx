@@ -1,8 +1,18 @@
 import styles from "./styles.module.css";
 import icon_done from "../../../assets/svg/icon_done.svg";
+import { useEffect, useState } from "react";
 
-export default function TableCobertura({ plan }) {
+export default function TableCobertura({ plan, infTables }) {
+  const [arrayInf, setArrayInf] = useState([]);
   if (!plan) return null;
+  useEffect(() => {
+    if (infTables) {
+      setArrayInf(plan.coberturas);
+    } else {
+      setArrayInf([]);
+    }
+  }, [infTables]);
+  if (!plan || arrayInf.length <= 0) return;
 
   return (
     <div className={styles.div_root}>
@@ -16,7 +26,7 @@ export default function TableCobertura({ plan }) {
         </thead>
 
         <tbody className={styles.tbody}>
-          {plan.coberturas.map((cobertura, index) => (
+          {arrayInf.map((cobertura, index) => (
             <tr className={styles.row} key={index}>
               <td className={styles.cell}>
                 {cobertura.typeCheck === "icon_done" && (

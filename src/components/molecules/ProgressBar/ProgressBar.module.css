@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .container2 {
   display: flex;
   flex-wrap: wrap;
@@ -57,20 +58,20 @@
   min-height: 1rem;
 }
 
-.stepNumber1 {
+.completed {
   background-color: #99e3ea;
   color: #1a1446;
   border: 1px solid #28a3af;
 }
 
-.stepNumber2 {
+/* .stepNumber2 {
   background-color: #99e3ea;
   color: #1a1446;
   border: 1px solid #28a3af;
-  margin-left: -15px;
-}
+} */
+/* margin-left: -15px; */
 
-.stepNumber3 {
+.pending {
   background-color: #e6e6e668;
   color: #1a1446;
   border: 2px solid #28a3af;
@@ -79,7 +80,7 @@
   margin-left: -15px;
 }
 
-.stepNumber4 {
+.none {
   background-color: #e6e6e668;
   color: #808080;
   border: 1px solid #c0bfc0;

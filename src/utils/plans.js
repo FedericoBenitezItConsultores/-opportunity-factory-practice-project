@@ -347,7 +347,6 @@ export const plans = [
       },
     ],
   },
-  // falta los iconos de este
   {
     id: 4,
     name: "Ligero",

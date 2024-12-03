@@ -1,14 +1,13 @@
 .div_root {
-    width: 288px;
-    height: 256px;
+
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
     border-radius: 3px 3px 0 0;
     opacity: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -19,16 +18,16 @@
     /* Incrementa ligeramente el tamaño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Sombra adicional */
-    width: 310px;
-    height: 256px;
+    /* width: 285px;
+    height: 256px; */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
     border-radius: 3px 3px 0 0;
     opacity: 1;
     z-index: 2;
@@ -50,7 +49,7 @@
 
     /* UI Properties */
     /* border: 1.1px solid #979797; */
-    background: transparent url('../../../assets/Oval4.jpg') no-repeat center;
+    background: transparent url("../../../assets/Oval4.jpg") no-repeat center;
     opacity: 0.6;
 }
 
@@ -59,9 +58,10 @@
     width: 112px;
     height: 29px;
     text-align: center;
-    font: bold 24px/29px Roboto;
+    font-family: "roboto Bold";
+
     letter-spacing: 0;
-    color: #1A1446;
+    color: #1a1446;
     opacity: 1;
 }
 
@@ -70,25 +70,25 @@
     width: 233px;
     height: 51px;
     text-align: center;
-    font: bold 42px/51px Roboto;
+    font: bold 42px/51px "roboto Bold";
     letter-spacing: 0;
-    color: #28A3AF;
+    color: #28a3af;
     opacity: 1;
 }
 
 .div_financing {
-    /* Layout Properties */
     width: 272px;
     height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    /* UI Properties */
-    background-color: #D9E8FE;
+    background-color: #d9e8fe;
     border-radius: 16px;
     opacity: 1;
     margin: 0 10px;
+    font-family: "roboto Bold";
+    font-size: 14px;
 }
 
 .financing_icon {
@@ -99,30 +99,29 @@
     opacity: 1;
 }
 
-
 .div_show_details {
+    font-family: "roboto regular";
     padding: 15px;
-    border-top: #E4E4E4 1px solid;
+    border-top: #e4e4e4 1px solid;
     width: 79%;
     text-align: center;
 }
 
-/* 'Fill583.jpg' */
 .div_show_details p {
-    /* Layout Properties */
-
-    /* width: 88px;
-    height: 19px; */
-    /* UI Properties */
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-06748c);
     letter-spacing: 0px;
-    color: #06748C;
+    color: #06748c;
     opacity: 1;
+    font-family: "roboto regular";
 }
 
 .triangle {
     position: absolute;
     bottom: -40;
     left: 36%;
+}
+
+.financiacion {
+    font-family: "roboto Bold";
 }

@@ -15,6 +15,7 @@ import {
 import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
+import { useNavigate } from "react-router-dom";
 
 export const InfoPerson = () => {
   const [error, setError] = useState({
@@ -35,6 +36,7 @@ export const InfoPerson = () => {
     añosExperiencia: "",
     ciuadadesMovilizacion: "",
   });
+  const navigate = useNavigate();
   const handleDayChange = (selectedDay) => {
     setFormData((prev) => ({
       ...prev,
@@ -71,6 +73,8 @@ export const InfoPerson = () => {
       );
       return;
     }
+
+    navigate("/price");
   };
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -91,7 +95,6 @@ export const InfoPerson = () => {
         <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
 
         <div className={style.containerCard}>
-          {/* <div className={style.document1}> */}
           <div>
             <table>
               <tr>
@@ -128,7 +131,6 @@ export const InfoPerson = () => {
               </tr>
             </table>
           </div>
-          {/* </div> */}
         </div>
 
         <div className={style.containerOne}>
@@ -316,7 +318,7 @@ export const InfoPerson = () => {
           marginBottom: "7em",
         }}
       >
-        <FooterButtons handleSubmit={handleSubmit} />
+        <FooterButtons type={3} functionContinuar={handleSubmit} />
       </div>
     </>
   );
