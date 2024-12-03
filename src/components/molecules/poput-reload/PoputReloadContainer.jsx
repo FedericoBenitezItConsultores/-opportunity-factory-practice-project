@@ -39,7 +39,7 @@ export default function PoputReloadContainer() {
                 <b> Mis Negocios.</b>
               </>
             }
-          /> 
+          />
         </>
         {/* pagina 30, pagina 58  */}
         <>

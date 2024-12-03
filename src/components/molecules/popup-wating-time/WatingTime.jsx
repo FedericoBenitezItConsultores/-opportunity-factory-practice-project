@@ -6,7 +6,7 @@ export default function WatingTime() {
   const [popup, setPopup] = useState(false);
 
   const [tiempoRestante, setTiempoRestante] = useState(120);
-  const tiempoInactividad = 1 * 1000 * 60;
+  const tiempoInactividad = 0.5 * 1000 * 60;
   useEffect(() => {
     let timeoutId;
     const resetTimer = () => {

@@ -38,8 +38,9 @@ export default function PoputReload({
               !btnReintentar ? styles.singleButton : ""
             }`}
           >
-            {buttons.map((buton) => (
+            {buttons.map((buton, i) => (
               <button
+                key={i}
                 onClick={() => buton.action()}
                 className={styles[buton.style]}
               >

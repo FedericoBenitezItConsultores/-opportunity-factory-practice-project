@@ -20,6 +20,7 @@ import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalD
 import { useNavigate } from "react-router-dom";
 import Poput from "../organisms/poput/Poput.jsx";
 import PoputReload from "../molecules/poput-reload/PoputReload.jsx";
+import WatingTime from "../molecules/popup-wating-time/WatingTime.jsx";
 
 export const InfoPerson = () => {
   const [loading, setLoading] = useState(false);
@@ -115,6 +116,8 @@ export const InfoPerson = () => {
   return (
     <>
       <Navbar />
+      <WatingTime />
+
       {ErrorCotizacion && (
         <>
           <Poput>

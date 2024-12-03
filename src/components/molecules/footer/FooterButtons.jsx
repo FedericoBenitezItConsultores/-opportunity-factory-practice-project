@@ -11,10 +11,9 @@ export default function FooterButtons({
   const navigate = useNavigate();
   const action = (act) => {
     let data = JSON.parse(localStorage.getItem("steps"));
-    if (data && data[type -1]) {
+    if (data && data[type - 1]) {
       if (act == "volver") {
         data[type - 1].state = "none";
-        navigate(-1);
       }
       if (act == "guardar") {
         data[type - 1].state = "pending";
