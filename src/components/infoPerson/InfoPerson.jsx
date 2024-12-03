@@ -19,6 +19,8 @@ import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
 import { useNavigate } from "react-router-dom";
+import Poput from "../organisms/poput/Poput.jsx";
+import PoputReload from "../molecules/poput-reload/PoputReload.jsx";
 
 
 export const InfoPerson = () => {
@@ -91,10 +93,89 @@ export const InfoPerson = () => {
     setError((prev) => ({ ...prev, [name]: "" }));
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+  const [ErrorCotizacion, setErrorCotizacion] = useState(false);
+  const [ErrorCotizacionIrAMisNegocios, setErrorCotizacionIrAMisNegocios] =
+    useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setErrorCotizacion(true);
+    }, 5000);
+  }, []);
 
   return (
     <>
       <Navbar />
+      {ErrorCotizacion && (
+        <>
+          <Poput>
+            <>
+              <PoputReload
+                buttons={[
+                  {
+                    action: () => navigate("/inf-person"),
+                    text: "Mis Negocios",
+                    style: "button1",
+                  },
+                  {
+                    action: () => {
+                      setErrorCotizacion(false);
+                      setErrorCotizacionIrAMisNegocios(true);
+                    },
+                    text: "Reintentar",
+                    style: "button",
+                  },
+                ]}
+                parrafo1={
+                  <>
+                    No podemos continuar con la <b>cotización</b> en este
+                    momento debido a problemas técnicos.
+                  </>
+                }
+                parrafo2={
+                  <>
+                    Por favor, intenta nuevamente a través del botón{" "}
+                    <b>Reintentar</b>
+                    .
+                    <br />
+                    Si el error persiste, retoma la cotización en unos minutos
+                    desde <br />
+                    <b> Mis Negocios.</b>
+                  </>
+                }
+              />
+            </>
+          </Poput>
+        </>
+      )}
+      {ErrorCotizacionIrAMisNegocios && (
+        <>
+          <Poput>
+            <>
+              <PoputReload
+                buttons={[
+                  {
+                    action: () => setErrorCotizacionIrAMisNegocios(false),
+                    text: "Ir a Mis Negocios",
+                    style: "button1",
+                  },
+                ]}
+                parrafo1={
+                  <>
+                    No podemos continuar con la <b>cotización</b> en este
+                    momento debido a problemas técnicos.
+                  </>
+                }
+                parrafo2={
+                  <>
+                    Reporta la falla en la mesa de ayuda al correo <br />
+                    <b>soporte.aplicativos@libertycolombia.com</b>
+                  </>
+                }
+              />
+            </>
+          </Poput>
+        </>
+      )}
       <div className={style.InfoPerson}>
         <h1 className={style.persona}>Persona</h1>
         <p className={style.information}>
