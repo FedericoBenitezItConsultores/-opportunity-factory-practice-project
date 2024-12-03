@@ -130,9 +130,9 @@
 
 .lineContainer {
   width: 100%;
-  height: 2px;
-  background-color: #99e5ea45;
-  margin: 10px 0;
+  height: 1px; /* Cambia el grosor de la línea a 1px */
+  background-color: #99e5ea; /* Usa el color especificado */
+  opacity: 0.7; /* Si necesitas semitransparencia, ajusta el valor */
 }
 
 .divCardDiscount {
