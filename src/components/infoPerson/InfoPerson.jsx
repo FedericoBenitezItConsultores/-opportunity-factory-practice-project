@@ -12,6 +12,7 @@ import {
   customStyles,
   customStylesError,
 } from "./stylesSelect.js";
+import warningIcons from "../../assets/svg/icon_Error.svg";
 import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
@@ -69,7 +70,10 @@ export const InfoPerson = () => {
     const returnError = validateForm(formData);
     if (returnError.length > 0) {
       returnError.map((item) =>
-        setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
+        setError((prev) => ({
+          ...prev,
+          [item]: "Este campo no puede quedar vacio",
+        }))
       );
       const element = document.getElementById("form");
       if (element) {
@@ -139,20 +143,36 @@ export const InfoPerson = () => {
         <div className={style.containerOne}>
           <div style={{ position: "relative" }}>
             {/* primerNombre */}
-            {error && <p className={style.error_form}>{error.primerNombre}</p>}
+            {error && error.primerNombre && (
+              <div className={style.div_icon_error}>
+                <img
+                  className={style.icon_error}
+                  src={warningIcons}
+                  alt="icon_Error.svg"
+                />
+                <p className={style.error_form}>{error.primerNombre}</p>
+              </div>
+            )}
             <InputForm
               name="primerNombre"
               action={handleInput}
               style={
                 error.primerNombre
-                  ? { border: "#E92243 solid 2px", backgroundColor: "#FAF1F1 " }
+                  ? { border: "#D32F2F solid 2px", backgroundColor: "#FAF1F1 " }
                   : {}
               }
             />
           </div>
           <div style={{ position: "relative" }}>
-            {error && (
-              <p className={style.error_form}>{error.primerApellido}</p>
+            {error && error.primerApellido && (
+              <div className={style.div_icon_error}>
+                <img
+                  className={style.icon_error}
+                  src={warningIcons}
+                  alt="icon_Error.svg"
+                />{" "}
+                <p className={style.error_form}>{error.primerApellido}</p>
+              </div>
             )}
             {/* primerApellido */}
             {/* <Input placehorder="primer nombre"/> */}
@@ -162,7 +182,7 @@ export const InfoPerson = () => {
               label="Primer apellido"
               style={
                 error.primerApellido
-                  ? { border: "#E92243 solid 2px", backgroundColor: "#FAF1F1 " }
+                  ? { border: "#D32F2F solid 2px", backgroundColor: "#FAF1F1 " }
                   : {}
               }
             />
@@ -171,17 +191,39 @@ export const InfoPerson = () => {
 
         <div className={style.containerTwo}>
           {/* Género */}
-          <div className={style.container_gender}>
-            <p className={style.gender_p}>Género</p>
-            <form>
+          <div
+            style={{
+              position: "relative", 
+            }}
+            className={style.container_gender}
+          >
+            {error.genero && (
+              <div className={style.error_genero}>
+                <img
+                  className={style.icon_error}
+                  src={warningIcons}
+                  alt="icon_Error.svg"
+                />
+                <p>El genero es requerido</p>
+              </div>
+            )}
+            <p className={style.gender_p}>
+              Género<span style={{ color: "#28A3AF" }}>*</span>
+            </p>
+            <form
+            // style={{ margin: "20px", paddingLeft: '20px' }}
+            >
               <div
                 style={
                   error.genero
                     ? {
                         border: "#E92243 solid 2px",
                         backgroundColor: "#FAF1F1 ",
+                        marginTop: "20px",
                       }
-                    : {}
+                    : {
+                        marginTop: "20px",
+                      }
                 }
                 className={style.gender}
               >
@@ -206,8 +248,11 @@ export const InfoPerson = () => {
                     ? {
                         border: "#E92243 solid 2px",
                         backgroundColor: "#FAF1F1 ",
+                        marginTop: "20px",
                       }
-                    : {}
+                    : {
+                        marginTop: "20px",
+                      }
                 }
                 className={style.gender}
               >
@@ -230,11 +275,27 @@ export const InfoPerson = () => {
           </div>
 
           {/* Fecha de nacimiento */}
-          <div className={style.info_date}>
-            <p className={style.gender_birth}>Fecha de nacimiento</p>
+          <div
+            style={{ position: "relative", margin: "20px" }}
+            className={style.info_date}
+          >
+            {error.dia && (
+              <div className={style.error_dia}>
+                <img
+                  className={style.icon_error}
+                  src={warningIcons}
+                  alt="icon_Error.svg"
+                />
+                <p style={{ fontSize: "12px" }}>
+                  No cumple con la politica de edad minima/maxima del conductor
+                </p>
+              </div>
+            )}
+            <p className={style.gender_birth}>
+              Fecha de nacimiento<span style={{ color: "#28A3AF" }}>*</span>
+            </p>
             <div style={{ display: "flex", gap: "10px" }}>
               <div style={{ position: "relative" }}>
-                {/* {error && <p className={style.error_form}>{error.dia}</p>} */}
                 {/* dia */}
                 <Select
                   options={dayOptions}
@@ -275,10 +336,10 @@ export const InfoPerson = () => {
 
         <div className={style.containerOne}>
           <div style={{ position: "relative" }}>
-            {error && (
+            {/* {error && (
               <p className={style.error_form}>{error.añosExperiencia}</p>
             )}
-            {/* añosExperiencia */}
+            añosExperiencia */}
             <InputForm
               action={handleInput}
               name="añosExperiencia"
@@ -292,9 +353,9 @@ export const InfoPerson = () => {
             />
           </div>
           <div style={{ position: "relative" }}>
-            {error && (
+            {/* {error && (
               <p className={style.error_form}>{error.ciuadadesMovilizacion}</p>
-            )}
+            )} */}
             {/* ciuadadesMovilizacion */}
             <Select
               className={style.inputCity}

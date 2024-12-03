@@ -18,8 +18,8 @@
   margin-bottom: 10px;
   font-family: "roboto Medium";
 }
-.information2{
-  margin-bottom: 15px; 
+.information2 {
+  margin-bottom: 15px;
   font-family: "roboto Medium";
 }
 
@@ -39,7 +39,6 @@
   height: 28px;
   border: 1px solid #e6e6e6;
 }
-
 
 .InfoPerson img {
   display: flex;
@@ -65,12 +64,12 @@
   text-align: center;
 }
 
-.inputCity{
+.inputCity {
   width: 375px;
   height: 50px;
 }
 
-.inputCity{
+.inputCity {
   width: 375px;
   height: 50px;
 }
@@ -87,11 +86,11 @@
   color: #171046;
 }
 
-.numberCc{
+.numberCc {
   display: flex;
 }
 
-.numberCc{
+.numberCc {
   display: flex;
 }
 
@@ -112,24 +111,24 @@
   gap: 120px;
 }
 
-.containerOne{
+.containerOne {
   display: flex;
   gap: 10px;
   margin-top: 30px;
 }
-.containerTwo{
+.containerTwo {
   display: flex;
   margin-top: 20px;
   margin-top: 20px;
   white-space: nowrap;
-    /*cambio*/
+  /*cambio*/
   gap: 20px;
   margin-right: 12px;
   gap: 20px;
   margin-right: 12px;
 }
 
-.InputForm1{
+.InputForm1 {
   display: flex;
   margin-left: -280px;
   padding-top: 20px;
@@ -137,27 +136,26 @@
   gap: 50px;
 }
 
-.gender{
+.gender {
   width: 174px;
   height: 50px;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   border: 1px solid #919191;
   font-size: 13px;
   text-align: center;
   margin-left: 10px;
   border-radius: 5px;
-
 }
 .gender label {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  gap: 9px; 
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
   width: 110px;
   margin-top: 20px;
 }
 
-.gender_p{
+.gender_p {
   display: flex;
   /* border: 1px solid #919191;  */
   align-items: flex-start;
@@ -165,7 +163,7 @@
   margin-left: 10px;
 }
 
-.gender_birth{
+.gender_birth {
   display: flex;
   /* border: 1px solid #919191;  */
   align-items: flex-start;
@@ -187,8 +185,6 @@
   transition: border-color 0.3s ease;
 }
 
-
-
 .label {
   position: absolute;
   top: 12px;
@@ -207,11 +203,39 @@
   /* color: #28a3af;  */
 }
 
+.error_form {
+  color: #d32f2f;
+}
 
-.error_form{
+.div_icon_error {
   position: absolute;
   top: -20px;
   left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
 }
-
-
+.error_genero {
+  color: #d32f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  gap: 5px;
+}
+.error_dia {
+  color: #d32f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  left: 0px;
+  top: -15px;
+  position: absolute;
+  gap: 5px;
+}
