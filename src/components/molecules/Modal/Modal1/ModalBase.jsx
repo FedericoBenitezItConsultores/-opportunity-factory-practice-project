@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import styles from "../Modal1/Modal.module.css";
 import AlertIcon from "../../../../assets/Alert.svg";
 import Modal from "@mui/material/Modal";
+import { useNavigate } from "react-router-dom";
+
+
 
 const ModalBase = ({ show, onClose, title, buttonText }) => {
   const [retryClicked, setRetryClicked] = useState(false); 
+  const navigate = useNavigate();  // Usa el hook useNavigate
 
   
   const handleRetry = () => {
     setRetryClicked(true); 
+  };
+
+  const handleGoToBusiness = () => {
+    // Navega a la ruta "/inf-person"
+    navigate("/inf-person");
   };
 
   if (!show) return null;
@@ -61,7 +70,7 @@ const ModalBase = ({ show, onClose, title, buttonText }) => {
         <div className={styles.modalFooter}>
           {retryClicked ? (
            
-            <button onClick={onClose} className={styles.button2}>
+            <button onClick={handleGoToBusiness} className={styles.button2}>
               Ir a Mis Negocios
             </button>
           ) : (
