@@ -4,7 +4,7 @@ import img_arrow_down from "../../../assets/svg/flechitaArriba.svg";
 import TableCobertura from "./TableCobertura";
 import TableAsistencia from "./TableAsistencia";
 import { useState } from "react";
-import IconsBackCircle from "../../../../public/IconsBackCircle.svg";
+import IconsBackCircle from "../../../assets/svg/IconsBackCircle.svg";
 export default function InfPlans({ plan }) {
   const [infTables, setInfTables] = useState(true);
 
@@ -14,11 +14,11 @@ export default function InfPlans({ plan }) {
         <img
           onClick={() => setInfTables(!infTables)}
           className={styles.img_arrow_down}
-          src={infTables ? img_arrow_down :   IconsBackCircle}
+          src={infTables ? img_arrow_down : IconsBackCircle}
           alt="img_arrow_down"
         />
       </div>
-      
+
       <div className={styles.fallo}>
         <div className={styles.div_inf}>
           <div

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
-
+import fallo from "../../../assets/svg/fallo.svg";
 export const FooterDiligenciación = () => {
   return (
     <div className={styles.container}>
@@ -13,7 +13,7 @@ export const FooterDiligenciación = () => {
         }}
       >
         <div className={styles.container1}>
-          <img src="/public/fallo.svg" alt="#" />
+          <img src={fallo} alt="#" />
         </div>
         <div className={styles.container2}>
           <span className={styles.span}>No olvides diligenciar el SARLAFT</span>

@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
+import IconClose from "../../../assets/svg/IconClose.svg";
+import mainLogo from "../../../assets/svg/mainLogo.svg";
+import happy from "../../../assets/svg/happy.svg";
+import withFilling from "../../../assets/svg/withFilling.svg";
+import regularFace from "../../../assets/svg/regularFace.svg";
+import withoutFilling from "../../../assets/svg/withoutFilling.svg";
+import sad from "../../../assets/svg/sad.svg";
+import withoutFillingTwo from "../../../assets/svg/withoutFillingTwo.svg";
 
 export default function Calificasion() {
   const [visible, setVisible] = useState(false);
@@ -7,7 +15,7 @@ export default function Calificasion() {
   useEffect(() => {
     const tiempo = setTimeout(() => {
       setVisible(true);
-    }, 30000);
+    }, 3000);
 
     return () => clearTimeout(tiempo);
   }, []);
@@ -16,10 +24,10 @@ export default function Calificasion() {
   return (
     <div className={styles.container}>
       <div className={styles.close} onClick={() => setVisible(false)}>
-        <img src="/public/IconClose.svg" alt="#" />
+        <img src={IconClose} alt="#" />
       </div>
       <div>
-        <img src="/public/mainLogo.svg" alt="#" />
+        <img src={mainLogo} alt="#" />
       </div>
       <div className={styles.parrafo}>
         <p>¿Fue fácil la tarea que acabas de completar? </p>
@@ -27,19 +35,19 @@ export default function Calificasion() {
       <div>
         <div className={styles.contenedorCaritas}>
           <div className={styles.carita}>
-            <img src="/public/happy.svg" alt="#" />
+            <img src={happy} alt="#" />
             <p>Fácil</p>
-            <img src="/public/withFilling.svg" alt="#" />
+            <img src={withFilling} alt="#" />
           </div>
           <div className={styles.carita}>
-            <img src="/public/regularFace.svg" alt="#" />
+            <img src={regularFace} alt="#" />
             <p>Más o menos</p>
-            <img src="/public/withoutFilling.svg" alt="#" />
+            <img src={withoutFilling} alt="#" />
           </div>
           <div className={styles.carita}>
-            <img src="/public/sad.svg" alt="#" />
+            <img src={sad} alt="#" />
             <p>Difícil</p>
-            <img src="/public/withoutFillingTwo.svg" alt="#" />
+            <img src={withoutFillingTwo} alt="#" />
           </div>
         </div>
       </div>

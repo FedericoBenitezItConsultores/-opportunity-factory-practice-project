@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./CardDiscount.module.css";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import img from "../../../assets/svg/Group8.svg";
+import img2 from "../../../assets/svg/Layer_2.svg";
 const CardDiscount = ({
   title = "Tienes un descuento",
   text1 = "De acuerdo al expertis del conductor,",
@@ -11,14 +13,14 @@ const CardDiscount = ({
     bg: "#E1F2E6",
     icon: CheckCircleOutlineIcon,
     colorIcon: "#00aa00",
-    img: "Layer_2.svg",
+    img: img2,
   },
 }) => {
   return (
     <div className={style.parentContainer}>
       <div className={style.CardDiscount}>
         <div className={style.bgImagen}>
-          <img src="Group8.svg" alt="" height="222" width="505" />
+          <img src={img} alt="" height="222" width="505" />
           <img src={porcentaje.img} alt="" className={style.layer2Image} />
         </div>
         <div className={style.containerText}>

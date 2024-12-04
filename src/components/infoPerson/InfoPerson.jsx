@@ -7,7 +7,8 @@ import FooterButtons from "../molecules/Footer/FooterButtons.jsx";
 import CardDiscount from "../molecules/card-discount/CardDiscount.jsx";
 import citys from "../atoms/input/citys.js";
 import SessionTimeout from "../molecules/Modal/SessionTimeout/SessionTimeout.jsx";
-
+import img from "../../assets/svg/Grupo7616.svg";
+import img2 from "../../assets/svg/Grupo2046.svg";
 
 import {
   citisStyles,
@@ -129,7 +130,7 @@ export const InfoPerson = () => {
                   <div className={style.line} />
                 </td>
                 <td>
-                  <img className={style.Image} src="Grupo7616.svg" alt="" />
+                  <img className={style.Image} src={img} alt="" />
                 </td>
                 <tr>
                   <td className={style.documents}>Tipo de documento</td>
@@ -147,7 +148,7 @@ export const InfoPerson = () => {
                   <div className={style.line} />
                 </td>
                 <td>
-                  <img className={style.Image} src="Grupo2046.svg" alt="" />
+                  <img className={style.Image} src={img2} alt="" />
                 </td>
                 <tr>
                   <td className={style.documents}>Identificación</td>
@@ -372,17 +373,15 @@ export const InfoPerson = () => {
               }
             />
           </div>
-          <div style={{ position: "relative",}}>
-          {error.ciuadadesMovilizacion && (
+          <div style={{ position: "relative" }}>
+            {error.ciuadadesMovilizacion && (
               <div className={style.error_dia}>
                 <img
                   className={style.icon_error}
                   src={warningIcons}
                   alt="icon_Error.svg"
                 />
-                <p style={{ fontSize: "12px" }}>
-                  Debes realizar una busqueda
-                </p>
+                <p style={{ fontSize: "12px" }}>Debes realizar una busqueda</p>
               </div>
             )}
             <Select
