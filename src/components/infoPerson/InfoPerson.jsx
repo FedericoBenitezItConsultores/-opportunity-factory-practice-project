@@ -193,12 +193,12 @@ export const InfoPerson = () => {
           {/* Género */}
           <div
             style={{
-              position: "relative", 
+              position: "relative",
             }}
             className={style.container_gender}
           >
             {error.genero && (
-              <div className={style.error_genero}>
+              <div className={style.error_genero1}>
                 <img
                   className={style.icon_error}
                   src={warningIcons}
@@ -207,11 +207,8 @@ export const InfoPerson = () => {
                 <p>El genero es requerido</p>
               </div>
             )}
-            <p className={style.gender_p}>
-              Género<span style={{ color: "#28A3AF" }}>*</span>
-            </p>
             <form
-            // style={{ margin: "20px", paddingLeft: '20px' }}
+              style={{ margin: "20px", marginLeft: "100px", marginRight: "0" }}
             >
               <div
                 style={
@@ -219,14 +216,14 @@ export const InfoPerson = () => {
                     ? {
                         border: "#E92243 solid 2px",
                         backgroundColor: "#FAF1F1 ",
-                        marginTop: "20px",
                       }
-                    : {
-                        marginTop: "20px",
-                      }
+                    : {}
                 }
                 className={style.gender}
               >
+                <p className={style.gender_p}>
+                  Género<span style={{ color: "#28A3AF" }}>*</span>
+                </p>
                 <label style={{ position: "relative" }}>
                   {/* genero */}
                   <input
@@ -248,10 +245,10 @@ export const InfoPerson = () => {
                     ? {
                         border: "#E92243 solid 2px",
                         backgroundColor: "#FAF1F1 ",
-                        marginTop: "20px",
+                        // marginTop: "20px",
                       }
                     : {
-                        marginTop: "20px",
+                        // marginTop: "20px",
                       }
                 }
                 className={style.gender}
@@ -276,7 +273,10 @@ export const InfoPerson = () => {
 
           {/* Fecha de nacimiento */}
           <div
-            style={{ position: "relative", margin: "20px" }}
+            style={{
+              position: "relative",
+              margin: " 20px 90px 20px 0",
+            }}
             className={style.info_date}
           >
             {error.dia && (
@@ -292,7 +292,8 @@ export const InfoPerson = () => {
               </div>
             )}
             <p className={style.gender_birth}>
-              Fecha de nacimiento<span style={{ color: "#28A3AF" }}>*</span>
+              Fecha de nacimiento
+              <span style={{ color: "#28A3AF" }}>*</span>
             </p>
             <div style={{ display: "flex", gap: "10px" }}>
               <div style={{ position: "relative" }}>
