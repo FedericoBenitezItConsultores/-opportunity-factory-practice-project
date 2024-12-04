@@ -74,7 +74,8 @@ export const AdditionalDiscount = ({
             </div>
           </form>
         </div>
-        <div>
+        <div>  
+          
           <div className={styles.fallo}>
             <div className={styles.div_inf}>
               <div className={styles.div_inf1}>
