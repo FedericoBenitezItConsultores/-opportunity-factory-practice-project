@@ -2,7 +2,7 @@ import React from "react";
 import style from "./CardDiscount.module.css";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import img from "../../../assets/svg/Group8.svg";
-import img2 from "../../../assets/svg/Layer_2.svg";
+import Layer_2 from "../../../assets/svg/Layer_2.svg";
 const CardDiscount = ({
   title = "Tienes un descuento",
   text1 = "De acuerdo al expertis del conductor,",
@@ -13,7 +13,7 @@ const CardDiscount = ({
     bg: "#E1F2E6",
     icon: CheckCircleOutlineIcon,
     colorIcon: "#00aa00",
-    img: img2,
+    img: Layer_2,
   },
 }) => {
   return (
