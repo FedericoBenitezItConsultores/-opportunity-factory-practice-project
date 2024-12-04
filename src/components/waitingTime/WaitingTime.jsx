@@ -29,13 +29,13 @@ export default function WaitingTime() {
 
     const resetInactivity = () => {
       if (!isModalOpen) {
-        setTimeLeft(12);
+        setTimeLeft(120);
         clearTimeout(inactivityTimeout);
 
         inactivityTimeout = setTimeout(() => {
           setIsModalOpen(true);
           startCountdown();
-        }, 5000);
+        }, 15000);
       }
     };
 
