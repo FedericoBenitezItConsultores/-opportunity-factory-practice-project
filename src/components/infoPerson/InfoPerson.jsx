@@ -339,8 +339,7 @@ export const InfoPerson = () => {
           <div style={{ position: "relative" }}>
             {/* {error && (
               <p className={style.error_form}>{error.añosExperiencia}</p>
-            )}
-            añosExperiencia */}
+            )} */}
             <InputForm
               action={handleInput}
               name="añosExperiencia"
@@ -353,11 +352,19 @@ export const InfoPerson = () => {
               }
             />
           </div>
-          <div style={{ position: "relative" }}>
-            {/* {error && (
-              <p className={style.error_form}>{error.ciuadadesMovilizacion}</p>
-            )} */}
-            {/* ciuadadesMovilizacion */}
+          <div style={{ position: "relative",}}>
+          {error.ciuadadesMovilizacion && (
+              <div className={style.error_dia}>
+                <img
+                  className={style.icon_error}
+                  src={warningIcons}
+                  alt="icon_Error.svg"
+                />
+                <p style={{ fontSize: "12px" }}>
+                  Debes realizar una busqueda
+                </p>
+              </div>
+            )}
             <Select
               className={style.inputCity}
               options={citys}
