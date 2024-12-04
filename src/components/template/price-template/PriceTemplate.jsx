@@ -1,10 +1,10 @@
-import React from "react";
 import styles from "./styles.module.css";
 import PlansPrice from "../../organisms/PlansPrice";
 import { Footer } from "../../molecules/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 export default function PriceTemplate() {
   const navigate = useNavigate();
+
   return (
     <div className={styles.div_father}>
       <div
