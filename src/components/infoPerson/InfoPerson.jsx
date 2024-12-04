@@ -6,6 +6,9 @@ import Navbar from "../organisms/navbar-2/Navbar.jsx";
 import FooterButtons from "../molecules/Footer/FooterButtons.jsx";
 import CardDiscount from "../molecules/card-discount/CardDiscount.jsx";
 import citys from "../atoms/input/citys.js";
+import SessionTimeout from "../molecules/Modal/SessionTimeout/SessionTimeout.jsx";
+
+
 import {
   citisStyles,
   citisStylesError,
@@ -18,6 +21,7 @@ import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalD
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../molecules/Footer/Footer.jsx";
 import Spiner from "../molecules/Spiner/Spiner.jsx";
+import WaitingTime from "../waitingTime/waitingTime.jsx";
 
 export const InfoPerson = () => {
   const [error, setError] = useState({
@@ -102,6 +106,7 @@ export const InfoPerson = () => {
       <Footer soloModal={true} />
       {loading && <Spiner />}
       <Navbar />
+      <WaitingTime />
       <div className={style.InfoPerson}>
         <h1 className={style.persona}>Persona</h1>
         <p className={style.information}>

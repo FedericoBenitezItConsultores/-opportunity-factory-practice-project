@@ -8,11 +8,12 @@ import { Modal } from "@mui/material";
 const SessionTimeout = ({
   show,
   onClose,
-  setTimeLeft,
-  setUserActive,
   setSessionEnded,
   timeLeft,
+  setTimeLeft,
+  setUserActive,
   sessionEnded,
+  setIsModalOpen,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(true);
 
@@ -25,14 +26,14 @@ const SessionTimeout = ({
   };
 
   const handleContinueSession = () => {
-    setTimeLeft(118);
-    setIsModalVisible(false);
-    setUserActive(true);
+
+    setIsModalOpen(false);
+
   };
 
   const handleSessionEnd = () => {
-    setIsModalVisible(false);
     setSessionEnded(true);
+    setIsModalOpen(false);
   };
 
   return (
@@ -76,45 +77,16 @@ const SessionTimeout = ({
               <button className={styles.closeButton} onClick={handleSessionEnd}>
                 Cerrar sesión
               </button>
-              <button className={styles.continueButton} onClick={onClose}>
+              <button
+                className={styles.continueButton}
+                onClick={handleContinueSession}
+              >
                 Continuar
               </button>
             </div>
           </div>
         </div>
       </Modal>
-
-      {sessionEnded && (
-        <div className={styles.overlay}>
-          <div className={styles.modal2}>
-            <div className={styles.cerrar}>
-              <img
-                src={Cerrar}
-                alt="Cerrar"
-                className={styles.Cerrar}
-                onClick={onClose}
-              />
-            </div>
-            <div className={styles.leftSection}>
-              <img
-                src={Esclamacion}
-                alt="Esclamacion"
-                className={styles.esclamacion}
-              />
-            </div>
-            <h2 className={styles.title}>Tu sesión ha finalizado.</h2>
-
-            <div className={styles.buttons2}>
-              <button
-                className={styles.closeButton}
-                onClick={() => setSessionEnded(false)}
-              >
-                Cerrar
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };
