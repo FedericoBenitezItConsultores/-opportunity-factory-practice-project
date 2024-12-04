@@ -34,6 +34,7 @@ export default function PriceTemplate() {
         }}
       >
         <Footer
+          ruta="/price"
           type={4}
           functionContinuar={() => navigate("/")}
           functionVolver={() => navigate(-1)}
