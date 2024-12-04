@@ -17,6 +17,8 @@ import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../molecules/Footer/Footer.jsx";
+import Spiner from "../molecules/Spiner/Spiner.jsx";
 
 export const InfoPerson = () => {
   const [error, setError] = useState({
@@ -28,6 +30,7 @@ export const InfoPerson = () => {
     año: "",
     añosExperiencia: "",
     ciuadadesMovilizacion: "",
+    identificacionConyuge: "",
   });
   const [formData, setFormData] = useState({
     primerNombre: "",
@@ -36,8 +39,12 @@ export const InfoPerson = () => {
     date: {},
     añosExperiencia: "",
     ciuadadesMovilizacion: "",
+    identificacionConyuge: "",
   });
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [conyuge, setConyuge] = useState(false);
+
   const handleDayChange = (selectedDay) => {
     setFormData((prev) => ({
       ...prev,
@@ -68,12 +75,15 @@ export const InfoPerson = () => {
   };
   const handleSubmit = () => {
     const returnError = validateForm(formData);
-    if (returnError.length > 0) {
-      returnError.map((item) =>
-        setError((prev) => ({
-          ...prev,
-          [item]: "Este campo no puede quedar vacio",
-        }))
+    let arraySinConyuge = returnError;
+    if (!conyuge) {
+      arraySinConyuge = returnError.filter(
+        (item) => item != "identificacionConyuge"
+      );
+    }
+    if (arraySinConyuge.length > 0) {
+      arraySinConyuge.map((item) =>
+        setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
       );
       const element = document.getElementById("form");
       if (element) {
@@ -81,7 +91,10 @@ export const InfoPerson = () => {
       }
       return;
     }
-    navigate("/price");
+    setLoading(true);
+    setTimeout(() => {
+      navigate("/price");
+    }, 3000);
   };
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -91,6 +104,8 @@ export const InfoPerson = () => {
 
   return (
     <>
+      <Footer soloModal={true} />
+      {loading && <Spiner />}
       <Navbar />
       <div className={style.InfoPerson}>
         <h1 className={style.persona}>Persona</h1>
@@ -381,7 +396,12 @@ export const InfoPerson = () => {
         </div>
       </div>
       <CardDiscount />
-      <AdditionalDiscount />
+      <AdditionalDiscount
+        errorIdentificion={error}
+        handleInput={handleInput}
+        conyuge={conyuge}
+        setConyuge={setConyuge}
+      />
       <div
         style={{
           display: "flex",

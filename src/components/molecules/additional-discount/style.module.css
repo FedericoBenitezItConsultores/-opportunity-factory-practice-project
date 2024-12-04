@@ -79,7 +79,7 @@
 
 .popupContent {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .inputContainer {
@@ -90,13 +90,13 @@
   font-family: "roboto regular";
 }
 
-.selectBox,
-.inputBox {
+.selectBox {
   flex: 1;
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 240px;
 }
 
 .cuadro {
@@ -184,4 +184,20 @@
   .lineContainer {
     height: 1px;
   }
+}
+
+
+.error_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  gap: 5px;
+}
+
+.error_form p {
+  color: #E92243;
+  font-size: 18px;
 }
