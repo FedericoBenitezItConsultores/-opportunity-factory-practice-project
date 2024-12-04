@@ -10,10 +10,8 @@ export default function WaitingTime() {
   const [timeLeft, setTimeLeft] = useState(120);
   const [countdownTimer, setCountdownTimer] = useState(null); // Para controlar el temporizador
 
-
   useEffect(() => {
     let inactivityTimeout;
-
     const startCountdown = () => {
       setCountdownTimer(
         setInterval(() => {
@@ -71,7 +69,7 @@ export default function WaitingTime() {
         show={isModalOpen}
         onClose={closeModal}
         setTimeLeft={setTimeLeft}
-        setUserActive={''}
+        setUserActive={""}
         setSessionEnded={setSessionEnded}
         sessionEnded={sessionEnded}
         setIsModalOpen={setIsModalOpen}
