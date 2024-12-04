@@ -4,20 +4,24 @@ import AlertIcon from "../../../../assets/Alert.svg";
 import Modal from "@mui/material/Modal";
 import { useNavigate } from "react-router-dom";
 
+const ModalBase = ({
+  show,
+  onClose,
+  title,
+  buttonText,
+  ruteNext = "/inf-person",
+}) => {
+  const [retryClicked, setRetryClicked] = useState(false);
+  const navigate = useNavigate(); // Usa el hook useNavigate
 
-
-const ModalBase = ({ show, onClose, title, buttonText }) => {
-  const [retryClicked, setRetryClicked] = useState(false); 
-  const navigate = useNavigate();  // Usa el hook useNavigate
-
-  
   const handleRetry = () => {
-    setRetryClicked(true); 
+    setRetryClicked(true);
   };
 
   const handleGoToBusiness = () => {
     // Navega a la ruta "/inf-person"
-    navigate("/inf-person");
+    onClose();
+    navigate(ruteNext);
   };
 
   if (!show) return null;
@@ -25,7 +29,7 @@ const ModalBase = ({ show, onClose, title, buttonText }) => {
   return (
     <Modal
       open={show}
-      onClose={onClose}
+      // onClose={onClose}
       aria-labelledby="modal-title"
       aria-describedby="modal-description"
       BackdropProps={{
@@ -46,8 +50,8 @@ const ModalBase = ({ show, onClose, title, buttonText }) => {
           {!retryClicked ? (
             <p className={styles.modalText}>
               Por favor, intenta nuevamente a través del botón{" "}
-              <span className={styles.bold}>Reintentar.</span> <br /> Si el error
-              persiste, retoma la cotización en unos minutos desde <br />
+              <span className={styles.bold}>Reintentar.</span> <br /> Si el
+              error persiste, retoma la cotización en unos minutos desde <br />
               <span className={styles.bold}>Mis Negocios</span>.
             </p>
           ) : (
@@ -69,7 +73,6 @@ const ModalBase = ({ show, onClose, title, buttonText }) => {
 
         <div className={styles.modalFooter}>
           {retryClicked ? (
-           
             <button onClick={handleGoToBusiness} className={styles.button2}>
               Ir a Mis Negocios
             </button>

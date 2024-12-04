@@ -3,26 +3,9 @@ import styles from "./Spiner.module.css";
 import liberty from "../../../assets/svg/liberty-arm-yellow.svg";
 import loader from "../../../assets/svg/loader.svg";
 
-const Spiner = ({ onClose }) => {
+const Spiner = ({ onClose, showText = false }) => {
   const imageRef = useRef(null);
-  const [showMessage, setShowMessage] = useState(false);
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (imageRef.current && !imageRef.current.contains(event.target)) {
-        onClose();
-      }
-    };
-    const timeout = setTimeout(() => {
-      setShowMessage(true);
-    }, 5000);
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      clearTimeout(timeout);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [onClose]);
+  // const [showMessage, setShowMessage] = useState(showText);
 
   return (
     <div className={styles.overlay}>
@@ -34,15 +17,17 @@ const Spiner = ({ onClose }) => {
       </div>
 
       <div className={styles.showMessage1}>
-      {showMessage && (
-        <div className={styles.message}>
-          <p className={styles.showMessage}>Este proceso puede tardar algunos segundos más, </p>
-          <p className={styles.showMessage}>por favor espera mientras seguimos realizando la consulta.</p>
-        </div>
-      )}
-
+        {showText && (
+          <div className={styles.message}>
+            <p className={styles.showMessage}>
+              Este proceso puede tardar algunos segundos más,{" "}
+            </p>
+            <p className={styles.showMessage}>
+              por favor espera mientras seguimos realizando la consulta.
+            </p>
+          </div>
+        )}
       </div>
-
     </div>
   );
 };

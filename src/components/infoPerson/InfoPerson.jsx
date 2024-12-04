@@ -16,6 +16,9 @@ import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
 import { useNavigate } from "react-router-dom";
+import ModalBase from "../molecules/Modal/Modal1/ModalBase.jsx";
+import { Footer } from "../molecules/Footer/Footer.jsx";
+import Spiner from "../molecules/Spiner/Spiner.jsx";
 
 export const InfoPerson = () => {
   const [error, setError] = useState({
@@ -36,6 +39,7 @@ export const InfoPerson = () => {
     añosExperiencia: "",
     ciuadadesMovilizacion: "",
   });
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const handleDayChange = (selectedDay) => {
     setFormData((prev) => ({
@@ -73,8 +77,10 @@ export const InfoPerson = () => {
       );
       return;
     }
-
-    navigate("/price");
+    setLoading(true);
+    setTimeout(() => {
+      navigate("/price");
+    }, 3000);
   };
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -84,6 +90,8 @@ export const InfoPerson = () => {
 
   return (
     <>
+      <Footer soloModal={true} />
+      {loading && <Spiner />}
       <Navbar />
       <div className={style.InfoPerson}>
         <h1 className={style.persona}>Persona</h1>
