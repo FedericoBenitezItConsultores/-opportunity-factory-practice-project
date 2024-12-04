@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SessionTimeout from "../../components/molecules/Modal/SessionTimeout/SessionTimeout.jsx";
 import stylesSeccionEnd from "../../components/molecules/Modal/SessionTimeout/SessionTimeout.module.css";
-import cerrar from "../../assets/Cerrar.svg";
-import Esclamacion from "../../assets/Esclamacion.svg";
+import cerrar from "../../assets/svg/Cerrar.svg";
+import Esclamacion from "../../assets/svg/Esclamacion.svg";
 
 export default function WaitingTime() {
   const [isModalOpen, setIsModalOpen] = useState(false);

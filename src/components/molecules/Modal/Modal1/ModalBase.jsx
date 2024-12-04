@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../Modal1/Modal.module.css";
-import AlertIcon from "../../../../assets/Alert.svg";
+import AlertIcon from "../../../../assets/svg/Alert.svg";
 import Modal from "@mui/material/Modal";
 import { useNavigate } from "react-router-dom";
 

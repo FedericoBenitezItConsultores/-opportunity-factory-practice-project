@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../Modal/SessionTimeout/SessionTimeout.module.css";
-import Reloj from "../../../../assets/Reloj.svg";
-import Cerrar from "../../../../assets/Cerrar.svg";
-import Esclamacion from "../../../../assets/Esclamacion.svg";
+import Reloj from "../../../../assets/svg/Reloj.svg";
+import Cerrar from "../../../../assets/svg/Cerrar.svg";
 import { Modal } from "@mui/material";
 
 const SessionTimeout = ({
@@ -26,9 +25,7 @@ const SessionTimeout = ({
   };
 
   const handleContinueSession = () => {
-
     setIsModalOpen(false);
-
   };
 
   const handleSessionEnd = () => {
