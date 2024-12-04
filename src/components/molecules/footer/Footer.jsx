@@ -5,18 +5,21 @@ import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal1/ModalBase.jsx";
 import Spiner from "../Spiner/Spiner.jsx";
 import { useNavigate } from "react-router-dom";
+import { Intermediary } from "../intermediary/intermediary.jsx";
 
-export const Footer = ({ soloModal = false }) => {
+export const Footer = ({ soloModal = false, ruta = "/" }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenBack, setIsModalOpenBack] = useState(false);
   const [isModalOpenLogout, setIsModalOpenLogout] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [soloModal1, setSoloModal1] = useState(false);
+  const [volverWarning, setVolverWarning] = useState(false);
   const [buttonText, setButtonText] = useState("Mis Negocios");
   const navigate = useNavigate();
+
   // const closeModal = () => {
   //   setIsModalOpen(false);
   // };
-
   // const handleLogout = () => {
   //   console.log("Sesión cerrada");
   //   setIsModalOpen(false);
@@ -24,6 +27,7 @@ export const Footer = ({ soloModal = false }) => {
 
   const handleBackClick = () => {
     setButtonText("Usar descuento conductor");
+    setVolverWarning(false)
     setIsModalOpenBack(true);
     setIsLoading(true);
     setTimeout(() => {
@@ -45,19 +49,21 @@ export const Footer = ({ soloModal = false }) => {
   };
 
   const handleContinue = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
+    // setIsLoading(false);
+    if (ruta == "/price") {
+      setSoloModal1(true);
+    }
   };
 
   const handleCloseSpinner = () => {
     setIsLoading(false);
   };
   useEffect(() => {
-    setTimeout(() => {
-      setIsModalOpen(true);
-    }, 3000);
+    if (soloModal) {
+      setTimeout(() => {
+        setIsModalOpen(true);
+      }, 3000);
+    }
   }, []);
   if (soloModal)
     return (
@@ -73,8 +79,30 @@ export const Footer = ({ soloModal = false }) => {
         )}
       </>
     );
+
   return (
     <>
+      {soloModal1 && (
+        <Modal
+          ruteNext="/price"
+          show={isModalOpenBack || isModalOpenLogout}
+          onClose={() => setSoloModal1(false)}
+          title="¡Ups! Lo sentimos"
+          buttonText={buttonText}
+          text1={
+            <>
+              No podemos generar el documento de la <b>cotización</b> en este
+              momento debido a problemas técnicos.
+            </>
+          }
+        />
+      )}
+      {volverWarning && (
+        <Intermediary
+          actionSi={handleBackClick}
+          actionNo={() => setVolverWarning(false)}
+        />
+      )}
       <footer>
         <div className={styles.cotizacion}>
           <CotizacionPdf />
@@ -84,7 +112,10 @@ export const Footer = ({ soloModal = false }) => {
             <FooterDiligenciación />
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className={styles.buttonVolver} onClick={handleBackClick}>
+            <button
+              className={styles.buttonVolver}
+              onClick={() => setVolverWarning(true)}
+            >
               Volver
             </button>
             <button className={styles.button}>Guardar y salir</button>
