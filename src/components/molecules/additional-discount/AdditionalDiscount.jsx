@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import warningIcons from "../../../assets/svg/warningicons.svg";
+import warningIcons2 from "../../../assets/svg/warning2.svg";
 import CardDiscount from "../card-discount/CardDiscount";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import imgConyugal from "../../../assets/svg/Wedding_Ring_CMYK_Yellow.svg";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import Spiner from "../Spiner/Spiner";
-export const AdditionalDiscount = () => {
-  const [showPopup, setShowPopup] = useState(false); // Estado para controlar el popup
-  const [selectValue, setSelectValue] = useState(0);
+import InputForm from "../../atoms/InputForm";
+export const AdditionalDiscount = ({
+  errorIdentificion,
+  handleInput,
+  conyuge: showPopup,
+  setConyuge: setShowPopup,
+}) => {
+  const [selectValue, setSelectValue] = useState("0");
   const [numeroTI, setNumeroTI] = useState("");
   const [spiner, setSpiner] = useState(false);
   const [spinerText, setSpinerText] = useState(false);
@@ -116,13 +122,45 @@ export const AdditionalDiscount = () => {
                   </option>
                 ))}
               </select>
-              <input
-                type="number"
-                placeholder="Número de identificación"
-                className={styles.inputBox}
-                value={numeroTI}
-                onChange={(e) => setNumeroTI(e.target.value)}
-              />
+
+              <div style={{ position: "relative" }}>
+                {/* primerNombre */}
+                {errorIdentificion.identificacionConyuge && (
+                  <div className={styles.error_form}>
+                    <img src={warningIcons2} alt="" />
+                    <p>Este campo no puede quedar vacío</p>
+                  </div>
+                )}
+                <InputForm
+                  name="identificacionConyuge"
+                  action={(e) => {
+                    setNumeroTI(e.target.value);
+                    handleInput(e);
+                  }}
+                  label={"Identificación"}
+                  style={
+                    errorIdentificion.identificacionConyuge
+                      ? {
+                          border: "#E92243 solid 2px",
+                          backgroundColor: "#FAF1F1 ",
+                          width: "340px",
+                          flex: 1,
+                          padding: "10px",
+                          fontSize: "14px",
+                          borderRadius: "5px",
+                        }
+                      : {
+                          backgroundColor: "#ffffff ",
+                          width: "340px",
+                          flex: 1,
+                          padding: "10px",
+                          fontSize: "14px",
+                          borderRadius: "5px",
+                          border: "1px solid #ccc",
+                        }
+                  }
+                />
+              </div>
             </div>
             <div className={styles.divCardDiscount}>
               {!spiner && !spinerText && numeroTI && selectValue == "2" && (
@@ -158,14 +196,12 @@ export const AdditionalDiscount = () => {
                 />
               )}
             </div>
-            {!numeroTI ||
-              selectValue == "0" ||
-              ((spiner || spinerText) && (
-                <div className={styles.cuadro}>
-                  %<br />
-                  El porcentaje de descuento de tu cónyuge es:
-                </div>
-              ))}
+            {(spiner || !numeroTI || selectValue == "0") && (
+              <div className={styles.cuadro}>
+                %<br />
+                El porcentaje de descuento de tu cónyuge es:
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -5,6 +5,7 @@ export const validateForm = ({
   date,
   añosExperiencia,
   ciuadadesMovilizacion,
+  identificacionConyuge,
 }) => {
   let error = [];
   if (!primerNombre?.trim()) error.push("primerNombre");
@@ -17,6 +18,7 @@ export const validateForm = ({
   }
   if (!añosExperiencia?.trim()) error.push("añosExperiencia");
   if (!ciuadadesMovilizacion) error.push("ciuadadesMovilizacion");
+  if (!identificacionConyuge) error.push("identificacionConyuge");
 
   return error;
 };

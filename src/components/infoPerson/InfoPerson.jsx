@@ -16,7 +16,6 @@ import { dayOptions, monthOptions, yearOptions } from "./dateInf.js";
 import { validateForm } from "./validatedForm.js";
 import { AdditionalDiscount } from "../molecules/additional-discount/AdditionalDiscount.jsx";
 import { useNavigate } from "react-router-dom";
-import ModalBase from "../molecules/Modal/Modal1/ModalBase.jsx";
 import { Footer } from "../molecules/Footer/Footer.jsx";
 import Spiner from "../molecules/Spiner/Spiner.jsx";
 
@@ -30,6 +29,7 @@ export const InfoPerson = () => {
     año: "",
     añosExperiencia: "",
     ciuadadesMovilizacion: "",
+    identificacionConyuge: "",
   });
   const [formData, setFormData] = useState({
     primerNombre: "",
@@ -38,9 +38,12 @@ export const InfoPerson = () => {
     date: {},
     añosExperiencia: "",
     ciuadadesMovilizacion: "",
+    identificacionConyuge: "",
   });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [conyuge, setConyuge] = useState(false);
+
   const handleDayChange = (selectedDay) => {
     setFormData((prev) => ({
       ...prev,
@@ -71,8 +74,14 @@ export const InfoPerson = () => {
   };
   const handleSubmit = () => {
     const returnError = validateForm(formData);
-    if (returnError.length > 0) {
-      returnError.map((item) =>
+    let arraySinConyuge = returnError;
+    if (!conyuge) {
+      arraySinConyuge = returnError.filter(
+        (item) => item != "identificacionConyuge"
+      );
+    }
+    if (arraySinConyuge.length > 0) {
+      arraySinConyuge.map((item) =>
         setError((prev) => ({ ...prev, [item]: "campo obligatorio" }))
       );
       return;
@@ -317,7 +326,12 @@ export const InfoPerson = () => {
         </div>
       </div>
       <CardDiscount />
-      <AdditionalDiscount />
+      <AdditionalDiscount
+        errorIdentificion={error}
+        handleInput={handleInput}
+        conyuge={conyuge}
+        setConyuge={setConyuge}
+      />
       <div
         style={{
           display: "flex",
