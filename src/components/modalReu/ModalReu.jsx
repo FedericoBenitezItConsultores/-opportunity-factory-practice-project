@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "../Modal1/Modal.module.css";
 import Modal from "@mui/material/Modal";
 import { useNavigate } from "react-router-dom";
 

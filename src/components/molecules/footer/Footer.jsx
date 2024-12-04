@@ -28,10 +28,6 @@ export const Footer = () => {
     setIsModalOpenBack(true); 
   };
 
-  // const handleLogoutClick = () => {
-  //   setButtonText("Mis Negocios"); 
-  //   setIsModalOpenLogout(true); 
-  // };
 
   const closeModalBack = () => {
     setIsModalOpenBack(false); 
