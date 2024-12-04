@@ -96,11 +96,13 @@ export default function PricePage() {
        setSessionEnded(false);
        clearTimeout(inactivityTimeout);
 
+       /* modal tiempo */ 
+
        inactivityTimeout = setTimeout(() => {
          setUserActive(false);
          setIsModalOpen(true);
          startCountdown();
-       }, 10000); 
+       }, 100000); 
      };
 
      // Escucha eventos de actividad del usuario

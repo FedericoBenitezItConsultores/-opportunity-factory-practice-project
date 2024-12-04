@@ -5,6 +5,7 @@ import Cerrar from "../../../../assets/Cerrar.svg";
 import Esclamacion from "../../../../assets/Esclamacion.svg";
 import { Modal } from "@mui/material";
 
+
 const SessionTimeout = ({
   show,
   onClose,
@@ -14,7 +15,7 @@ const SessionTimeout = ({
   timeLeft,
   sessionEnded,
 }) => {
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60)
@@ -25,7 +26,7 @@ const SessionTimeout = ({
   };
 
   const handleContinueSession = () => {
-    setTimeLeft(118);
+    setTimeLeft(138);
     setIsModalVisible(false);
     setUserActive(true);
   };
