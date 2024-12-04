@@ -69,6 +69,7 @@ export const AdditionalDiscount = ({
           <form>
             <div className={styles.checkboxGroup}>
               <input
+                style={{ marginTop: "10.5px" }}
                 type="checkbox"
                 onChange={handleCheckboxChange} // Control del checkbox
               />
