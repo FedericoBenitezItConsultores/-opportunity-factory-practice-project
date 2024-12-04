@@ -5,7 +5,7 @@ import Home from "../pages/home/Home";
 import PricePage from "../pages/price-page/PricePage";
 
 export const routes = [
-  { path: "/", element: <Home /> },
+  { path: "/", element: <InfoPerson /> },
   { path: "/price", element: <PricePage /> },
   { path: "/inf-person", element: <InfoPerson /> },
   { path: "/calificasion", element: <Calificasion /> },
