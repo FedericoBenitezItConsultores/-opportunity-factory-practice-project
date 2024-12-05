@@ -1,0 +1,265 @@
+/* progresBar */
+.container3 {
+    display: flex;
+    background-color: #e6e6e668;
+    padding: 10px 50px;
+    min-height: 45px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container3_2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.price {
+    gap: 5px;
+    display: flex;
+    padding: 5px 20px;
+    padding-left: 92px;
+    padding-top: 15px;
+    padding-bottom: 5.5px;
+    padding-right: 60px;
+}
+
+.title {
+    gap: 5px;
+    font-size: 11px;
+    color: #343741;
+}
+
+.id {
+    color: #1a1446;
+    font-weight: 600;
+    font-size: 11px;
+    margin-right: 10px;
+}
+
+.stepContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.stepNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 5px;
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    min-width: 1rem;
+    min-height: 1rem;
+}
+
+.completed {
+    background-color: #99e3ea;
+    color: #1a1446;
+    font-family: "roboto Bold", sans-serif;
+    border: 1px solid #28a3af;
+}
+
+.pending {
+    background-color: #e6e6e668;
+    color: #1a1446;
+    border: 2px solid #28a3af;
+    font-family: "roboto Bold", sans-serif;
+    width: 1rem;
+    height: 1rem;
+    margin-left: -15px;
+}
+
+.none {
+    background-color: #e6e6e668;
+    color: #808080;
+    font-family: "roboto Bold", sans-serif;
+    border: 1px solid #c0bfc0;
+    width: 1rem;
+    height: 1rem;
+    margin-left: -15px;
+}
+
+.stepText {
+    margin-left: 1px;
+    font-size: 11px;
+    font-family: "roboto regular", sans-serif;
+    color: #1a1446;
+    font-weight: 600;
+}
+
+.cotizacionFinal {
+    color: #808080;
+    font-family: "roboto regular", sans-serif;
+    margin-left: 1px;
+}
+
+.divider {
+    width: 1rem;
+    height: 1px;
+    background-color: #1a1416;
+    margin: 0 0.1rem;
+    margin-left: 0.5rem;
+    border: 1px solid #1a1416;
+}
+
+.divider3 {
+    background-color: #c0c0c0;
+    border: 0px solid #c0c0c0;
+}
+
+.completed {
+    background-color: #99e3ea;
+    color: #1a1446;
+    border-width: 2px;
+    border: 1px solid #28a3af;
+    font-size: 12px;
+    width: 1rem;
+    height: 1rem;
+}
+
+.pending {
+    background-color: #e6e6e668;
+}
+
+.triangle {
+    position: absolute;
+    margin-left: 395px;
+    margin-top: 65px;
+    width: 43px;
+    height: 20px;
+    color: #ffffff;
+}
+
+/* navbar2 */
+.title {
+    font-family: "roboto regular", sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 8px;
+    display: inline-block;
+}
+
+.title.grey {
+    color: #343741;
+}
+
+.title.blue {
+    color: #28a3af;
+}
+
+.arrow {
+    width: 5px;
+    height: auto;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    margin-left: 120px;
+    padding-right: 200px;
+}
+
+.button {
+    border: none;
+    border-bottom: 2px solid #06748c;
+    border-radius: 6px;
+    background-color: #99e3ea;
+    color: #1a1446;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "roboto Bold", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #06748c;
+    color: white;
+    border-bottom: 2px solid #1e1045;
+}
+
+
+
+.container1 {
+    padding: 1rem;
+}
+
+/* navbar */
+.container2 {
+    height: 85px;
+    gap: 10px;
+    background-color: #ffd000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 80px;
+    padding-left: 144px;
+    padding-top: 10px;
+    padding-bottom: 10.5px;
+    padding-right: 110px;
+    align-items: center;
+    opacity: 1;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 103px;
+    height: 52px;
+}
+
+
+
+.rightSection {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    top: 27px;
+    left: 969px;
+    height: 32px;
+}
+
+
+
+.button2 {
+    color: #1a1446;
+    background-color: #ffd000;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "roboto Medium", sans-serif;
+    width: 122px;
+    height: 36px;
+    border: 1px solid #1E1045;
+    border-radius: 3px;
+    opacity: 100%;
+}
+
+.name {
+    font-size: 14px;
+    color: #1a1446;
+    font-weight: 400;
+    font-family: "roboto Medium", sans-serif;
+}
+
+.profile {
+    width: 30px;
+    height: 30px;
+}

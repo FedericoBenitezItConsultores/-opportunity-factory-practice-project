@@ -1,11 +1,5 @@
-import ButtonPerson from "./components/basics/button-person/ButtonPerson";
+import React from "react";
 
 export default function PersonPage() {
-  return (
-    <>
-      <ButtonPerson>Lo que se les de la gana !</ButtonPerson>
-      <ButtonPerson>Lo que se les de la gana 2!</ButtonPerson>
-      <ButtonPerson>Lo que se les de la gana 3!</ButtonPerson>
-    </>
-  );
+  return <div>PersonPage</div>;
 }
