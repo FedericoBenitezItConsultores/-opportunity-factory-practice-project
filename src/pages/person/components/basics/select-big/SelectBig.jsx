@@ -1,25 +1,21 @@
 import React from "react";
 import Select from "react-select";
-import citys, { customStyles } from "./utils/stylesSelect";
+import { customStyles } from "./utils/stylesSelect";
 
-const SelectCity = () => {
-  const handleCityChange = (selectedOption) => {
-    console.log("Ciudad seleccionada:", selectedOption);
-  };
-
+const SelectBig = ({options, placaholder="Ciudad de movilización *", menuPlacement='top', onChange}) => {
   return (
     <div style={{ position: "relative" }}>
       <Select
-        options={citys} 
+        options={options} 
         styles={customStyles} 
-        placeholder="Ciudad de movilización *"
-        onChange={handleCityChange}
+        placeholder={placaholder}
+        onChange={(resp)=>onChange(resp)}
         isSearchable={true}
-        menuPlacement="top"  
+        menuPlacement={menuPlacement}  
         menuPosition="absolute"
       />
     </div>
   );
 };
 
-export default SelectCity;
+export default SelectBig;

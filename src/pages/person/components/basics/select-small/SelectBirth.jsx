@@ -5,10 +5,10 @@ import { dayOptions, monthOptions, yearOptions } from "./utils/dateInf.js";
 const SelectSmall = ({ formData, handleDayChange, handleMonthChange, handleYearChange }) => {
   return (
     <div style={{ position: "relative", margin: "20px 90px 20px 0" }} className="info_date">
-      <p className="gender_birth">
+      {/* <p className="gender_birth">
         Fecha de nacimiento
         <span style={{ color: "#28A3AF" }}>*</span>
-      </p>
+      </p> */}
       <div style={{ display: "flex", gap: "10px" }}>
         <div style={{ position: "relative" }}>
           {/* Día */}
