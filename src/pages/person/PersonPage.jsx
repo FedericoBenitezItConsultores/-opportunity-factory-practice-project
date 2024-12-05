@@ -7,8 +7,6 @@ export default function PersonPage() {
       <ButtonPerson>Lo que se les de la gana !</ButtonPerson>
       <ButtonPerson>Lo que se les de la gana 2!</ButtonPerson>
       <ButtonPerson>Lo que se les de la gana 3!</ButtonPerson>
-      <FooterPopup></FooterPopup>
-
     </>
   );
 }
