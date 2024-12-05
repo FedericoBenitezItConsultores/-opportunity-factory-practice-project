@@ -1,4 +1,3 @@
-import FooterPopup from "../../components/basic/popup/footer-popup/FooterPopup";
 import ButtonPerson from "./components/basics/button-person/ButtonPerson";
 
 export default function PersonPage() {
