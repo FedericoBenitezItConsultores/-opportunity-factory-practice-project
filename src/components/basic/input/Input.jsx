@@ -42,10 +42,10 @@ export function Input({
           onChange={(e) => {
             setInput(e.target.value);
             onChange(e);
+            typeStyle = "prymary"
           }}
-          //   className={STYLE_INPUT[TypeStyle]}
           type={"text"}
-          className={styles.input}
+          className={styles.inputs}
         />
       </label>
     </div>
