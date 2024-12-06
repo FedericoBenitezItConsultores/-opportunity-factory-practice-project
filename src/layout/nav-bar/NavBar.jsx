@@ -66,12 +66,7 @@ const Navbar = () => {
             <img src={icon_left} alt="icon_left" className={styles.arrow} />
             <p className={`${styles.title} ${styles.blue}`}>Nueva cotización</p>
           </div>
-          <Button
-            typeStyle="secondary"
-            // styles={{ width: "200px", height: "20px" }}
-          >
-            Ir a mis negocios
-          </Button>
+          <Button typeStyle="secondary">Ir a mis negocios</Button>
         </div>
       </div>
     </div>
