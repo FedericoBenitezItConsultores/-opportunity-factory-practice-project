@@ -3,44 +3,54 @@
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalHeader {
-  margin-bottom: 16px;
-  padding-top: 48px;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+  text-align: center;
 }
 
 .IconDanger {
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 33px;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 0 auto 2rem;
 }
 
 .modalTitle {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   color: #1a1446;
   margin: 0;
-  font-family: "roboto Medium", sans-serif;
+  font-family: "Roboto Medium", sans-serif;
+  text-align: center;
 }
 
 .modalText {
-  font-size: 16px;
+  font-size: 1rem;
   color: #343741;
-  width: 464px;
-  margin: 5px 0;
+  width: 90%;
+  max-width: 464px;
+  margin: 0.5rem 0;
+  text-align: center;
 }
 
 .quoteNumber {
   font-weight: bold;
   color: #28a3af;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .container_btns {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .container_text {
@@ -48,12 +58,175 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 .modalBody p {
-  font-family: "roboto Medium", sans-serif;
-  width: 464px;
-  font-size: 16px;
+  font-family: "Roboto Medium", sans-serif;
+  width: 90%;
+  max-width: 464px;
+  font-size: 1rem;
   color: #343741;
+  text-align: center;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .modalHeader {
+    padding-top: 2rem;
+  }
+
+  .IconDanger {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+
+  .modalText,
+  .modalBody p {
+    font-size: 0.875rem;
+  }
+
+  .container_btns {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .IconDanger {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.25rem;
+  }
+
+  .modalText,
+  .modalBody p {
+    font-size: 0.75rem;
+  }
+
+  .container_btns {
+    gap: 0.5rem;
+  }
+}
+.modalBackdrop {
+  background-color: rgba(30, 16, 69, 0.9) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalHeader {
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.IconDanger {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 0 auto 2rem;
+}
+
+.modalTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1446;
+  margin: 0;
+  font-family: "Roboto Medium", sans-serif;
+  text-align: center;
+}
+
+.modalText {
+  font-size: 1rem;
+  color: #343741;
+  width: 90%;
+  max-width: 464px;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.quoteNumber {
+  font-weight: bold;
+  color: #28a3af;
+  font-size: 0.75rem;
+}
+
+.container_btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modalBody p {
+  font-family: "Roboto Medium", sans-serif;
+  width: 90%;
+  max-width: 464px;
+  font-size: 1rem;
+  color: #343741;
+  text-align: center;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .modalHeader {
+    padding-top: 2rem;
+  }
+
+  .IconDanger {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+
+  .modalText,
+  .modalBody p {
+    font-size: 0.875rem;
+  }
+
+  .container_btns {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .IconDanger {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.25rem;
+  }
+
+  .modalText,
+  .modalBody p {
+    font-size: 0.75rem;
+  }
+
+  .container_btns {
+    gap: 0.5rem;
+  }
 }
