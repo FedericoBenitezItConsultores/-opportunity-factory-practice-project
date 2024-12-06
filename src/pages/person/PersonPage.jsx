@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import WeCannotGenerateTheDocument from "../../components/collections/popup/cards-pop-up/WeCannotGenerateTheDocument";
 
 export default function PersonPage() {
   return (
-    <div>PersonPage</div>
-  )
+    <div>
+      <WeCannotGenerateTheDocument />
+    </div>
+  );
 }
