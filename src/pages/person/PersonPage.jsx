@@ -1,10 +1,7 @@
-import React from "react";
-import AdditionalDiscount from "./components/collections/additional-discount/AdditionalDiscount";
+import React from 'react'
+
 export default function PersonPage() {
   return (
-    <>
-      <div>PersonPage</div>
-      <AdditionalDiscount />;
-    </>
-  );
+    <div>PersonPage</div>
+  )
 }

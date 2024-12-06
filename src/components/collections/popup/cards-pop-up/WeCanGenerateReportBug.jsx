@@ -1,4 +1,3 @@
-//no podemos generar la cotizacion reportar falla
 
 // No podemos continuar con la cotización. Inténtelo nuevamente más tarde.
 import React from "react";

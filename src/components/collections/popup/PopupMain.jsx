@@ -33,6 +33,7 @@ const PopupMain = ({
     </>
   ),
   numQuotation = true,
+  props
 }) => {
   return (
     <Popup>
@@ -69,7 +70,7 @@ const PopupMain = ({
             </Button>
           ))}
         </div>
-        <FooterPopup />
+        <FooterPopup {...props} />
       </div>
     </Popup>
   );
