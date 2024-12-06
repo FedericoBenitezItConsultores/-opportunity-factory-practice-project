@@ -33,6 +33,7 @@ const PopupMain = ({
     </>
   ),
   numQuotation = true,
+  props
 }) => {
   return (
     <Popup>
@@ -53,7 +54,7 @@ const PopupMain = ({
               className={styles.modalText}
             >
               Número de cotización
-              <span className={styles.quoteNumber}>100030819</span>
+              <span className={styles.quoteNumber}> 100030819</span>
             </p>
           )}
         </div>
@@ -69,7 +70,7 @@ const PopupMain = ({
             </Button>
           ))}
         </div>
-        <FooterPopup />
+        <FooterPopup {...props} />
       </div>
     </Popup>
   );
