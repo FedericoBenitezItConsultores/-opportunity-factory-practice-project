@@ -11,6 +11,7 @@ export default function CardPlan(plan) {
   const { setPlanSelect, planSelect, quantityPlans } = plan;
   const [width, setWidth] = useState("285px");
   const [height, setHeight] = useState("256px");
+
   useEffect(() => {
     console.log("quantityPlans", quantityPlans);
     if (quantityPlans == 4) {
