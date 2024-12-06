@@ -1,16 +1,18 @@
 .primary {
     cursor: pointer;
-    min-width: 110px;
-    min-height: 42px;
-    background-color: #99E3EA;
-    box-shadow: 0px 3px 0px #06748C;
-    border: 1px solid #99E3EA;
+    min-width: 252px;
+    min-height: 48px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 0px #919191;
+    border: 1px solid #1A1446;
     border-radius: 3px;
     color: #1A1446;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 31px 12px 31px 11px;
+    padding: 15.48px 70.6px 13.52px 67.4px;
+    font-family: "roboto Bold", sans-serif;
+    font-size: 16px;
 
     &:hover {
         background-color: #06748C;
@@ -32,9 +34,9 @@
 
 .secondary {
     cursor: pointer;
-    min-width: 110px;
-    min-height: 42px;
-    background-color: red;
+    min-width: 252px;
+    min-height: 48px;
+    background-color: #99E3EA;
     box-shadow: 0px 3px 0px #06748C;
     border: 1px solid #99E3EA;
     border-radius: 3px;
@@ -42,7 +44,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 31px 12px 31px 11px;
+    padding: 15.48px 70.6px 13.52px 67.4px;
+    font-family: "roboto Bold", sans-serif;
+    font-size: 16px;
 
     &:hover {
         background-color: #06748C;

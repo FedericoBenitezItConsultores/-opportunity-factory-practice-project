@@ -62,3 +62,27 @@
   font-family: "roboto Thinltalic";
   src: url("../src/assets/font/Roboto-ThinItalic.ttf");
 }
+
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  display: flex;
+  background-color: #F5F5F5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+}
+
+#root {
+  width: 100%;
+}
