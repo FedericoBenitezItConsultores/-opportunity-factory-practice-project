@@ -1,11 +1,12 @@
 import React from "react";
-import styles from "../footer-popup/FooterPopup.module.css";
+import styles from "./FooterPopup.module.css";
 
 const FooterPopup = ({
-  infoMessage = "Para obtener información adicional comunícate con la mesa de ayuda al correo", 
-  email = "soporte.aplicativos@libertycolombia.com",  
+  infoMessage = "Para obtener información adicional comunícate con la mesa de ayuda al correo",
+  email = "soporte.aplicativos@libertycolombia.com",
   errorMessage = "Código de error: 1234 - Paso 3: Información personal",
   date = "21/Jul/2022 - 13:15",
+  stylesFooterPopup,
 }) => {
   return (
     <div className={styles.overlay}>
