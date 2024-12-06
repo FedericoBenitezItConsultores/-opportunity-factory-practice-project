@@ -1,0 +1,76 @@
+.div_root1 {
+    position: relative;
+    width: 1140px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.115), 5px 0 10px rgba(0, 0, 0, 0.115);
+}
+
+.div_root {
+    border-top: none !important;
+    position: relative;
+    padding: 25px;
+    text-align-last: left;
+}
+
+.financing_icon {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.div_inf {
+    top: 737px;
+    width: 851px;
+    height: 86px;
+    font-size: 16px;
+    font-family: "roboto Bold";
+    white-space: nowrap;
+    color: #0061f5;
+    padding-right: 100px;
+    background-color: #ffffff;
+    border: 1px solid #c0bfc0;
+    border-radius: 3px;
+    opacity: 1;
+    border-left: 4px solid #0061f5;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 10px;
+}
+
+.img_arrow_down {
+    position: absolute;
+    top: 20px;
+    left: 1108px;
+    width: 24px;
+    height: 13px;
+    opacity: 1;
+}
+
+.title_table {
+    top: 738px;
+    left: 189px;
+    width: 1063px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #99e5ea;
+    border-radius: 6px 6px 0px 0px;
+
+    margin-left: 50px;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    /*paq la linea sea seguida*/
+    font-family: "roboto Bold";
+}
+
+.panel_information {
+    display: flex;
+    /* justify-content: end; */
+    margin-top: 30px;
+    margin-left: 160px
+}

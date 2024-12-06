@@ -1,5 +1,8 @@
 import React from "react";
-import AdditionalDiscount from "./components/collections/additional-discount/AdditionalDiscount";
+import CardDiscount from "./components/collections/card-discount/CardDiscount";
+import imgFirst from "../../assets/icons/svg/Group8.svg";
+import imgSecond from "../../assets/icons/svg/Wedding_Yellow.svg";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 export default function PersonPage() {
   return <>
