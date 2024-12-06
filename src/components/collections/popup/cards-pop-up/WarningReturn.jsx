@@ -20,8 +20,16 @@ export default function WarningReturn({ btn_misNegocios, btn_reintentar }) {
           action: btn_reintentar,
         },
       ]}
-      text1={"Ten en cuenta que una vez regreses a pasos anteriores de la cotización desde este punto, es posible que se generen variaciones en la tarifa entregada inicialmente"}
+      text1={
+        "Ten en cuenta que una vez regreses a pasos anteriores de la cotización desde este punto, es posible que se generen variaciones en la tarifa entregada inicialmente"
+      }
       text2={""}
+      numQuotation={false}
+      heightCard={"500px"}
+      props={{
+        errorMessage: "",
+        date: "",
+      }}
     />
   );
 }

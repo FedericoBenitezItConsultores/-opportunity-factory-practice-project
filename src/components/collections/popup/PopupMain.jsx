@@ -33,10 +33,12 @@ const PopupMain = ({
     </>
   ),
   numQuotation = true,
-  props
+  props,
+  heightCard
 }) => {
+
   return (
-    <Popup>
+    <Popup heightCard={heightCard}>
       <div>
         <div className={styles.modalHeader}>
           <img className={styles.IconDanger} src={img} alt="Alerta" />
