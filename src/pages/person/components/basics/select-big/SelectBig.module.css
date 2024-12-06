@@ -1,0 +1,44 @@
+.wrapper {
+    position: relative;
+    width: 375px;
+    height: 80px; /* Ajustar altura si es necesario */
+  }
+  
+  .label {
+    position: absolute; /* Cambiar a absolute para evitar interferencias con el layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Asegura que el label esté encima del Select */
+  }
+  
+  .p_text {
+    color: #707070;
+    position: absolute;
+    left: 10px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Asegura que el texto no interfiera con la interacción con el Select */
+  }
+  
+  .react-select__control {
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    background-color: #e6e6e6;
+    border: 1px solid #919191;
+    border-radius: 5px;
+    opacity: 1;
+    z-index: 0; /* Asegura que el Select esté detrás del label */
+  }
+  
+  .react-select__control--is-focused {
+    border-color: #28a3af;
+    box-shadow: 0 0 5px rgba(40, 163, 175, 0.3);
+  }
+  
+  .react-select__menu {
+    z-index: 9999;
+  }
+  
