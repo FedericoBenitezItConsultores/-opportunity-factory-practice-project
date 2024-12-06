@@ -1,0 +1,39 @@
+.fallo {
+  top: 37px;
+  min-width: 851px;
+  max-width: 691px;
+  height: auto;
+  font-size: 16px;
+  font-family: "roboto Bold";
+  color: #0061f5;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #c0bfc0;
+  border-radius: 3px;
+  opacity: 1;
+  border-left: 4px solid #0061f5;
+  margin: 30px auto;
+  padding: 10px;
+  gap: 5px;
+}
+
+.div_inf1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.div_inf {
+  display: flex;
+  flex-direction: column;
+}
+.inf2 {
+  margin-left: 30px;
+  color: #343741;
+  font-family: "roboto Regular";
+}
+
+.icons {
+  width: 16px;
+  height: 16px;
+}

@@ -25,7 +25,7 @@ export function Input({
         <p
           style={{
             left: "10px",
-            bottom: isFocused ? "19px" : "-10px",
+            bottom: isFocused ? "19px" : "3px",
             fontSize: isFocused ? "14px" : "20px",
             transition: "all 0.3s ease",
           }}
@@ -42,7 +42,7 @@ export function Input({
           onChange={(e) => {
             setInput(e.target.value);
             onChange(e);
-            typeStyle = "prymary"
+            // typeStyle = "prymary"
           }}
           type={"text"}
           className={styles.inputs}
