@@ -3,7 +3,12 @@ import Select from "react-select";
 import { customStyles } from "./utils/stylesSelect";
 import styles from "./SelectBig.module.css";
 
-const SelectBig = ({ options, placeholder = "", menuPlacement = "top", onChange }) => {
+const SelectBig = ({
+  options,
+  placeholder = "Ciudad de movilización",
+  menuPlacement = "top",
+  onChange,
+}) => {
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState(null); // Guardar el valor seleccionado
 
@@ -16,7 +21,7 @@ const SelectBig = ({ options, placeholder = "", menuPlacement = "top", onChange 
       <label className={styles.label}>
         <p
           style={{
-            top:isFocused || value ? "-1px" : "-0px",
+            top: isFocused || value ? "-1px" : "-0px",
             left: "5px",
             marginTop: isFocused || value ? "-1px" : "15px", // Ajuste para que suba
             fontSize: isFocused || value ? "14px" : "20px", // Reducir el tamaño del texto cuando está enfocado
@@ -25,13 +30,13 @@ const SelectBig = ({ options, placeholder = "", menuPlacement = "top", onChange 
           }}
           className={styles.p_text}
         >
-          Ciudad de movilización <span style={{ color: "#28A3AF" }}>*</span>
+          {placeholder} <span style={{ color: "#28A3AF" }}>*</span>
         </p>
 
         <Select
           options={options}
           styles={customStyles}
-          placeholder={placeholder}
+          placeholder={" "}
           onChange={(resp) => {
             onChange(resp);
             setValue(resp); // Guardar el valor seleccionado

@@ -71,7 +71,7 @@ const AdditionalDiscount = () => {
           <div className={styles.container_form}>
             <SelectBig
               options={identidades}
-              placaholder="Tipo de identificación *"
+              placeholder="Tipo de identificación"
               onChange={handleSelectChange}
               value={selectedOption}
             />
