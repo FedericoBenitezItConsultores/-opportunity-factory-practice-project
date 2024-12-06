@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import InfPlans from "../molecules/tables-plans/InfPlans";
+// import InfPlans from "../molecules/tables-plans/InfPlans";
 import { plans } from "../../../../utils/plans";
 import CardPlan from "../../basic/card-plan/CardPlan";
-export default function PlansPrice() {
+import InfPlans from "../inf-plans/InfPlans";
+export default function PanelPlans() {
   const [planSelect, setPlanSelect] = useState(plans[0]);
   return (
-    <div>
+    <div style={{ paddingTop: "80px", backgroundColor: "#fff" }}>
       <div className={styles.div_root}>
         {plans.map((plan) => (
           <CardPlan
@@ -18,7 +19,9 @@ export default function PlansPrice() {
           />
         ))}
       </div>
-      <InfPlans plan={planSelect} />
+      <div className={styles.container_tables}>
+        <InfPlans plan={planSelect} />
+      </div>
     </div>
   );
 }

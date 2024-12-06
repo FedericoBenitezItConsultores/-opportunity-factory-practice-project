@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    background:red;
+    background: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 3px 3px 0 0;
     opacity: 1;
@@ -46,10 +46,6 @@
     position: absolute;
     top: 10px;
     left: 10px;
-
-    /* UI Properties */
-    /* border: 1.1px solid #979797; */
-    background: transparent url("../../../assets/Oval4.jpg") no-repeat center;
     opacity: 0.6;
 }
 
@@ -58,7 +54,7 @@
     width: 112px;
     height: 29px;
     text-align: center;
-    font-family: "roboto Bold";
+    font-family: "roboto Bold", sans-serif;
 
     letter-spacing: 0;
     color: #1a1446;
@@ -71,6 +67,7 @@
     height: 51px;
     text-align: center;
     font: bold 42px/51px "roboto Bold";
+    font-family: "roboto Bold", sans-serif;
     letter-spacing: 0;
     color: #28a3af;
     opacity: 1;
@@ -86,8 +83,8 @@
     background-color: #d9e8fe;
     border-radius: 16px;
     opacity: 1;
-    margin: 0 10px;
-    font-family: "roboto Bold";
+    margin: 0 20px;
+    font-family: "roboto Bold", sans-serif;
     font-size: 14px;
 }
 
@@ -100,7 +97,7 @@
 }
 
 .div_show_details {
-    font-family: "roboto regular";
+    font-family: "roboto regular", sans-serif;
     padding: 15px;
     border-top: #e4e4e4 1px solid;
     width: 79%;
@@ -108,12 +105,10 @@
 }
 
 .div_show_details p {
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-06748c);
     letter-spacing: 0px;
     color: #06748c;
     opacity: 1;
-    font-family: "roboto regular";
+    font-family: "roboto regular", sans-serif;
 }
 
 .triangle {
@@ -123,5 +118,5 @@
 }
 
 .financiacion {
-    font-family: "roboto Bold";
+    font-family: "roboto Bold", sans-serif;
 }
