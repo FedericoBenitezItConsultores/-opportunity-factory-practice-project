@@ -6,6 +6,28 @@ import SelectBig from "../../basics/select-big/SelectBig";
 
 const AdditionalDiscount = () => {
   const [checked, setChecked] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null); // Estado para la opción seleccionada
+
+  const identidades = [
+    { value: "opcion1", type: "0", label: "Cédula de ciudadanía" },
+    { value: "opcion2", type: "1", label: "Cédula de extranjería" },
+    { value: "opcion3", type: "2", label: "Carnet Diplomático" },
+    { value: "opcion4", type: "0", label: "Pasaporte" },
+    { value: "opcion5", type: "1", label: "Tarjeta de Identidad" },
+    { value: "opcion6", type: "0", label: "Registro Civil" },
+    { value: "opcion7", type: "1", label: "Permiso Especial de Permanencia" },
+    { value: "opcion8", type: "2", label: "Documento de Identidad Consular" },
+    { value: "opcion9", type: "0", label: "Certificado de Nacimiento" },
+    {
+      value: "opcion10",
+      type: "2",
+      label: "Número Único de Identificación Personal (NIUP)",
+    },
+  ];
+
+  const handleSelectChange = (selected) => {
+    setSelectedOption(selected); // Actualiza el estado con la opción seleccionada
+  };
 
   return (
     <div className={styles.container}>
@@ -26,18 +48,19 @@ const AdditionalDiscount = () => {
       <div>
         <PanelInformation
           parrafo1="El uso del descuento del cónyuge estará sujeto a posteriores revisiones y validaciones"
-          parrafo2={
-            checked
-              ? "Se aplicará siempre el descuento más alto entre conductor y cónyuge."
-              : " "
-          }
+          parrafo2={checked ? "Se aplicará siempre el descuento más alto entre conductor y cónyuge." : " "}
         />
       </div>
       {checked && (
         <>
           <div className={styles.container_form}>
-            <SelectBig />
-            <input type="text" />
+            {/* Se le pasa el asterisco al placeholder */}
+            <SelectBig 
+              options={identidades} 
+              placaholder="Tipo de identificación *" 
+              onChange={handleSelectChange} // Controlar la opción seleccionada
+              value={selectedOption} // Pasa la opción seleccionada como el valor del select
+            />
           </div>
           <p className={styles.info}>
             Ingresa la identificación de tu cónyuge si quieres aplicar su
