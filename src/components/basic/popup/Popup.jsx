@@ -1,16 +1,13 @@
-
 import React from "react";
 import styles from "../popup/Popup.module.css";
 
 const Popup = ({ children }) => {
   return (
-    <div className={styles.overlay}>
-      <div className={styles.popup}>
-        {children}
-      </div>
-    </div>
+    <>
+      <div className={styles.overlay}></div>
+      <div className={styles.popup}>{children}</div>
+    </>
   );
 };
 
 export default Popup;
-

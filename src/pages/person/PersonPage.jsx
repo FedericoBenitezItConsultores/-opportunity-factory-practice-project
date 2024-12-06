@@ -1,11 +1,15 @@
-import ButtonPerson from "./components/basics/button-person/ButtonPerson";
-import { Input } from "../../components/basic/input/Input";
+import React from "react";
+import ContinueWithQuoteTryLaterDriverDiscount from "../../components/collections/popup/cards-pop-up/ContinueWithQuoteTryLaterDriverDiscount";
+// import PopupMain from "../../components/collections/popup/PopupMain";
 
 export default function PersonPage() {
-
   return (
-    <>
-      <Input />
-    </>
+    <div>
+      {/* <PopupMain /> */}
+      <ContinueWithQuoteTryLaterDriverDiscount
+        btn_misNegocios={() => console.log("btn_misNegocioswe")}
+        btn_reintentar={() => console.log("btn_reintentawer")}
+      />
+    </div>
   );
 }
