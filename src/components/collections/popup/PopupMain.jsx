@@ -1,11 +1,10 @@
 import Popup from "../../basic/popup/Popup";
-import React, { useState } from "react";
 import styles from "./Popup.module.css";
 import IconDanger from "../../../assets/icons/svg/Icon-danger.svg";
 import FooterPopup from "../../basic/popup/footer-popup/FooterPopup";
 import Button from "../../basic/button/Button";
 
-const ModalBase = ({
+const PopupMain = ({
   img = IconDanger,
   title = <span style={{ color: "#1A1446" }}>¡Ups! Lo sentimos</span>,
   buttons = [
@@ -22,17 +21,15 @@ const ModalBase = ({
   ],
   text1 = (
     <>
-      No podemos continuar con la cotización en este momento debido a problemas
-      técnicos.
-      <b>Reintentar.</b> <br /> Si el error persiste, retoma la cotización en
-      unos minutos desde <br />
-      <b>Mis Negocios</b>.
+      No podemos continuar con la <b>cotización</b> en este momento debido a
+      problemas técnicos.
     </>
   ),
   text2 = (
     <>
-      Reporta la falla en la mesa de ayuda al correo{" "}
-      <p>soporte.aplicativos@libertycolombia.com</p>
+      Por favor, intenta nuevamente a través del botón <b>Reintentar.</b> <br />
+      Si el error persiste, retoma la cotización en unos minutos desde <br />
+      <b>Mis Negocios.</b>
     </>
   ),
   numQuotation = true,
@@ -51,7 +48,10 @@ const ModalBase = ({
             <p className={styles.modalText}>{text2}</p>
           </div>
           {numQuotation && (
-            <p style={{ marginLeft: "13%" }} className={styles.modalText}>
+            <p
+              style={{ margin: " 30px 0 30px 13% " }}
+              className={styles.modalText}
+            >
               Número de cotización
               <span className={styles.quoteNumber}>100030819</span>
             </p>
@@ -75,4 +75,4 @@ const ModalBase = ({
   );
 };
 
-export default ModalBase;
+export default PopupMain;
