@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "./input.module.css";
-
-const STYLE_INPUT = {
-  prymary: styles.prymary,
-  secondary: styles.secondary,
-  terciary: styles.terciary,
-};
+import imgWarning from "../../../assets/icons/svg/warningError.svg";
 export function Input({
   label = "Primer nombre",
   onChange,
-  TypeStyle,
+  TypeStyle = "primary",
+  textError = "Este campo no puede quedar vacío",
   ...props
 }) {
   const [isFocused, setIsFocused] = useState(false);
@@ -20,12 +16,16 @@ export function Input({
   }, [Input, isFocused]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles[TypeStyle]}>
+      <div className={styles.container_text_error}>
+        <img src={imgWarning} alt="" />
+        <p>{textError}</p>
+      </div>
       <label className={styles.label}>
         <p
           style={{
             left: "10px",
-            bottom: isFocused ? "19px" : "3px",
+            bottom: isFocused ? "19px" : "8.5px",
             fontSize: isFocused ? "14px" : "20px",
             transition: "all 0.3s ease",
           }}
@@ -37,12 +37,11 @@ export function Input({
         <input
           value={Input}
           {...props}
-          onFocus={() => setIsFocused(true)} // Se activa cuando el input tiene foco
-          onBlur={() => setIsFocused(false)} // Se activa cuando el input pierde foco
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
           onChange={(e) => {
             setInput(e.target.value);
             onChange(e);
-            // typeStyle = "prymary"
           }}
           type={"text"}
           className={styles.inputs}

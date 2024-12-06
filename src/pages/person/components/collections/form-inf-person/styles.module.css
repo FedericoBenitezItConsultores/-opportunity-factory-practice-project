@@ -1,0 +1,104 @@
+.container_form {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.container_genders {
+    /* Layout Properties */
+    margin-left: 98px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+    font-family: "Segoe UI", sans-serif;
+    color: #565656;
+
+    & div {
+        margin-left: 0;
+        padding-left: 5px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        width: 174px;
+        height: 50px;
+        background-color: #E6E6E6;
+        border: 1px solid #919191;
+        opacity: 1;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    & div span {
+        position: absolute;
+        top: -25px;
+        left: 0;
+        color: #343741;
+        font-family: "roboto regular", sans-serif;
+
+        & b {
+            color: #28A3AF;
+        }
+    }
+
+    & p {
+        font-size: 13px;
+    }
+}
+
+.container_genders_error {
+    /* Layout Properties */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    font-family: "Segoe UI", sans-serif;
+    color: #565656;
+
+    & div {
+        padding-left: 5px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        width: 174px;
+        height: 50px;
+        background-color: #FFF4F5;
+        border: 1px solid #E92243;
+        opacity: 1;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    & div span {
+        position: absolute;
+        top: -25px;
+        left: 0;
+        color: #343741;
+        font-family: "roboto regular", sans-serif;
+
+        & b {
+            color: #28A3AF;
+        }
+    }
+
+    & p {
+        font-size: 13px;
+    }
+}
+
+.container_birth {
+    font-family: "roboto regular", sans-serif;
+    margin-left: -5px;
+}

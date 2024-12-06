@@ -1,18 +1,24 @@
 import React from "react";
 import Select from "react-select";
 import { dayOptions, monthOptions, yearOptions } from "./utils/dateInf.js";
+import { customStyles, customStylesError } from "./utils/styles.js";
 
-const SelectSmall = ({ formData, handleDayChange, handleMonthChange, handleYearChange }) => {
+const SelectBirth = ({
+  formData,
+  handleDayChange,
+  handleMonthChange,
+  handleYearChange,
+}) => {
   return (
-    <div style={{ position: "relative", margin: "20px 90px 20px 0" }} className="info_date">
-      {/* <p className="gender_birth">
-        Fecha de nacimiento
-        <span style={{ color: "#28A3AF" }}>*</span>
-      </p> */}
-      <div style={{ display: "flex", gap: "10px" }}>
+    <div
+      style={{ position: "relative", margin: "20px 90px 20px 0" }}
+      className="info_date"
+    >
+      <div style={{ display: "flex", gap: "12px" }}>
         <div style={{ position: "relative" }}>
           {/* Día */}
           <Select
+            styles={true ? customStyles : customStylesError}
             options={dayOptions}
             placeholder="Día"
             onChange={handleDayChange}
@@ -23,6 +29,7 @@ const SelectSmall = ({ formData, handleDayChange, handleMonthChange, handleYearC
         <div style={{ position: "relative" }}>
           {/* Mes */}
           <Select
+            styles={true ? customStyles : customStylesError}
             options={monthOptions}
             placeholder="Mes"
             onChange={handleMonthChange}
@@ -33,6 +40,7 @@ const SelectSmall = ({ formData, handleDayChange, handleMonthChange, handleYearC
         <div style={{ position: "relative" }}>
           {/* Año */}
           <Select
+            styles={true ? customStyles : customStylesError}
             options={yearOptions}
             placeholder="Año"
             onChange={handleYearChange}
@@ -45,4 +53,4 @@ const SelectSmall = ({ formData, handleDayChange, handleMonthChange, handleYearC
   );
 };
 
-export default SelectSmall;
+export default SelectBirth;
