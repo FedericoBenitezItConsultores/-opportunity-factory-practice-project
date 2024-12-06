@@ -25,6 +25,7 @@
 }
 
 .infoMessage {
+    color: #1A1446;
   margin-top: 10px;
   margin: 5px;
   font-size: 12px;
@@ -37,6 +38,7 @@
   color: #343741;
   font-family: "roboto Italic", sans-serif;
 }
+  
 .date {
   margin-top: 2px;
   font-size: 10px;

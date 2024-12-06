@@ -1,49 +1,67 @@
 export const customStyles = {
-    control: (base) => ({
-      ...base,
-      background: "#e6e6e6",
-      border: "1px solid #d9d9d9",
-      borderRadius: "5px",
-      border: "1px solid #919191",
-      padding: "5px",
-      fontSize: "14px",
-      color: "#e6e6e6",
-      boxShadow: "none",
-      "&:hover": {
-        borderColor: "#333333", 
-      },
-      width: "300px",
-      height: "50px",
-    }),
-    
-    menu: (base) => ({
+  control: (base, state) => ({
+    ...base,
+    background: "#e6e6e6",
+    border: "1px solid #d9d9d9",
+    borderRadius: "5px",
+    fontSize: "14px",
+    color: "#333333",
+    boxShadow: "none",
+    "&:hover": {
+      borderColor: "#333333",
+    },
+    width: "377px",
+    height: "50px", // Mayor altura para el control
+    position: "relative", // Necesario para posicionar el label
+  }),
+  valueContainer: (base) => ({
+    ...base,
+    marginBottom: "-20px",
+    width: "80px",
+    height: "50px",
+    padding: "0 0 0 5px", // Ajusta el padding para que el texto no se oculte
+    alignItems: "flex-start", // Alinea el texto arriba
+    marginTop: "25px", // Añadir el margin-top aquí para bajar el texto
+  }),
+  placeholder: (base, state) => ({
+    ...base,
+    marginTop: "-10px",
+    position: "relative",
+    top: state.isFocused || state.hasValue ? "-15px" : "50%", // Flota hacia arriba si está enfocado o tiene valor
+    fontSize: state.isFocused || state.hasValue ? "12px" : "14px",
+    transform: state.isFocused || state.hasValue ? "translateY(15px)" : "translateY(5px)", // Para mantener el placeholder visible sin desaparecer
+    transition: "all 0.4s ease", // Animación suave al flotar
+    pointerEvents: "none", // Evita que interfiera con los clics
+    color: "#707070", // Color placeholder
+  }),
+  menu: (base) => ({
     ...base,
     background: "#ffffff",
     borderRadius: "8px",
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
     zIndex: 10,
-    width: "300px", // Ajustar ancho del menú 
-    maxWidth: "300px", // Asegurarse de que el menú no exceda este ancho
-    maxHeight: "200px", // altura  menú desplegable
+    width: "300px",
+    maxWidth: "300px",
+    maxHeight: "200px",
   }),
-    option: (base, state) => ({
-      ...base,
-      backgroundColor: state.isFocused ? "#f0f8ff" : "#ffffff",
-      color: state.isFocused ? "#0073e6" : "#333333",
-      padding: "10px",
-      cursor: "pointer",
-      fontSize: "14px",
-    }),
-    dropdownIndicator: (base) => ({
-      ...base,
-      color: "#333333", 
-    }),
-    placeholder: (base) => ({
-      ...base,
-      color: "#b3b3b3",
-      fontFamily: "roboto regular, sans- serif", // Aquí puedes cambiar el tipo de letra
-    }),
-  };
+  option: (base, state) => ({
+    ...base,
+    backgroundColor: state.isFocused ? "#f0f8ff" : "#ffffff",
+    color: state.isFocused ? "#0073e6" : "#333333",
+    padding: "10px",
+    cursor: "pointer",
+    fontSize: "14px",
+  }),
+  dropdownIndicator: (base) => ({
+    ...base,
+    color: "#333333",
+  }),
+};
+
+
+
+
+
 
 export const customStylesError = {
     control: (base) => ({

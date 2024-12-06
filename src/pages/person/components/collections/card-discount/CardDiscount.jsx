@@ -1,31 +1,43 @@
 import React from "react";
 import style from "./CardDiscount.module.css";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import imgFirst from "../../../../../assets/icons/svg/Group8.svg"
-import imgSecond from "../../../../../assets/icons/svg/Layer_2.svg"
-
+import imgFirst from "../../../../../assets/icons/svg/Group8.svg";
+import imgSecond from "../../../../../assets/icons/svg/Layer_2.svg";
+import WeddingYellow from "../../../../../assets/icons/svg/WeddingYellow.svg";
+import CombinedShape1 from "../../../../../assets/icons/svg/CombinedShape1.svg";
+import CombinedShape2 from "../../../../../assets/icons/svg/CombinedShape2.svg";
 
 const CardDiscount = ({
-  title = "Tienes un descuento", 
-  text1 = "De acuerdo al expertis del conductor,", 
+  title = "Tienes un descuento",
+  text1 = "De acuerdo al expertis del conductor,",
   porcentaje = {
-    text: "20% OFF", 
-    color: "#28a3af", 
-    textDescuento: "Aplica descuento mayor", 
-    bg: "#E1F2E6", 
-    icon: CheckCircleOutlineIcon, 
-    colorIcon: "#00aa00", 
-    img: null, 
+    text: "20% OFF",
+    color: "#28a3af",
+    textDescuento: "Aplica descuento mayor",
+    bg: "#E1F2E6",
+    icon: CombinedShape1,
+    colorIcon: "#00aa00",
+    img: null,
   },
-  imgSrc = imgFirst, 
-  layerImageSrc = imgSecond, 
+  imgSrc = imgFirst,
+  layerImageSrc = imgSecond,
 }) => {
   return (
     <div className={style.parentContainer}>
       <div className={style.CardDiscount}>
         <div className={style.bgImagen}>
-          <img src={imgSrc} alt="Imagen de descuento" height="222" width="505" />
-          {layerImageSrc && <img src={layerImageSrc} alt="Imagen de capa" className={style.layer2Image} />}
+          <img
+            src={imgSrc}
+            alt="Imagen de descuento"
+            height="222"
+            width="505"
+          />
+          {layerImageSrc && (
+            <img
+              src={layerImageSrc}
+              alt="Imagen de capa"
+              className={style.layer2Image}
+            />
+          )}
         </div>
         <div className={style.containerText}>
           <div className={style.title}>{title}</div>
@@ -41,7 +53,7 @@ const CardDiscount = ({
               style={{ backgroundColor: porcentaje.bg }}
               className={style.textDescuento}
             >
-              <porcentaje.icon sx={{ color: porcentaje.colorIcon }} />
+              <img src={porcentaje.icon} alt="" />
               <p>{porcentaje.textDescuento}</p>
             </div>
           </div>
