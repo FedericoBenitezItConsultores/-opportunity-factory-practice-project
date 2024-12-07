@@ -1,0 +1,72 @@
+.container {
+  background-color: #99e5ea45;
+  width: 100%;
+  min-height: 250px;
+  padding: 44px;
+  text-align: center;
+  display: flex;               
+  flex-direction: column;      
+  align-items: center;         
+  justify-content: center;     
+}
+
+.title {
+  font-size: 28px;
+  color: #1a1446;
+  margin-bottom: 29px;
+  font-family: "roboto Bold", sans-serif;
+}
+
+.checkboxContainer {
+  display: flex;               
+  justify-content: center;     
+  align-items: center;       
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.squareChecked {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #707070;
+}
+
+.label {
+  font-family: "roboto regular", sans-serif;
+  font-size: 16px;
+  color: #1a1446;
+}
+
+.info {
+  font-family: "roboto regular", sans-serif;
+  font-size: 20px;
+  color: #1a1446;
+  margin-top: 30px;
+  text-align: center;          
+}
+
+.container_form {
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  gap: 24px;
+  font-family: "roboto regular", sans-serif;
+  margin-top: 20px;      
+  text-align: left;      
+}
+
+.cuadro {
+  width: 100%;
+  max-width: 650px;            
+  height: 158px;
+  background-color: white;
+  color: #c0bfc0;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 3px;
+  margin-top: 20px;
+  border: 1px dashed #c0bfc0;
+}

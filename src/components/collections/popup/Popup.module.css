@@ -1,0 +1,59 @@
+.modalBackdrop {
+  background-color: rgba(30, 16, 69, 0.9) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modalHeader {
+  margin-bottom: 16px;
+  padding-top: 48px;
+}
+
+.IconDanger {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 33px;
+}
+
+.modalTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1446;
+  margin: 0;
+  font-family: "roboto Medium", sans-serif;
+}
+
+.modalText {
+  font-size: 16px;
+  color: #343741;
+  width: 464px;
+  margin: 5px 0;
+}
+
+.quoteNumber {
+  font-weight: bold;
+  color: #28a3af;
+  font-size: 12px;
+}
+
+.container_btns {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.modalBody p {
+  font-family: "roboto Medium", sans-serif;
+  width: 464px;
+  font-size: 16px;
+  color: #343741;
+}
