@@ -1,73 +1,138 @@
 import React, { useState } from "react";
-import { Input } from "../../../../../components/basic/input/Input";
+import { Input } from "../../basics/input/Input";
 import styles from "./styles.module.css";
 import SelectBirth from "../../basics/select-small/SelectBirth";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import SelectBig from "../../basics/select-big/SelectBig";
-export default function FormInfPerson() {
-  const [checked, setChecked] = useState("");
+import { citys } from "../../basics/select-big/utils/citys";
+import { Controller } from "react-hook-form";
+import imgWarning from "../../../../../assets/icons/svg/warningError.svg";
+export default function FormInfPerson({
+  register,
+  errors,
+  control,
+  formValues,
+  setError,
+  clearErrors,
+}) {
   return (
     <div className={styles.container_form}>
       <div className={styles.container_input}>
         <Input
-          onChange={() => console.log("object")}
+          control={control}
+          name={"firstName"}
           label="Primer nombre"
-          TypeStyle="primary"
-          textError="Este campo no puede quedar vacío"
+          textError={errors?.firstName?.message}
+          id={"firstName"}
+          {...register("firstName", { required: "El nombre es obligatorio" })}
+          TypeStyle={errors?.firstName?.message ? "secondary" : "primary"}
         />
         <Input
-          onChange={() => console.log("object")}
+          control={control}
+          name={"firstLastName"}
           label="Primer apellido"
-          TypeStyle="primary"
-          textError="Este campo no puede quedar vacío"
+          textError={errors?.firstLastName?.message}
+          id={"firstLastName"}
+          {...register("firstLastName", {
+            required: "El apellido es obligatorio",
+          })}
+          TypeStyle={errors?.firstLastName?.message ? "secondary" : "primary"}
         />
       </div>
 
-      <div className={styles.container_input}>
-        <div className={styles.container_genders}>
-          <div onClick={() => setChecked("masculino")}>
+      <div className={styles.container_input2}>
+        <div
+          className={
+            errors.gender
+              ? styles.container_genders_error
+              : styles.container_genders
+          }
+        >
+          {errors.gender && (
+            <div className={styles.container_error_gender}>
+              <img src={imgWarning} alt="Error" />
+              <p>{errors.gender.message}</p>
+            </div>
+          )}
+          <div>
             <span>
               Género <b>*</b>
             </span>
-            {checked === "masculino" ? (
-              <RadioButtonCheckedIcon
-                sx={{ color: true ? "#707070" : "#E92243 " }}
+            <div className={styles.container_gender}>
+              <Controller
+                name="gender"
+                control={control}
+                rules={{ required: "El género es requerido" }}
+                render={({ field }) => (
+                  <div onClick={() => field.onChange("masculino")}>
+                    {field.value === "masculino" ? (
+                      <RadioButtonCheckedIcon sx={{ color: "#707070" }} />
+                    ) : (
+                      <RadioButtonUncheckedIcon sx={{ color: "#707070" }} />
+                    )}
+                    <p>Masculino</p>
+                  </div>
+                )}
               />
-            ) : (
-              <RadioButtonUncheckedIcon
-                sx={{ color: true ? "#707070" : "#E92243 " }}
-              />
-            )}
-            <p>Masculino</p>
+            </div>
           </div>
-          <div onClick={() => setChecked("femenino")}>
-            {checked === "femenino" ? (
-              <RadioButtonCheckedIcon
-                sx={{ color: true ? "#707070" : "#E92243 " }}
-              />
-            ) : (
-              <RadioButtonUncheckedIcon
-                sx={{ color: true ? "#707070" : "#E92243 " }}
-              />
-            )}
-            <p>Femenino</p>
+
+          <div className={styles.container_gender}>
+            <Controller
+              name="gender"
+              control={control}
+              rules={{ required: "El género es requerido" }}
+              render={({ field }) => (
+                <div onClick={() => field.onChange("femenino")}>
+                  {field.value === "femenino" ? (
+                    <RadioButtonCheckedIcon sx={{ color: "#707070" }} />
+                  ) : (
+                    <RadioButtonUncheckedIcon sx={{ color: "#707070" }} />
+                  )}
+                  <p>Femenino</p>
+                </div>
+              )}
+            />
           </div>
         </div>
+
         <div className={styles.container_birth}>
-          <SelectBirth />
-        </div>
-      </div>
-      <div className={styles.container_input}>
-        <div style={{ width: "375px" }}>
-          <Input
-            onChange={() => console.log("object")}
-            label="Primer nombre"
-            TypeStyle="primary"
-            textError="Este campo no puede quedar vacío"
+          <p className={styles.text_date_birth}>
+            Fecha de nacimiento <b>*</b>
+          </p>
+          <SelectBirth
+            control={control}
+            errors={errors}
+            formValues={formValues}
+            setError={setError}
+            clearErrors={clearErrors}
           />
         </div>
-        <SelectBig />
+      </div>
+      <div className={styles.container_input3}>
+        <div style={{ marginBottom: "35px" }}>
+          <Input
+            control={control}
+            name={"yearsOfExperience"}
+            label="Años de experiencia"
+            id={"yearsOfExperience"}
+            {...register("yearsOfExperience", {
+              required: "El apellido es obligatorio",
+            })}
+            TypeStyle={
+              errors?.yearsOfExperience?.message ? "secondary" : "primary"
+            }
+          />
+        </div>
+        <SelectBig
+          name="ciudad"
+          control={control}
+          options={citys}
+          placeholder="Selecciona una ciudad"
+          rules={{ required: "Debes seleccionar una ciudad" }}
+          errors={errors}
+        />
       </div>
     </div>
   );

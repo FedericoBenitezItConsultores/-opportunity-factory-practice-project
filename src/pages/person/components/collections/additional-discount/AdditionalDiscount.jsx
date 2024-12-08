@@ -1,44 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../additional-discount/AdditionalDiscount.module.css";
 import iconCheck from "../../../../../assets/icons/svg/iconCheck.svg";
 import { PanelInformation } from "../../../../../components/collections/panel-box/PanelInformation";
 import SelectBig from "../../basics/select-big/SelectBig";
-import { Input } from "../../../../../components/basic/input/Input";
+import { Input } from "../../basics/input/Input";
 import CardDiscount from "../card-discount/CardDiscount";
 import WeddingYellow from "../../../../../assets/icons/svg/WeddingYellow.svg";
 import CombinedShape1 from "../../../../../assets/icons/svg/CombinedShape1.svg";
 import CombinedShape2 from "../../../../../assets/icons/svg/CombinedShape2.svg";
-// import WeddingYellow from "../../../../../assets/icons/svg/WeddingYellow.svg";
-
-const AdditionalDiscount = () => {
+import { identidades } from "./utils/indentidades";
+import { getValidationRules } from "./utils/validationsRules";
+const AdditionalDiscount = ({
+  register,
+  errors,
+  control,
+  setError,
+  clearErrors,
+  watch, // Asegúrate de pasar `watch` desde el `useForm`
+}) => {
   const [checked, setChecked] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
   const [stateCard, setStateCard] = useState(0);
+  const [selectedIdentificacion, setSelectedIdentificacion] = useState("");
 
-  const identidades = [
-    { value: "opcion1", type: "0", label: "Cédula de ciudadanía" },
-    { value: "opcion2", type: "1", label: "Cédula de extranjería" },
-    { value: "opcion3", type: "2", label: "Carnet Diplomático" },
-    { value: "opcion4", type: "0", label: "Pasaporte" },
-    { value: "opcion5", type: "1", label: "Tarjeta de Identidad" },
-    { value: "opcion6", type: "0", label: "Registro Civil" },
-    { value: "opcion7", type: "1", label: "Permiso Especial de Permanencia" },
-    { value: "opcion8", type: "2", label: "Documento de Identidad Consular" },
-    { value: "opcion9", type: "0", label: "Certificado de Nacimiento" },
-    {
-      value: "opcion10",
-      type: "2",
-      label: "Número Único de Identificación Personal (NIUP)",
-    },
-  ];
+  const identificacionValue = watch("identificación"); // Observar el valor del input
 
-  const handleSelectChange = (selected) => {
-    setSelectedOption(selected);
-  };
+  useEffect(() => {
+    setSelectedIdentificacion(identificacionValue);
+    if (!identificacionValue) return;
 
-  const handleChangeDiscount = () => {
-    setStateCard((prevState) => (prevState === 2 ? 0 : prevState + 1));
-  };
+    const validationRules = getValidationRules(selectedIdentificacion);
+    if (validationRules?.pattern) {
+      const isValid = validationRules.pattern.value.test(
+        selectedIdentificacion
+      );
+      if (!isValid) {
+        setError("identificación", {
+          type: "manual",
+          message: validationRules.pattern.message,
+        });
+      } else {
+        clearErrors("identificación");
+      }
+    }
+  }, [identificacionValue, selectedIdentificacion, setError, clearErrors]);
 
   return (
     <div className={styles.container}>
@@ -69,13 +73,31 @@ const AdditionalDiscount = () => {
       {checked && (
         <>
           <div className={styles.container_form}>
-            <SelectBig
-              options={identidades}
-              placeholder="Tipo de identificación"
-              onChange={handleSelectChange}
-              value={selectedOption}
+            <div className={styles.wrapper}>
+              <SelectBig
+                name="typeIdentification"
+                control={control}
+                options={identidades}
+                errors={errors}
+                rules={{ required: "Debes seleccionar una identificación" }}
+                onChange={(selectedOption) => {
+                  setSelectedIdentificacion(selectedOption.value);
+                }}
+              />
+            </div>
+            <Input
+              label="Identificación"
+              id="identificación"
+              control={control}
+              {...register(
+                "identificación",
+                getValidationRules(selectedIdentificacion)
+              )}
+              style={{ padding: "30px 0 0 5px" }}
+              TypeStyle={
+                errors?.identificación?.message ? "secondary" : "primary"
+              }
             />
-            <Input />
           </div>
           <button
             style={{
@@ -83,7 +105,11 @@ const AdditionalDiscount = () => {
               top: "45%",
               right: "20px",
             }}
-            onClick={handleChangeDiscount}
+            onClick={() => {
+              setStateCard((prevState) =>
+                prevState === 2 ? 0 : prevState + 1
+              );
+            }}
           >
             Cambio de descuento
           </button>
