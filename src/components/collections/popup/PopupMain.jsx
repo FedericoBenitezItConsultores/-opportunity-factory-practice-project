@@ -34,9 +34,8 @@ const PopupMain = ({
   ),
   numQuotation = true,
   props,
-  heightCard
+  heightCard,
 }) => {
-
   return (
     <Popup heightCard={heightCard}>
       <div>
@@ -67,6 +66,11 @@ const PopupMain = ({
               key={i}
               onClick={() => buton.action()}
               typeStyle={buton.typeStyle}
+              style={{
+                width: "220px",
+                height: "48px",
+                padding: "15px 21px 14px 21px",
+              }}
             >
               {buton.text}
             </Button>
