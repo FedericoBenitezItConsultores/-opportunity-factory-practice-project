@@ -118,11 +118,22 @@ export default function FormInfPerson({
             label="Años de experiencia"
             id={"yearsOfExperience"}
             {...register("yearsOfExperience", {
-              required: "El apellido es obligatorio",
+              required: "El campo es obligatorio",
+              validate: (value) => {
+                if (isNaN(value)) {
+                  return "Solo se permiten números";
+                }
+                if (value < 0) {
+                  return "El número debe ser positivo";
+                }
+                return true;
+              },
             })}
             TypeStyle={
               errors?.yearsOfExperience?.message ? "secondary" : "primary"
             }
+            type="number"
+            style={{ padding: "30px 0 0 5px" }}
           />
         </div>
         <SelectBig

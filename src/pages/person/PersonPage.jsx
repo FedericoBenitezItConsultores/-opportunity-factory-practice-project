@@ -31,8 +31,12 @@ export default function PersonPage() {
       </p>
       <p className={style.information2}>acorde a sus necesidades</p>
       <p className={style.parragraf}>Los campos con (*) son obligatorios</p>
-      {/* <PanelIdentification /> */}
-      <form onSubmit={handleSubmit(onSubmit)} className={style.container_form}>
+      <PanelIdentification />
+      <form
+        style={{ marginTop: "26px" }}
+        onSubmit={handleSubmit(onSubmit)}
+        className={style.container_form}
+      >
         <FormInfPerson
           register={register}
           errors={errors}
