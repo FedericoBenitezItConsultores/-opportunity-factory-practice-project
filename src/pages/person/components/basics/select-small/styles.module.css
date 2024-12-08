@@ -1,0 +1,13 @@
+.container_error {
+    /* Layout Properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    top: -40px;
+    position: absolute;
+    text-align: left;
+    color: #D32F2F;
+    opacity: 1;
+}
