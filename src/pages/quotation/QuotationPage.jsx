@@ -9,6 +9,7 @@ import WeCanGenerateTryLater from "../../components/collections/popup/cards-pop-
 import WeCannotGenerateTheDocument from "../../components/collections/popup/cards-pop-up/WeCannotGenerateTheDocument";
 import { SnipperPopup } from "../../components/collections/popup/snipper/SnipperPopup";
 import TestPopup from "../../components/collections/test-popup/TestPopup";
+import InactiveUser from "../../components/collections/popup/inactuve-user/InactiveUser";
 
 export default function QuotationPage() {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ export default function QuotationPage() {
   return (
     <div>
       {modals.sniper && <SnipperPopup showText={false} />}
+      <InactiveUser />
 
       {modals.weCanGenerateTryLater && (
         <WeCanGenerateTryLater
