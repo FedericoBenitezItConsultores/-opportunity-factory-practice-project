@@ -1,7 +1,7 @@
 .div_root {
   /* Layout Properties */
   position: fixed;
-  z-index: 300;
+  z-index: 502;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
