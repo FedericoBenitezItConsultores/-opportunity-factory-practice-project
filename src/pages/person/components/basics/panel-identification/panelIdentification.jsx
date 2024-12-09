@@ -9,43 +9,48 @@ export default function PanelIdentification() {
     <>
     
     <div id="form" className={style.containerCard}>
-          <div>
-            <table>
-              <tr>
-                <td>
-                  <div className={style.line} />
-                </td>
-                <td>
-                  <img className={style.Image} src={profile} alt="" />
-                </td>
-                <tr>
-                  <td className={style.documents}>Tipo de documento</td>
-                </tr>
-                <tr>
-                  <td>Cédula de Ciudadanía</td>
-                </tr>
-              </tr>
-            </table>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <div className={style.line}></div>
+        </td>
+        <td>
+          <div className={style.Image}>
+            <img src={profile} alt="Profile" />
           </div>
+        </td>
+        <td>
           <div>
-            <table>
-              <tr>
-                <td>
-                  <div className={style.line} />
-                </td>
-                <td>
-                  <img className={style.Image} src={identification} alt="" />
-                </td>
-                <tr>
-                  <td className={style.documents}>Identificación</td>
-                </tr>
-                <tr>
-                  <td className={style.numberCc}>123456789</td>
-                </tr>
-              </tr>
-            </table>
+            <div className={style.documents}>Tipo de documento</div>
+            <div>Cédula de Ciudadanía</div>
           </div>
-        </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <div className={style.line}></div>
+        </td>
+        <td>
+          <div className={style.Image}>
+            <img src={identification} alt="Identification" />
+          </div>
+        </td>
+        <td>
+          <div>
+            <div className={style.documents}>Identificación</div>
+            <div className={style.numberCc}>123456789</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
     </>
   )
 }
