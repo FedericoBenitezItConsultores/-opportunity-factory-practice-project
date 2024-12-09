@@ -108,6 +108,8 @@
   
   .textDescuento {
     position: absolute;
+    font-family: "roboto Bold", sans-serif;
+    color: #343741;
     min-width: auto;
     text-wrap: nowrap;
     font-size: 13px;
