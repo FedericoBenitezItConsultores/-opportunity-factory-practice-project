@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "../popup/Popup.module.css";
 
-const Popup = ({ children, heightCard='613px' }) => {
-  console.log(heightCard)
+const Popup = ({ children, heightCard = "613px", tyle = true }) => {
   return (
     <>
       <div className={styles.overlay}></div>
-      <div style={{ height: heightCard }} className={styles.popup}>
+      <div style={{ height: heightCard }} className={tyle ? styles.popup : ""}>
         {children}
       </div>
     </>

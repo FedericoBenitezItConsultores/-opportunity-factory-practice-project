@@ -1,0 +1,198 @@
+.div_root {
+  /* Layout Properties */
+  position: fixed;
+  z-index: 300;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 626px;
+  height: 513px;
+  opacity: 1;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+}
+
+.div_roo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  gap: 40px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  width: 20px;
+}
+
+.div_count_father {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.div_count {
+  /* Layout Properties */
+
+  width: 76px;
+  height: 65px;
+  /* UI Properties */
+  background: transparent
+    url("../../../assets/svg/Button-OutlinesButton-Secondary-SM.svg") 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
+  position: relative;
+}
+
+.div_count p {
+  font-size: 40px;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-1a1446);
+  text-align: center;
+  letter-spacing: 0px;
+  color: #1a1446;
+  opacity: 0.6;
+  position: absolute;
+}
+
+.dos_puntos {
+  /* Layout Properties */
+  font-size: 55px;
+
+  width: 14px;
+  height: 52px;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-1a1446);
+  text-align: center;
+  letter-spacing: 0px;
+  color: #1a1446;
+  opacity: 0.6;
+}
+
+.buttons {
+  /* Layout Properties */
+  /* margin-top: 200px; */
+  width: 100%;
+  /* UI Properties */
+  background: var(--unnamed-color-f0fbfc) 0% 0% no-repeat padding-box;
+  background: #f0fbfc 0% 0% no-repeat padding-box;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.buttons button {
+  width: 162px;
+  height: 48px;
+  border-radius: 5px;
+  font-family: "roboto Bold", sans-serif;
+  margin-right: 10px;
+  font-weight: 700;
+
+  /* Suaviza el cambio de color */
+}
+
+.button {
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  border: 1px solid;
+  color: #1a1446;
+
+  background-color: #99e3ea;
+  box-shadow: 0px 3px 0px #06748c;
+  border: 1px solid #99e3ea;
+}
+
+.button:hover {
+  background-color: #06748c;
+  /* Color cuando el mouse está encima */
+}
+
+.button_cerrar_sesion {
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 0px var(--unnamed-color-c0bfc0);
+  border: 1px solid var(--unnamed-color-1a1446);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 0px #c0bfc0;
+  border: 1px solid #1a1446;
+  opacity: 1;
+}
+
+.session_finish {
+  font-size: 35px;
+  font-family: "roboto Bold";
+  color: #1a1446;
+}
+
+.button_iniciar_sesion {
+  color: #1a1446;
+  width: 182px !important;
+
+  background: var(--unnamed-color-99e3ea) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 0px var(--unnamed-color-06748c);
+  border: 1px solid var(--unnamed-color-99e3ea);
+  background: #99e3ea 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 0px #06748c;
+  border: 1px solid #99e3ea;
+  opacity: 1;
+  font-family: "roboto Bold" !important;
+  font-size: 17px;
+}
+
+/* F0FBFC */
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.parrafo {
+  font-size: 16px;
+  color: #343741;
+  font-family: "roboto Medium", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.timeContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.timeBox {
+  display: inline-flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 76.35px;
+  height: 65.44px;
+  padding: 3px 11px;
+  border: 2px solid #e8e7ec; /* Gris medio para el borde */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #767290; /* Color del texto */
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+
+  font-family: "roboto Medium", sans-serif;
+}

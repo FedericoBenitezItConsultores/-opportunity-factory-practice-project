@@ -5,9 +5,14 @@ const STYLES_BUTTON = {
   secondary: styles.secondary,
 };
 
-const Button = ({ children, typeStyle = "primary", ...props }) => {
+const Button = ({
+  children,
+  typeStyle = "primary",
+  style = { minWidth: "252px",  padding: '15.48px 70.6px 13.52px 67.4px' },
+  ...props
+}) => {
   return (
-    <button {...props} className={STYLES_BUTTON[typeStyle]}>
+    <button style={style} {...props} className={STYLES_BUTTON[typeStyle]}>
       {children}
     </button>
   );
