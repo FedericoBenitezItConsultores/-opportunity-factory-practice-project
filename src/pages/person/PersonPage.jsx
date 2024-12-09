@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import TestPopup from "../../components/collections/test-popup/TestPopup";
 import { SnipperPopup } from "../../components/collections/popup/snipper/SnipperPopup";
 import { useNavigate } from "react-router-dom";
+import InactiveUser from "../../components/collections/popup/inactuve-user/InactiveUser";
 
 export default function PersonPage() {
   const {
@@ -36,6 +37,7 @@ export default function PersonPage() {
   const [showText, setShowText] = useState(false);
   return (
     <>
+      <InactiveUser />
       {snipper && <SnipperPopup showText={showText} />}
       <div className={style.container_main}>
         <h1 className={style.persona}>Persona</h1>
