@@ -70,7 +70,6 @@
   text-align: center;
 }
 
-/* Media queries para dispositivos más pequeños */
 @media (max-width: 768px) {
   .modalHeader {
     padding-top: 2rem;
@@ -95,6 +94,7 @@
   }
 }
 
+/*Este media es para dispositivos mas pequños*/
 @media (max-width: 480px) {
   .IconDanger {
     width: 3.5rem;
@@ -186,7 +186,7 @@
   text-align: center;
 }
 
-/* Media queries para dispositivos más pequeños */
+/*Este Media queries es para dispositivos más pequeños */
 @media (max-width: 768px) {
   .modalHeader {
     padding-top: 2rem;
