@@ -4,10 +4,10 @@
   min-height: 250px;
   padding: 44px;
   text-align: center;
-  display: flex;               
-  flex-direction: column;      
-  align-items: center;         
-  justify-content: center;     
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -18,9 +18,9 @@
 }
 
 .checkboxContainer {
-  display: flex;               
-  justify-content: center;     
-  align-items: center;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -44,22 +44,28 @@
   font-size: 20px;
   color: #1a1446;
   margin-top: 30px;
-  text-align: center;          
+  text-align: center;
 }
 
 .container_form {
-  display: flex;               
-  justify-content: center;     
-  align-items: center;         
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
   font-family: "roboto regular", sans-serif;
-  margin-top: 20px;      
-  text-align: left;      
+  margin-top: 20px;
+  text-align: left;
+
+}
+
+.wrapper {
+
+  margin-top: 35px;
 }
 
 .cuadro {
   width: 100%;
-  max-width: 650px;            
+  max-width: 650px;
   height: 158px;
   background-color: white;
   color: #c0bfc0;

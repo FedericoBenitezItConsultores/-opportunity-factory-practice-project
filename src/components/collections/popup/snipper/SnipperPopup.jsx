@@ -3,8 +3,7 @@ import liberty from "../../../../assets/icons/svg/liberty-arm-yellow.svg";
 import loader from "../../../../assets/icons/svg/loader.svg";
 import styles from "./SnipperPopup.module.css";
 
-
-export const SnipperPopup = ({  showText = true }) => {
+export const SnipperPopup = ({ showText = true }) => {
   const imageRef = useRef(null);
 
   return (
@@ -30,4 +29,4 @@ export const SnipperPopup = ({  showText = true }) => {
       </div>
     </div>
   );
-}
+};

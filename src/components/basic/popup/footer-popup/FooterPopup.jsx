@@ -7,6 +7,7 @@ const FooterPopup = ({
   errorMessage = "Código de error: 1234 - Paso 3: Información personal",
   date = "21/Jul/2022 - 13:15",
   stylesFooterPopup,
+  
 }) => {
   return (
     <div className={styles.overlay}>

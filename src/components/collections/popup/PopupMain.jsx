@@ -33,10 +33,11 @@ const PopupMain = ({
     </>
   ),
   numQuotation = true,
-  props
+  props,
+  heightCard,
 }) => {
   return (
-    <Popup>
+    <Popup heightCard={heightCard}>
       <div>
         <div className={styles.modalHeader}>
           <img className={styles.IconDanger} src={img} alt="Alerta" />
@@ -65,6 +66,11 @@ const PopupMain = ({
               key={i}
               onClick={() => buton.action()}
               typeStyle={buton.typeStyle}
+              style={{
+                width: "220px",
+                height: "48px",
+                padding: "15px 21px 14px 21px",
+              }}
             >
               {buton.text}
             </Button>
