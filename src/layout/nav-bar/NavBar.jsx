@@ -6,7 +6,9 @@ import Triangle from "../../assets/icons/png/Triangle.png";
 import icon_left from "../../assets/icons/png/icon-left.png";
 import { steps } from "./steps-navbar";
 import Button from "../../components/basic/button/Button";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className={styles.container2}>
@@ -66,7 +68,9 @@ const Navbar = () => {
             <img src={icon_left} alt="icon_left" className={styles.arrow} />
             <p className={`${styles.title} ${styles.blue}`}>Nueva cotización</p>
           </div>
-          <Button typeStyle="secondary">Ir a mis negocios</Button>
+          <Button onClick={() => navigate("/")} typeStyle="secondary">
+            Ir a mis negocios
+          </Button>
         </div>
       </div>
     </div>
