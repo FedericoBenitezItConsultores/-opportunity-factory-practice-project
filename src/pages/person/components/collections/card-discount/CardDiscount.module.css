@@ -64,7 +64,7 @@
     color: #1c1149;
     font-size: 32px;
     margin-left: -340px;
-    font-family: "roboto Medium";
+    font-family: "roboto Medium", sans-serif;
     margin-top: 30px;
     border-top-left-radius: 3px;
   }
@@ -75,7 +75,7 @@
     margin-left: -310px;
     color: #333742;
     white-space: nowrap;
-    font-family: "roboto regular";
+    font-family: "roboto regular", sans-serif;
   }
   
   .text2 {
@@ -84,14 +84,14 @@
     color: #333742;
     white-space: nowrap;
     margin-left: -264px;
-    font-family: "roboto regular";
+    font-family: "roboto regular", sans-serif;
   }
   
   .discount {
     display: flex;
     position: absolute;
     font-size: 56px;
-    font-family: "roboto Bold";
+    font-family: "roboto Bold", sans-serif;
     white-space: nowrap;
     margin-left: -270px;
     margin-top: 130px;
@@ -110,6 +110,7 @@
     position: absolute;
     min-width: auto;
     text-wrap: nowrap;
+    font-family: "roboto Bold", sans-serif;
     font-size: 13px;
     top: 190px;
     right: 40px;
@@ -118,5 +119,6 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    color: #343741;
     gap: 5px;
   }
