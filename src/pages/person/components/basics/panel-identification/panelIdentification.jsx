@@ -37,7 +37,7 @@ export default function PanelIdentification() {
         </td>
         <td>
           <div className={style.Image}>
-            <img src={identification} alt="Identification" />
+            <img src={identification} alt="Identification " />
           </div>
         </td>
         <td>
