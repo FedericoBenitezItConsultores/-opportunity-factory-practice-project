@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../popup/Popup.module.css";
 
-const Popup = ({ children, heightCard = "613px", tyle = true }) => {
+const Popup = ({ children, heightCard = "533px", tyle = true }) => {
   return (
     <>
       <div className={styles.overlay}></div>
