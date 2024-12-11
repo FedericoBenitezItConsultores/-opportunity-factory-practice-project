@@ -1,7 +1,7 @@
 export const customStyles = {
   control: (base) => ({
     ...base,
-    background: "#e6e6e6",
+    background: "#fff",
     border: "1px solid #919191",
     borderRadius: "5px",
     fontSize: "14px",
@@ -11,7 +11,7 @@ export const customStyles = {
     color: "#333333",
     boxShadow: "none",
     "&:hover": {
-      borderColor: "#333333",
+      border: "1px solid #28A3AF",
     },
     fontFamily: '"Segoe UI", sans-serif',
   }),

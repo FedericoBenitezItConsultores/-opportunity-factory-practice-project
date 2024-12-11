@@ -30,6 +30,7 @@ export default function WarningReturn({ btn_misNegocios, btn_reintentar }) {
         errorMessage: "",
         date: "",
       }}
+      containerPopup="container_popup"
     />
   );
 }

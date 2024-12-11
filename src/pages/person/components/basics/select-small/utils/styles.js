@@ -4,7 +4,7 @@ export const customStyles = {
     ...base,
     fontFamily: '"roboto regular", sans-serif',
     color: "#565656",
-    background: "#e6e6e6",
+    background: "#fff",
     border: "1px solid #d9d9d9",
     borderRadius: "5px",
     border: "1px solid #919191",
@@ -12,7 +12,7 @@ export const customStyles = {
     fontSize: "14px",
     boxShadow: "none",
     "&:hover": {
-      borderColor: "#333333", // Cambiado a gris
+      border: "1px solid #28A3AF",
     },
     width: "116px",
     height: "50px",

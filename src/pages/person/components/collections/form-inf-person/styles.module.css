@@ -54,8 +54,12 @@
         opacity: 1;
         border-radius: 5px;
         position: relative;
-        background-color: #E6E6E6;
+        background-color: #ffffff;
         border: 1px solid #919191;
+
+        &:hover {
+            border: 1px solid #28A3AF;
+        }
     }
 
     & span {
